@@ -18,7 +18,7 @@ Gerüststufe `echafaudage` nach Partie: I = 1, II = 2, III = 3, IV = 2 bei neuem
 - Stufe 4: nur Briefing und Kriterien.
 
 ## Pflichtkennzeichnung
-« Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi », © 2026 OKOHO Consulting GmbH, Markenhinweis (« Claude est une marque d'Anthropic … sans partenariat avec Anthropic »), Version und Datum der Screenshots. Gestaltung nur über `design/tokens.json` (OKOHO Design System 2.2 + Académie-Modus, academie-tint #FFF4E8).
+« Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi », © <Jahr des Builds, automatisch> OKOHO Consulting GmbH, Markenhinweis (« Claude est une marque d'Anthropic … sans partenariat avec Anthropic »), Version und Datum der Screenshots. Gestaltung nur über `design/tokens.json` (OKOHO Design System 2.2 + Académie-Modus, academie-tint #FFF4E8).
 
 ## Arbeitsablauf
 - Jede Séance auf eigenem Branch `seance/<CODE>`, Merge nach `main` erst nach Freigabe durch Bertrand.
