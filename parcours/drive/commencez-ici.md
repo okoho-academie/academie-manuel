@@ -1,6 +1,6 @@
 # Commencez ici
 
-*OKOHO Académie · Parcours Claude Pro · Cohorte 1*
+*OKOHO Académie · Parcours Claude Pro · {{cohorte}}*
 
 Bienvenue. Ce dossier contient tous les documents de votre parcours. Il se lit en trois gestes.
 
@@ -10,7 +10,7 @@ Ouvrez **01 · Programme et calendrier**. Vous y trouvez les dates, le rythme et
 
 ## 2. Ouvrez la semaine en cours
 
-Ouvrez **02 · Séances semaine par semaine**, puis le dossier de la semaine, par exemple **Semaine 00 · 31.10.2026 · Séance de lancement**.
+Ouvrez **02 · Séances semaine par semaine**, puis le dossier de la semaine, par exemple **Semaine 00 · … · Séance de lancement** (la date de la séance figure dans le nom).
 
 Lisez les documents dans l'ordre de leur numéro :
 
@@ -18,7 +18,7 @@ Lisez les documents dans l'ordre de leur numéro :
 |---|---|
 | **S00-1** · Guide · … | Semaine 0, document à lire en premier |
 | **S00-2** · À remplir · … | Semaine 0, deuxième document |
-| **S01-1** · Séance en direct · M01-S1 … | Semaine 1 : à préparer pour la séance du samedi |
+| **S01-1** · Séance en direct · M01-S1 … | Semaine 1 : à préparer pour la séance du {{jour}} |
 | **S01-2** · En autonomie · M01-S2 … | Semaine 1 : à faire seul pendant la semaine |
 
 ## 3. Déposez votre travail dans votre portfolio
@@ -35,8 +35,8 @@ Nommez chaque livrable avec le numéro du document et votre prénom : **S00-1_Ai
 
 ## Besoin d'aide ?
 
-Écrivez dans le groupe WhatsApp **Cohorte 1**. Joignez une capture de votre écran.
+Écrivez dans le groupe WhatsApp **{{groupe}}**. Joignez une capture de votre écran.
 
 ---
 
-© 2026 OKOHO Consulting GmbH · okoho.de · info@okoho.de · +49 5231 5682750 · Formateur : Dr. Bertrand Toumi
+© OKOHO Consulting GmbH · okoho.de · info@okoho.de · +49 5231 5682750 · Formateur : Dr. Bertrand Toumi

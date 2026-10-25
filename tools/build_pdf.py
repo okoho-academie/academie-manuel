@@ -4,12 +4,15 @@
 Génère out/pdf/OKOHO_PCP_<CODE>_<Type>_v<version>.pdf à partir de
   seances/<CODE>/seance.md   (Type : Fiche)
   accueil/<CODE>/document.md (Type : Guide)
-Usage : python3 tools/build_pdf.py [CODE ...] [--fixtures]
+Usage : python3 tools/build_pdf.py [CODE ...] [--fixtures] [--cohorte=cohorte-1]
+Sans --cohorte : PDF neutres (sans date), réutilisables pour toute cohorte et le parcours en autonomie.
+Avec --cohorte : variables {{…}} remplacées par les dates du calendrier, sortie dans out/pdf/<cohorte>/.
 Conventions de rédaction : tools/README_PDF.md
 """
 import base64, html, re, sys
 from pathlib import Path
-from common import ROOT, OUT, read_seance, structure, load_yaml
+from common import ROOT, OUT, read_seance, structure, load_yaml, load_cohorte, resolve
+from datetime import date
 
 try:
     import markdown
@@ -236,8 +239,9 @@ display:flex;justify-content:space-between;border-top:0.5pt solid #D5DCE6;paddin
     return head, foot
 
 
-def build_one(kind, path, struct):
+def build_one(kind, path, struct, cal=None, out_dir=None):
     meta, body = read_seance(path)
+    body = resolve(body, cal)
     code, titre = meta["code"], meta["titre"]
     version = str(meta.get("version", "0.1"))
     captures = meta.get("captures") or "—"
@@ -267,11 +271,12 @@ def build_one(kind, path, struct):
 <div class="mention">Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi</div></header>"""
     fin = f"""<div class="fin">Claude est une marque d'Anthropic. Le Parcours Claude Pro est une formation indépendante proposée par
 OKOHO Consulting GmbH, sans partenariat avec Anthropic. Reproduction et diffusion interdites sans autorisation écrite
-d'OKOHO Consulting GmbH.<br>Version {html.escape(version)} · Captures d'écran réalisées le {html.escape(str(captures))} · © 2026 OKOHO Consulting GmbH</div>"""
+d'OKOHO Consulting GmbH.<br>Version {html.escape(version)} · Captures d'écran réalisées le {html.escape(str(captures))} · © {date.today().year} OKOHO Consulting GmbH</div>"""
     doc = f"""<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>{html.escape(code)} · {html.escape(titre)}</title>
 <style>{css()}</style></head><body>{cover}{content}{fin}</body></html>"""
-    PDF_DIR.mkdir(parents=True, exist_ok=True)
-    out = PDF_DIR / f"OKOHO_PCP_{code}_{typ}_v{version}.pdf"
+    dest = out_dir or PDF_DIR
+    dest.mkdir(parents=True, exist_ok=True)
+    out = dest / f"OKOHO_PCP_{code}_{typ}_v{version}.pdf"
     head, foot = header_footer(code, titre, jalon)
     return doc, out, head, foot
 
@@ -282,7 +287,7 @@ def render(jobs):
         b = p.chromium.launch()
         pg = b.new_page()
         for doc, out, head, foot in jobs:
-            tmp = OUT / "pdf" / (out.stem + ".html")
+            tmp = out.parent / (out.stem + ".html")
             tmp.write_text(doc, encoding="utf-8")
             pg.goto(tmp.as_uri())
             pg.wait_for_load_state("networkidle")
@@ -297,6 +302,9 @@ def render(jobs):
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     fixtures = "--fixtures" in sys.argv
+    nom_c = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--cohorte=")), None)
+    cal = load_cohorte(nom_c)
+    out_dir = PDF_DIR / nom_c if nom_c else None
     _, struct = structure()
     sources = [("seance", f) for f in sorted((ROOT / "seances").glob("*/seance.md"))]
     sources += [("document", f) for f in sorted((ROOT / "accueil").glob("*/document.md"))]
@@ -307,7 +315,7 @@ def main():
     jobs = []
     for kind, f in sources:
         try:
-            jobs.append(build_one(kind, f, struct))
+            jobs.append(build_one(kind, f, struct, cal, out_dir))
         except Exception as e:
             print(f"ERREUR pdf {f.relative_to(ROOT)} : {e}"); return 1
     if jobs:

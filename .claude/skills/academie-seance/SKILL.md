@@ -13,4 +13,5 @@ Référence : `CLAUDE.md` (grundsätze, Scaffolding, Pflichtkennzeichnung), `sch
 - Français, « vous », phrases courtes. Exemples camerounais seulement dans « Cas fil rouge ». Aucune référence à une autre semaine.
 - Captures : emplacement `![Étape n : action](captures/etape-n.png)` ; vraie interface Claude uniquement.
 - Terminer par la mention OKOHO, la mention Anthropic, la version et la date des captures.
+- Aucune date, aucune année, aucun numéro de semaine, aucun nom de cohorte : la séance sert à toutes les cohortes, dans n’importe quel ordre, et au parcours en autonomie. Échéance : « avant la prochaine séance ». Groupe : {{groupe}}. Les dates et semaines viennent de parcours/cohorte-N.yaml au build.
 - Ne jamais inventer de fonction ou de prix de Claude.

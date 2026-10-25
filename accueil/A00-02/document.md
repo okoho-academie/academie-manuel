@@ -4,13 +4,13 @@ titre: "Diagnostic d'entrée"
 type: document
 public: apprenants
 jalon: J1
-version: "1.1"
+version: "2.0"
 ---
 
 ::: objectifs
 - Vous décrivez votre situation de départ : appareil, connexion, expérience, objectifs.
 - Vous réalisez une première mini-tâche avec Claude.
-- Vous fixez votre objectif personnel pour les 22 semaines du parcours.
+- Vous fixez votre objectif personnel pour les {{nb_semaines}} semaines du parcours.
 :::
 
 ## Pourquoi c'est utile
@@ -70,8 +70,8 @@ Répondez aux cinq questions de Claude, puis notez ici :
 
 ## Partie 5 : votre engagement
 
-Complétez la phrase : « Le 24 avril 2027, je serai capable de … »
+Complétez la phrase : « À la fin du parcours, je serai capable de … »
 
 ::: livrable
-Le document **S00-2 · Diagnostic d'entrée** rempli dans votre portfolio, avant la fin de la séance de lancement du 31 octobre 2026.
+Le document **S00-2 · Diagnostic d'entrée** rempli dans votre portfolio, avant la fin de la séance de lancement.
 :::

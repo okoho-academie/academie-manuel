@@ -4,7 +4,7 @@ titre: "Bien démarrer : vos comptes et vos outils"
 type: document
 public: apprenants
 jalon: J1
-version: "1.2"
+version: "2.0"
 captures: "2026-10-25"
 ---
 
@@ -92,13 +92,13 @@ Google présente désormais cet outil sous le nom « Gemini Notebook ». Dans ce
 ## Étape 7 : rejoindre la communauté WhatsApp
 
 1. Ouvrez le lien d'invitation envoyé par votre formateur.
-2. Rejoignez le groupe **Cohorte 1** et le groupe **Annonces**.
+2. Rejoignez deux groupes : **Annonces** pour les informations officielles, **{{groupe}}** pour vos questions et l'entraide.
 3. Écrivez un message court : votre prénom, votre ville et votre objectif en une phrase.
 
 ::: coup-de-pouce
 - Vous ne recevez pas le code par SMS ? Attendez deux minutes, vérifiez le numéro, puis demandez un nouvel envoi.
 - Claude ne s'ouvre pas ? Fermez le navigateur, ouvrez une fenêtre de navigation privée, puis réessayez avec claude.ai.
-- Rien ne fonctionne ? Faites une capture de l'écran et envoyez-la dans le groupe WhatsApp Cohorte 1. Quelqu'un vous aide.
+- Rien ne fonctionne ? Faites une capture de l'écran et envoyez-la dans le groupe WhatsApp **{{groupe}}**. Quelqu'un vous aide.
 :::
 
 ::: erreurs
@@ -112,5 +112,5 @@ Aïcha, couturière à Bonamoussadi, fait l'étape 4 le soir même. Claude lui p
 :::
 
 ::: livrable
-Dans votre dossier portfolio : une capture d'écran de la réponse de Claude à l'étape 4, nommée **S00-1_Prenom.png** (par exemple S00-1_Aicha.png). À déposer avant la séance du samedi 7 novembre 2026.
+Dans votre dossier portfolio : une capture d'écran de la réponse de Claude à l'étape 4, nommée **S00-1_Prenom.png** (par exemple S00-1_Aicha.png). À déposer avant {{date:S01}}.
 :::

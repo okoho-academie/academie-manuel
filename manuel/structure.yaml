@@ -11,6 +11,12 @@ echafaudage:
     2: Prompts à trous
     3: Checklist et critères seulement
     4: Brief et critères seulement
+jalons:
+  J1: {nom: Utilisateur autonome, competence: "Utiliser Claude chaque jour et publier une première page web"}
+  J2: {nom: Praticien productif, competence: "Produire site, flyer et contenus pour un client pilote"}
+  J3: {nom: Spécialiste, competence: "Maîtriser un profil et présenter un catalogue de services"}
+  J4: {nom: Constructeur, competence: "Automatiser des tâches et construire un site ou une mini-application"}
+  J5: {nom: Prestataire, competence: "Gagner, réaliser et livrer un projet client"}
 parties:
 - code: I
   titre: Fondations

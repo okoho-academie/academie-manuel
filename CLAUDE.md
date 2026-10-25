@@ -31,4 +31,6 @@ Gerüststufe `echafaudage` nach Partie: I = 1, II = 2, III = 3, IV = 2 bei neuem
 - Ordner: « Semaine NN · JJ.MM.AAAA · Titre ». Datei: « SNN-Reihenfolge · Type · Code Titre » (Types: Guide, À remplir, Séance en direct, En autonomie).
 - Abgabe der Lernenden: « SNN-Reihenfolge_Prenom.ext ». Kein « : » in Dateinamen (Windows).
 - Drive-Wurzel in Nutzungsreihenfolge: 00 · Formateur (privé), 01 · Programme et calendrier, 02 · Séances semaine par semaine, 03 · Réviser avec NotebookLM, 04 · Portfolios, 05 · Projets en équipe, 06 · Ressources et liens utiles. Einstieg: « 00 · COMMENCEZ ICI » (Quelle `parcours/drive/commencez-ici.md`).
-- Séances selbst bleiben datumsfrei; Woche und Datum stehen nur im Kohortenkalender.
+- Wiederverwendung: Quellen (seances/, accueil/, parcours/drive/) enthalten NIE Datum, Jahr oder Kohortennamen. Statt dessen Variablen: {{date:SNN}} (« le samedi 7 novembre 2026 »), {{debut}}, {{fin}}, {{jour}}, {{cohorte}}, {{groupe}}, {{nb_semaines}}, {{calendrier}}, {{jalons}}. `validate.py` blockiert Datumsangaben.
+- Ohne Kohorte (`out/pdf/`) entstehen neutrale PDFs für jede Kohorte und das Selbstlernen; mit Kohorte (`out/pdf/cohorte-N/`, `out/drive/cohorte-N/`) datierte Ausgaben.
+- Neue Kohorte: `parcours/cohorte-1.yaml` kopieren, Daten und Gruppennamen ändern, `python3 tools/build.py`. Kein Dokument wird neu geschrieben. Déroulé ohne Datum: `parcours/modele.yaml`.
