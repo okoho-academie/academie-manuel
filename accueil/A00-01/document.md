@@ -4,8 +4,8 @@ titre: "Bien démarrer : vos comptes et vos outils"
 type: document
 public: apprenants
 jalon: J1
-version: "1.0"
-captures: "2026-10-31"
+version: "1.1"
+captures: "2026-10-25"
 ---
 
 ::: objectifs
@@ -47,6 +47,8 @@ Si vous avez déjà une adresse Gmail, passez directement à l'étape 2.
 4. Lisez et acceptez les conditions d'utilisation d'Anthropic.
 5. Si Claude vous demande un numéro de téléphone, saisissez-le et confirmez avec le code reçu.
 
+Pendant la séance de lancement, le formateur montre ces écrans en direct sur un téléphone réglé en français. Les captures seront ajoutées ici après la séance.
+
 ![Étape 2 : page de connexion de Claude](captures/A00-01_claude-01.png)
 
 ![Étape 2 : première conversation ouverte](captures/A00-01_claude-02.png)
@@ -71,11 +73,13 @@ Lisez la réponse. Si elle s'affiche, votre compte fonctionne.
 
 ## Étape 5 : ouvrir NotebookLM
 
-1. Ouvrez **notebooklm.google.com** dans votre navigateur.
+1. Ouvrez **notebooklm.google.com** dans votre navigateur. La page d'accueil peut s'afficher sous le nom **Gemini Notebook** : touchez **Essayer Gemini Notebook**.
 2. Connectez-vous avec votre compte Google.
 3. Vous ne créez rien aujourd'hui : vous vérifiez seulement que la page s'ouvre.
 
-Google présente aussi cet outil sous le nom « Gemini Notebook ». Il s'agit du même service. Si Google vous demande de vérifier votre âge, faites-le dans votre compte Google.
+![Étape 5 : page d'accueil de Gemini Notebook (NotebookLM)](captures/A00-01_notebook-01.png)
+
+Google présente désormais cet outil sous le nom « Gemini Notebook ». Dans ce parcours, nous disons encore souvent « NotebookLM » : il s'agit du même service. Si Google vous demande de vérifier votre âge, faites-le dans votre compte Google.
 
 ## Étape 6 : ouvrir votre portfolio dans Google Drive
 
