@@ -20,7 +20,8 @@ def main():
     run("build_index.py")
     cible = code or "toutes les séances"
     run("build_pdf.py", *([code] if code else []))
-    hook("drive", f"copie des PDF et sources NotebookLM vers Google Drive pour {cible} (connecteur Drive)")
+    run("build_drive.py", "cohorte-1")
+    hook("drive", "chargement de out/drive/cohorte-1 dans Google Drive (manifest.json, connecteur ou dépôt manuel)")
     hook("video", f"tutoriel, vitrine, shorts pour {cible} (ffmpeg + voix, agent 4)")
     hook("app", "l'application academie.okoho.de lit seances/ et out/ (dossier app/)")
     print("build : terminé")

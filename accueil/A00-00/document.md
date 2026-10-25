@@ -85,18 +85,33 @@ Le formateur peut adapter le calendrier au rythme du groupe. Toute modification 
 
 | Lieu | À quoi il sert |
 |---|---|
-| Dossier Google Drive « OKOHO Académie · Parcours Claude Pro » | Programme, guides et fiches de séance en PDF, sources pour NotebookLM |
-| Votre dossier portfolio (Google Drive) | Vos livrables et votre diagnostic d'entrée. Vous seul et le formateur y avez accès |
+| Dossier Google Drive « OKOHO Académie · Parcours Claude Pro » | Tous les documents du parcours, rangés semaine par semaine |
+| Votre portfolio (Google Drive) | Vos livrables et votre diagnostic d'entrée. Vous seul et le formateur y avez accès |
 | Application OKOHO Académie (academie.okoho.de) | Lieu d'apprentissage principal à partir de la semaine 2 : séances, progression, dépôts |
 | WhatsApp, groupe **Annonces** | Informations officielles : heures, documents publiés, changements |
 | WhatsApp, groupe **Cohorte 1** | Questions, entraide, partage de résultats |
 
-Dans le dossier Google Drive :
+Dans le dossier Google Drive, les dossiers sont numérotés dans l'ordre d'utilisation :
 
-- **01_Programme** : ce document.
-- **02_Manuel** : un sous-dossier par partie. Les fiches de séance y sont publiées au plus tard le vendredi avant la séance.
-- **03_NotebookLM** : les sources à importer dans NotebookLM pour réviser.
-- **06_Ressources** : liens et outils utiles.
+- **01 · Programme et calendrier** : ce document, toujours à jour.
+- **02 · Séances semaine par semaine** : un dossier par semaine, par exemple « Semaine 01 · 07.11.2026 · Prise en main de Claude ». Il est publié au plus tard le vendredi avant la séance.
+- **03 · Réviser avec NotebookLM** : les sources à importer dans NotebookLM.
+- **04 · Portfolios** : vous y voyez seulement votre propre portfolio.
+- **05 · Projets en équipe** : les travaux communs de la cohorte.
+- **06 · Ressources et liens utiles** : outils et adresses du parcours.
+
+## Comment reconnaître un document
+
+Chaque document commence par sa semaine et son ordre de lecture :
+
+**S01-1 · Séance en direct · M01-S1 Créer son compte et découvrir l'interface**
+
+- **S01** : semaine 1 du parcours.
+- **-1** : le document à lire en premier cette semaine. Ensuite -2, -3…
+- **Séance en direct** : à préparer pour le samedi. **En autonomie** : à faire pendant la semaine.
+- **M01-S1** : le code de la séance dans le Manuel. Vous le retrouvez dans l'application.
+
+Vos livrables reprennent le même code, suivi de votre prénom : **S01-1_Aicha.png** ou **S01-1_Aicha.pdf**. Ainsi, le formateur sait tout de suite à quelle séance votre travail correspond.
 
 ## Ce que vous apportez
 
@@ -113,5 +128,5 @@ Dans le dossier Google Drive :
 - Une question ? Posez-la dans le groupe **Cohorte 1**. Une autre personne a souvent la même.
 
 ::: livrable
-Lisez ce programme avant la séance de lancement du samedi 31 octobre 2026. Notez dans votre agenda les cinq dates des Démo Days.
+Lisez ce programme avant la séance de lancement du samedi 31 octobre 2026. Notez dans votre agenda les cinq dates des Démo Days. Ouvrez ensuite le dossier « Semaine 00 » et lisez le document **S00-1**.
 :::

@@ -4,7 +4,7 @@ titre: "Diagnostic d'entrée"
 type: document
 public: apprenants
 jalon: J1
-version: "1.0"
+version: "1.1"
 ---
 
 ::: objectifs
@@ -17,7 +17,7 @@ version: "1.0"
 
 Votre formateur adapte le rythme, les exemples et les ateliers à vos réponses. Il n'y a pas de bonne ou de mauvaise réponse : plus vous êtes précis, plus le parcours vous servira. Vos réponses restent confidentielles entre vous et OKOHO Académie.
 
-Durée : 20 minutes. Où : dans le document « Diagnostic d'entrée » de votre portfolio Google Drive.
+Durée : 20 minutes. Où : dans le document **S00-2 · Diagnostic d'entrée** de votre portfolio Google Drive.
 
 ## Partie 1 : votre situation
 
@@ -73,5 +73,5 @@ Répondez aux cinq questions de Claude, puis notez ici :
 Complétez la phrase : « Le 24 avril 2027, je serai capable de … »
 
 ::: livrable
-Le document « Diagnostic d'entrée » rempli dans votre portfolio, avant la fin de la séance de lancement du 31 octobre 2026.
+Le document **S00-2 · Diagnostic d'entrée** rempli dans votre portfolio, avant la fin de la séance de lancement du 31 octobre 2026.
 :::

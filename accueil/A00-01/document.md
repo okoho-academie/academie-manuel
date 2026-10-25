@@ -4,7 +4,7 @@ titre: "Bien démarrer : vos comptes et vos outils"
 type: document
 public: apprenants
 jalon: J1
-version: "1.1"
+version: "1.2"
 captures: "2026-10-25"
 ---
 
@@ -83,10 +83,11 @@ Google présente désormais cet outil sous le nom « Gemini Notebook ». Dans ce
 
 ## Étape 6 : ouvrir votre portfolio dans Google Drive
 
-1. Vous recevez un e-mail d'invitation « OKOHO Académie · Portfolio · [votre prénom] ».
+1. Vous recevez un e-mail d'invitation pour le dossier « Portfolio · [votre prénom et nom] ».
 2. Ouvrez le lien et ajoutez le dossier à votre Drive.
 3. Installez l'application **Google Drive** sur votre téléphone si elle n'y est pas.
-4. Dans votre dossier, ouvrez le document **Diagnostic d'entrée** : vous le remplirez pendant la séance de lancement.
+4. Dans votre portfolio, ouvrez le document **S00-2 · Diagnostic d'entrée** : vous le remplirez pendant la séance de lancement.
+5. Toutes les semaines, vous déposez vos livrables dans ce portfolio.
 
 ## Étape 7 : rejoindre la communauté WhatsApp
 
@@ -111,5 +112,5 @@ Aïcha, couturière à Bonamoussadi, fait l'étape 4 le soir même. Claude lui p
 :::
 
 ::: livrable
-Dans votre dossier portfolio : une capture d'écran de la réponse de Claude à l'étape 4, nommée **A00-01_Prenom.png**. À déposer avant la séance du samedi 7 novembre 2026.
+Dans votre dossier portfolio : une capture d'écran de la réponse de Claude à l'étape 4, nommée **S00-1_Prenom.png** (par exemple S00-1_Aicha.png). À déposer avant la séance du samedi 7 novembre 2026.
 :::
