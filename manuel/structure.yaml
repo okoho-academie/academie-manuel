@@ -1,0 +1,345 @@
+# Structure du Manuel · OKOHO Académie · source : Curriculum 3.0, section 5 et 4a
+manuel:
+  titre: Parcours Claude Pro
+  marque: OKOHO Académie
+  editeur: OKOHO Consulting GmbH
+  version: '3.0'
+echafaudage:
+  regle: I=1, II=2, III=3, IV=2 pour un nouvel outil sinon 3, V=4
+  niveaux:
+    1: Prompts modèles complets, capture par clic
+    2: Prompts à trous
+    3: Checklist et critères seulement
+    4: Brief et critères seulement
+parties:
+- code: I
+  titre: Fondations
+  pole: Socle commun de toutes les fonctions
+  echafaudage: 1
+  modules:
+  - code: M01
+    titre: Prise en main de Claude
+    seances:
+    - code: M01-S1
+      titre: Créer son compte et découvrir l'interface
+      livrable: Compte actif et première conversation documentée
+      outil: Claude Chat
+      appareil: smartphone
+    - code: M01-S2
+      titre: Fichiers, images et application mobile
+      livrable: Analyse d'une photo ou d'un document du quotidien
+      outil: Claude Chat
+      appareil: smartphone
+  - code: M02
+    titre: L'art du prompt
+    seances:
+    - code: M02-S1
+      titre: Les cinq éléments d'une bonne consigne
+      livrable: Cinq tâches du quotidien résolues
+      outil: Claude Chat
+      appareil: smartphone
+    - code: M02-S2
+      titre: Itérer et affiner
+      livrable: Avant-après d'un texte professionnel
+      outil: Claude Chat
+      appareil: smartphone
+    - code: M02-S3
+      titre: Construire sa bibliothèque de prompts
+      livrable: Dix prompts personnels testés
+      outil: Claude Chat
+      appareil: smartphone
+  - code: M03
+    titre: Fiabilité, éthique et données
+    seances:
+    - code: M03-S1
+      titre: 'Vérifier : erreurs, sources, limites'
+      livrable: Vérification d'un message WhatsApp viral
+      outil: Claude Chat + recherche web
+      appareil: smartphone
+    - code: M03-S2
+      titre: Protéger les données, respecter les droits
+      livrable: Charte personnelle d'utilisation
+      outil: Claude Chat
+      appareil: smartphone
+  - code: M04
+    titre: Organiser son travail avec les projets
+    seances:
+    - code: M04-S1
+      titre: Créer un projet Claude
+      livrable: Projet « Mon assistant business »
+      outil: Claude Chat (Projets)
+      appareil: smartphone
+    - code: M04-S2
+      titre: Instructions et connaissances du projet
+      livrable: Projet configuré pour le client pilote
+      outil: Claude Chat (Projets)
+      appareil: smartphone
+- code: II
+  titre: Présence digitale
+  pole: Pôle Web, design et contenu
+  echafaudage: 2
+  modules:
+  - code: M05
+    titre: Sites web
+    seances:
+    - code: M05-S1
+      titre: Une page web en une conversation
+      livrable: Landing page v1 en ligne avec lien
+      outil: Claude Chat (artefact)
+      appareil: smartphone
+    - code: M05-S2
+      titre: Structurer un site de plusieurs pages
+      livrable: Arborescence et textes pour le client pilote
+      outil: Claude Chat
+      appareil: laptop-recommande
+    - code: M05-S3
+      titre: Publier sur son propre domaine
+      livrable: Site v2 en ligne sur son propre domaine
+      outil: Claude Chat + hébergement
+      appareil: laptop-obligatoire
+    - code: M05-S4
+      titre: Formulaire et visibilité sur Google
+      livrable: Formulaire de contact, profil d'entreprise Google, mots-clés
+      outil: Claude Chat
+      appareil: laptop-obligatoire
+  - code: M06
+    titre: Design et identité visuelle
+    seances:
+    - code: M06-S1
+      titre: Flyer et affiche
+      livrable: Flyer prêt à imprimer
+      outil: Claude Design
+      appareil: smartphone
+    - code: M06-S2
+      titre: L'identité visuelle d'un client
+      livrable: Couleurs, typographies, brief logo
+      outil: Claude Design
+      appareil: laptop-recommande
+    - code: M06-S3
+      titre: Présentation et pitch
+      livrable: Pitch deck pour le client pilote
+      outil: Claude (Slides)
+      appareil: laptop-recommande
+  - code: M07
+    titre: Contenu et marketing digital
+    seances:
+    - code: M07-S1
+      titre: Textes pour WhatsApp Business et Facebook
+      livrable: Dix publications et textes de catalogue
+      outil: Claude Chat
+      appareil: smartphone
+    - code: M07-S2
+      titre: Calendrier éditorial d'un mois
+      livrable: Calendrier éditorial sous forme de tableau
+      outil: Claude Chat + Sheets
+      appareil: smartphone
+    - code: M07-S3
+      titre: Campagne et suivi des résultats
+      livrable: Plan de campagne avec indicateurs
+      outil: Claude Chat + Sheets
+      appareil: laptop-recommande
+- code: III
+  titre: Services aux entreprises
+  pole: Pôle Documents, données et conseil
+  echafaudage: 3
+  modules:
+  - code: M08
+    titre: Documents professionnels
+    seances:
+    - code: M08-S1
+      titre: Courriers, CV et rapports
+      livrable: Trois documents professionnels
+      outil: Claude Chat (Docs)
+      appareil: smartphone
+    - code: M08-S2
+      titre: Analyser un contrat ou un appel d'offres
+      livrable: Analyse avec risques et recommandation
+      outil: Claude Chat
+      appareil: smartphone
+    - code: M08-S3
+      titre: Modèles de documents pour un client
+      livrable: Jeu de modèles pour le client pilote
+      outil: Claude Chat (Docs)
+      appareil: laptop-recommande
+  - code: M09
+    titre: Données et tableurs
+    seances:
+    - code: M09-S1
+      titre: Tableau de suivi
+      livrable: Liste clients ou stock
+      outil: Claude (Sheets)
+      appareil: laptop-recommande
+    - code: M09-S2
+      titre: Formules, budget et tableau de bord
+      livrable: Budget avec formules et vue d'ensemble
+      outil: Claude (Sheets, Dashboard)
+      appareil: laptop-obligatoire
+  - code: M10
+    titre: Recherche et analyse
+    seances:
+    - code: M10-S1
+      titre: Recherche multi-sources
+      livrable: Rapport de recherche avec sources
+      outil: Claude Chat + Recherche
+      appareil: smartphone
+    - code: M10-S2
+      titre: Étude de marché locale
+      livrable: Étude de marché des services digitaux dans une ville
+      outil: Claude Chat + Recherche
+      appareil: laptop-recommande
+    - code: M10-S3
+      titre: Note de décision pour un client
+      livrable: Note de décision de deux pages
+      outil: Claude Chat (Docs)
+      appareil: laptop-recommande
+- code: IV
+  titre: Automatisation et développement
+  pole: Pôle Tech
+  echafaudage: 2
+  modules:
+  - code: M11
+    titre: Travail agentique et automatisation
+    seances:
+    - code: M11-S1
+      titre: Confier une tâche en plusieurs étapes
+      livrable: Tâche en plusieurs étapes réalisée avec fichier
+      outil: Claude (fonctions Cowork)
+      appareil: laptop-obligatoire
+    - code: M11-S2
+      titre: Connecter Drive et Gmail
+      livrable: Tâche réalisée via applications connectées
+      outil: Claude (connecteurs)
+      appareil: laptop-obligatoire
+    - code: M11-S3
+      titre: Tâches planifiées
+      livrable: Rapport hebdomadaire automatique
+      outil: Claude (tâches planifiées)
+      appareil: laptop-obligatoire
+  - code: M12
+    titre: 'Skills : standardiser un service'
+    seances:
+    - code: M12-S1
+      titre: Comprendre et utiliser les skills
+      livrable: Utilisation documentée d'un skill
+      outil: Claude (Skills)
+      appareil: laptop-obligatoire
+    - code: M12-S2
+      titre: Créer son propre skill
+      livrable: Skill personnel pour un service
+      outil: Claude (Skills)
+      appareil: laptop-obligatoire
+  - code: M13
+    titre: Applications sans code
+    seances:
+    - code: M13-S1
+      titre: Outils interactifs
+      livrable: Calculateur ou checklist en artefact
+      outil: Claude Chat (artefact)
+      appareil: laptop-recommande
+    - code: M13-S2
+      titre: Mini-application avec mémoire
+      livrable: Mini-application avec sauvegarde
+      outil: Claude Chat (artefact)
+      appareil: laptop-obligatoire
+    echafaudage: 3
+  - code: M14
+    titre: 'Claude Code : fondations'
+    seances:
+    - code: M14-S1
+      titre: Installer et lancer un premier projet
+      livrable: Premier projet fonctionnel
+      outil: Claude Code
+      appareil: laptop-obligatoire
+    - code: M14-S2
+      titre: Versions et sauvegarde avec Git
+      livrable: Projet avec historique de versions
+      outil: Claude Code
+      appareil: laptop-obligatoire
+    - code: M14-S3
+      titre: Déployer un site
+      livrable: Site publié avec Claude Code
+      outil: Claude Code
+      appareil: laptop-obligatoire
+  - code: M15
+    titre: 'Claude Code : applications'
+    seances:
+    - code: M15-S1
+      titre: Base de données
+      livrable: Application avec données enregistrées
+      outil: Claude Code
+      appareil: laptop-obligatoire
+    - code: M15-S2
+      titre: Site dynamique avec espace administrateur
+      livrable: Site v3
+      outil: Claude Code
+      appareil: laptop-obligatoire
+    - code: M15-S3
+      titre: Maintenance et sécurité
+      livrable: Plan de maintenance et contrôle de sécurité
+      outil: Claude Code
+      appareil: laptop-obligatoire
+    echafaudage: 3
+- code: V
+  titre: Entreprise et prestation
+  pole: Pôle Business, socle commun
+  echafaudage: 4
+  modules:
+  - code: M16
+    titre: Concevoir et vendre une offre
+    seances:
+    - code: M16-S1
+      titre: Catalogue de services
+      livrable: Catalogue de services du groupe
+      outil: Claude Chat (Docs)
+      appareil: smartphone
+    - code: M16-S2
+      titre: Fixer ses prix pour le marché camerounais
+      livrable: Grille tarifaire avec calcul
+      outil: Claude Chat + Sheets
+      appareil: laptop-recommande
+    - code: M16-S3
+      titre: Proposition commerciale
+      livrable: Proposition pour un prospect réel
+      outil: Claude Chat (Docs)
+      appareil: laptop-recommande
+  - code: M17
+    titre: Conduire un projet client
+    seances:
+    - code: M17-S1
+      titre: Brief et cahier des charges
+      livrable: Cahier des charges d'un projet client
+      outil: Claude Chat (Docs)
+      appareil: smartphone
+    - code: M17-S2
+      titre: Suivi, livraison et validation
+      livrable: Plan de projet et procès-verbal de réception
+      outil: Claude (Tasks, Docs)
+      appareil: laptop-recommande
+    - code: M17-S3
+      titre: Service après-vente et fidélisation
+      livrable: Offre de suivi après livraison
+      outil: Claude Chat
+      appareil: smartphone
+  - code: M18
+    titre: Projet réel et création d'entreprise
+    seances:
+    - code: M18-S1
+      titre: Acquérir un client
+      livrable: Entretien commercial mené, mission gagnée
+      outil: Tous les outils
+      appareil: laptop-obligatoire
+    - code: M18-S2
+      titre: Réaliser le projet
+      livrable: Projet client réalisé
+      outil: Tous les outils
+      appareil: laptop-obligatoire
+    - code: M18-S3
+      titre: Livrer et présenter
+      livrable: Livraison et démonstration
+      outil: Tous les outils
+      appareil: laptop-obligatoire
+    - code: M18-S4
+      titre: Feuille de route de l'entreprise
+      livrable: Concept de création d'entreprise
+      outil: Claude Chat (Docs)
+      appareil: laptop-obligatoire
