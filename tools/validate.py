@@ -5,6 +5,7 @@ import json, re, sys
 from common import ROOT, read_seance, seance_files, structure, load_yaml
 
 SCHEMA = json.loads((ROOT / "schema" / "seance.schema.json").read_text(encoding="utf-8"))
+SCHEMA_DOC = json.loads((ROOT / "schema" / "document.schema.json").read_text(encoding="utf-8"))
 TYPES = {"string": str, "integer": int, "boolean": bool, "array": list, "object": dict, "null": type(None)}
 
 def check(value, sch, path, errs):
@@ -73,7 +74,20 @@ def main():
         for e in errs: print(f"ERREUR  {rel} : {e}")
         for w in warns: print(f"AVERT.  {rel} : {w}")
         n_err += len(errs); n_warn += len(warns)
-    print(f"validate : {len(files)} séance(s), {n_err} erreur(s), {n_warn} avertissement(s)")
+    docs = sorted((ROOT / "accueil").glob("*/document.md"))
+    for f in docs:
+        rel = f.relative_to(ROOT)
+        errs = []
+        try:
+            meta, body = read_seance(f)
+        except Exception as e:
+            print(f"ERREUR {rel} : {e}"); n_err += 1; continue
+        check(meta, SCHEMA_DOC, "meta", errs)
+        if meta.get("code") and f.parent.name != meta["code"]:
+            errs.append(f"dossier « {f.parent.name} » différent du code « {meta['code']} »")
+        for e in errs: print(f"ERREUR  {rel} : {e}")
+        n_err += len(errs)
+    print(f"validate : {len(files)} séance(s), {len(docs)} document(s) d'accueil, {n_err} erreur(s), {n_warn} avertissement(s)")
     return 1 if n_err else 0
 
 if __name__ == "__main__":

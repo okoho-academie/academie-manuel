@@ -19,7 +19,7 @@ def main():
     run("validate.py")
     run("build_index.py")
     cible = code or "toutes les séances"
-    hook("pdf", f"Fiche, Support, Devoir, Grille pour {cible} (Quarto + gabarits OKOHO, agent 5)")
+    run("build_pdf.py", *([code] if code else []))
     hook("drive", f"copie des PDF et sources NotebookLM vers Google Drive pour {cible} (connecteur Drive)")
     hook("video", f"tutoriel, vitrine, shorts pour {cible} (ffmpeg + voix, agent 4)")
     hook("app", "l'application academie.okoho.de lit seances/ et out/ (dossier app/)")
