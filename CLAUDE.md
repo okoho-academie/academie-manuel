@@ -25,3 +25,10 @@ Gerüststufe `echafaudage` nach Partie: I = 1, II = 2, III = 3, IV = 2 bei neuem
 - Vor jeder Arbeit `git pull`. Nach jeder Änderung `python3 tools/validate.py`.
 - Befehl `/produire-seance <CODE>`: validate → build → Commit auf `seance/<CODE>`.
 - Glossar- und Indexbegriffe stehen im Metadatenkopf; `tools/build_index.py` erzeugt Inhaltsverzeichnis, Glossar und Index. Nie von Hand pflegen.
+
+## Benennung für Lernende (Drive, WhatsApp, Abgaben)
+- Quelle: `parcours/cohorte-<N>.yaml` (Woche, Datum, Lesereihenfolge). Ausgabe: `tools/build_drive.py` → `out/drive/cohorte-<N>/` mit `manifest.json`.
+- Ordner: « Semaine NN · JJ.MM.AAAA · Titre ». Datei: « SNN-Reihenfolge · Type · Code Titre » (Types: Guide, À remplir, Séance en direct, En autonomie).
+- Abgabe der Lernenden: « SNN-Reihenfolge_Prenom.ext ». Kein « : » in Dateinamen (Windows).
+- Drive-Wurzel in Nutzungsreihenfolge: 00 · Formateur (privé), 01 · Programme et calendrier, 02 · Séances semaine par semaine, 03 · Réviser avec NotebookLM, 04 · Portfolios, 05 · Projets en équipe, 06 · Ressources et liens utiles. Einstieg: « 00 · COMMENCEZ ICI » (Quelle `parcours/drive/commencez-ici.md`).
+- Séances selbst bleiben datumsfrei; Woche und Datum stehen nur im Kohortenkalender.

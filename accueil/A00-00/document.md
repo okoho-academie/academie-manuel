@@ -41,7 +41,7 @@ Chaque jalon est validé lors d'un **Démo Day** et confirmé par une **attestat
 
 | Semaine | Samedi | Séance en direct | En autonomie |
 |---|---|---|---|
-| 0 | 31.10.2026 | Séance de lancement, diagnostic d'entrée | Comptes et outils (guide A00-01) |
+| 0 | 31.10.2026 | Séance de lancement, diagnostic d'entrée (S00-2) | Comptes et outils (S00-1) |
 | **Cycle 1** | | **Je maîtrise Claude et je publie** | |
 | 1 | 07.11. | M01-S1 Créer son compte et découvrir l'interface | M01-S2 Fichiers, images et application mobile |
 | 2 | 14.11. | M02-S1 Les cinq éléments d'une bonne consigne | M02-S2 Itérer et affiner |
