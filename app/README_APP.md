@@ -64,3 +64,10 @@ formateur) gère, le responsable d'entreprise lit la progression de son entrepri
 ## Polices
 
 Montserrat et Open Sans sont embarquées (`fonts/`, licence OFL) via `next/font/local`, pour un build sans accès à Google Fonts.
+
+## Dépannage
+
+Page sans styles ou « Application error » après `next start` : le serveur sert une ancienne compilation
+alors que `.next/` a été reconstruit entre-temps (les fichiers CSS et JS changent de nom à chaque build).
+Arrêter le serveur, puis `rm -rf .next && npm run build && npm start`. Ne jamais lancer `npm run build`
+pendant qu'un `next start` tourne sur le même dossier.
