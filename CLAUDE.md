@@ -20,6 +20,12 @@ Gerüststufe `echafaudage` nach Partie: I = 1, II = 2, III = 3, IV = 2 bei neuem
 ## Pflichtkennzeichnung
 « Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi », © <Jahr des Builds, automatisch> OKOHO Consulting GmbH, Markenhinweis (« Claude est une marque d'Anthropic … sans partenariat avec Anthropic »), Version und Datum der Screenshots. Gestaltung nur über `design/tokens.json` (OKOHO Design System 2.2 + Académie-Modus, academie-tint #FFF4E8).
 
+## Design-Pflicht für jede Ausgabe
+- Jedes Dokument entsteht über die Werkzeuge, nie als Rohtext: PDF `tools/build_pdf.py`, Word `tools/build_docx.py` (auch für interne deutsche Dokumente mit `--lang=de`), Drive-Paket `tools/build_drive.py`.
+- Alle drei lesen `design/tokens.json` und `design/logos/`: Logo OKOHO Académie im Kopf, Montserrat für Titel, Open Sans für Text, Encadrés in academie-tint mit orangefarbener Linie, Tabellenkopf blue-deep, Fußzeile mit Kontakt und Seitenzahl, Pflichtkennzeichnung.
+- Für Lernende im Drive: PDF. Word (.docx) nur für Dokumente zum Ausfüllen oder Bearbeiten. Keine unformatierten Google Docs aus Markdown.
+- Folien: Claude Slides mit Design System OKOHO (Académie-Farben).
+
 ## Arbeitsablauf
 - Jede Séance auf eigenem Branch `seance/<CODE>`, Merge nach `main` erst nach Freigabe durch Bertrand.
 - Vor jeder Arbeit `git pull`. Nach jeder Änderung `python3 tools/validate.py`.

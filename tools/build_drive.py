@@ -75,7 +75,7 @@ def main():
     dest.mkdir(parents=True)
     manifest, manquants = [], []
     for s in cal["semaines"]:
-        dossier = folder_name(s)
+        dossier = "02 · Séances semaine par semaine/" + folder_name(s)
         for i, item in enumerate(s.get("items", []), 1):
             meta, info = source_of(item["code"])
             if meta and meta.get("status") == "brouillon":
@@ -84,7 +84,7 @@ def main():
             if not meta or not pdf.is_file():
                 manquants.append(item["code"]); continue
             nomf = file_name(s, i, item, meta)
-            (dest / dossier).mkdir(exist_ok=True)
+            (dest / dossier).mkdir(parents=True, exist_ok=True)
             cible = dest / dossier / f"{nomf}.pdf"
             if shutil.which("qpdf"):
                 subprocess.run(["qpdf", "--recompress-flate", "--compression-level=9",
@@ -95,12 +95,20 @@ def main():
                              "code": item["code"], "version": str(meta.get("version")),
                              "livrable": f"S{s['n']:02d}-{i}_Prenom"})
             print(f"drive : {dossier} / {nomf}.pdf")
-    gd = dest / "_google_docs"
-    gd.mkdir()
+    # Tout document au design Académie : PDF pour les apprenants, Word (.docx) en version modifiable
+    from build_docx import build as build_docx
+    word = dest / "_word"
+    word.mkdir()
     prog = cal.get("programme", {})
-    (gd / f"{prog.get('nom_drive', 'Programme et calendrier')}.md").write_text(
-        gdoc_md(ROOT / "accueil" / prog.get("code", "A00-00") / "document.md", cal, prog.get("nom_drive")), encoding="utf-8")
-    (gd / "00 · COMMENCEZ ICI.md").write_text(gdoc_md(ROOT / "parcours" / "drive" / "commencez-ici.md", cal), encoding="utf-8")
+    nom_prog = prog.get("nom_drive", "Programme et calendrier")
+    (dest / "01 · Programme et calendrier").mkdir()
+    src_prog = OUT / "pdf" / nom / f"OKOHO_PCP_{prog.get('code', 'A00-00')}_Guide_v{source_of(prog.get('code', 'A00-00'))[1][1]}.pdf"
+    shutil.copy(src_prog, dest / "01 · Programme et calendrier" / f"{clean(nom_prog)}.pdf")
+    build_docx(ROOT / "accueil" / prog.get("code", "A00-00") / "document.md", cal, word / f"{clean(nom_prog)}.docx")
+    build_docx(ROOT / "accueil" / "A00-02" / "document.md", cal, word / "S00-2 · Diagnostic d'entrée · Prénom Nom.docx")
+    ci = build_docx(ROOT / "parcours" / "drive" / "commencez-ici.md", cal, word / "00 · COMMENCEZ ICI.docx", label="BIENVENUE")
+    subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", str(dest), str(ci)],
+                   check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     (dest / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
     print(f"build_drive : {len(manifest)} fichier(s) prêts dans out/drive/{nom}, {len(manquants)} séance(s) pas encore validée(s)")
     return 0
