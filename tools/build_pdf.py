@@ -167,10 +167,12 @@ def fil_svg(jalon, width=150):
 
 def css():
     fonts = ""
-    for fam, f in (("Montserrat", "Montserrat-Variable.ttf"), ("Open Sans", "OpenSans-Variable.ttf")):
-        p = FONTS / f
-        if p.is_file():
-            fonts += f'@font-face{{font-family:"{fam}";src:url("{p.as_uri()}");font-weight:100 900;}}\n'
+    # Polices statiques : PDF nettement plus légers que les polices variables (Type 3).
+    for fam, base in (("Montserrat", "Montserrat"), ("Open Sans", "OpenSans")):
+        for w, style in ((400, "Regular"), (600, "SemiBold"), (700, "Bold")):
+            p = FONTS / f"{base}-{style}.ttf"
+            if p.is_file():
+                fonts += f'@font-face{{font-family:"{fam}";src:url("{p.as_uri()}");font-weight:{w};}}\n'
     tokens = (DESIGN / "tokens.css").read_text(encoding="utf-8")
     return tokens + fonts + r"""
 @page{size:A4;margin:30mm 20mm 20mm 25mm;}
