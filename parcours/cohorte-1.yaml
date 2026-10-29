@@ -24,7 +24,7 @@ pauses:
   - {apres: 7, dates: ["2026-12-26", "2027-01-02"], note: "Pas de séance. Révision avec NotebookLM"}
   - {apres: 18, dates: ["2027-03-27"], note: "Pas de séance"}
 semaines:
-  - {n: 0, date: "2026-10-31", titre: "Séance de lancement", items: [{type: Guide, code: A00-01}, {type: À remplir, code: A00-02}]}
+  - {n: 0, date: "2026-10-31", titre: "Séance de lancement", items: [{type: Guide, code: A00-01}, {type: À remplir, code: A00-02}, {type: Guide, code: A00-03}]}
   - {n: 1, date: "2026-11-07", titre: "Prise en main de Claude", cycle: 1, items: [{type: Séance en direct, code: M01-S1}, {type: En autonomie, code: M01-S2}]}
   - {n: 2, date: "2026-11-14", titre: "L'art du prompt", cycle: 1, items: [{type: Séance en direct, code: M02-S1}, {type: En autonomie, code: M02-S2}]}
   - {n: 3, date: "2026-11-21", titre: "Première page web", cycle: 1, items: [{type: Séance en direct, code: M05-S1}, {type: En autonomie, code: M03-S1}]}

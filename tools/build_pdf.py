@@ -245,6 +245,7 @@ def build_one(kind, path, struct, cal=None, out_dir=None):
     code, titre = meta["code"], meta["titre"]
     version = str(meta.get("version", "0.1"))
     captures = meta.get("captures") or "—"
+    verifie = f" · Fonctions et prix de Claude vérifiés le {meta['verifie']}" if meta.get("verifie") else ""
     if kind == "seance":
         ref = struct.get(code, {})
         label = f"PARTIE {meta.get('partie','')} · {ref.get('partie_titre','')} · MODULE {meta.get('module','')} · {ref.get('module_titre','')}"
@@ -271,7 +272,7 @@ def build_one(kind, path, struct, cal=None, out_dir=None):
 <div class="mention">Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi</div></header>"""
     fin = f"""<div class="fin">Claude est une marque d'Anthropic. Le Parcours Claude Pro est une formation indépendante proposée par
 OKOHO Consulting GmbH, sans partenariat avec Anthropic. Reproduction et diffusion interdites sans autorisation écrite
-d'OKOHO Consulting GmbH.<br>Version {html.escape(version)} · Captures d'écran réalisées le {html.escape(str(captures))} · © {date.today().year} OKOHO Consulting GmbH</div>"""
+d'OKOHO Consulting GmbH.<br>Version {html.escape(version)} · Captures d'écran réalisées le {html.escape(str(captures))}{html.escape(verifie)} · © {date.today().year} OKOHO Consulting GmbH</div>"""
     doc = f"""<!doctype html><html lang="fr"><head><meta charset="utf-8"><title>{html.escape(code)} · {html.escape(titre)}</title>
 <style>{css()}</style></head><body>{cover}{content}{fin}</body></html>"""
     dest = out_dir or PDF_DIR

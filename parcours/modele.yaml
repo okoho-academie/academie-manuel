@@ -7,6 +7,8 @@ semaines:
     code: A00-01
   - type: À remplir
     code: A00-02
+  - type: Guide
+    code: A00-03
 - n: 1
   titre: Prise en main de Claude
   cycle: 1

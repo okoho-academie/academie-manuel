@@ -216,7 +216,8 @@ def prepare_md(src, cal, label_default, lang="fr"):
       fin = (f"Claude est une marque d'Anthropic. Le Parcours Claude Pro est une formation indépendante proposée par OKOHO "
            f"Consulting GmbH, sans partenariat avec Anthropic. Reproduction et diffusion interdites sans autorisation écrite "
            f"d'OKOHO Consulting GmbH." + (f" Version {version}." if version else "") +
-           (f" Captures d'écran réalisées le {capt}." if capt else "") + f" © {date.today().year} OKOHO Consulting GmbH")
+           (f" Captures d'écran réalisées le {capt}." if capt else "") +
+           (f" Fonctions et prix de Claude vérifiés le {meta['verifie']}." if meta.get("verifie") else "") + f" © {date.today().year} OKOHO Consulting GmbH")
     head = f'::: {{custom-style="Subtitle"}}\n{label}\n:::\n\n::: {{custom-style="Title"}}\n{titre}\n:::\n\n*{fr}*\n\n'
     tail = f'\n\n::: {{custom-style="Mentions"}}\n{fin}\n:::\n'
     return head + body + tail, entete, titre
