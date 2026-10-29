@@ -4,7 +4,7 @@ titre: "Bien démarrer : vos comptes et vos outils"
 type: document
 public: apprenants
 jalon: J1
-version: "2.1"
+version: "2.2"
 captures: "2026-10-25"
 ---
 
@@ -83,7 +83,7 @@ Google présente désormais cet outil sous le nom « Gemini Notebook ». Dans ce
 
 ## Étape 6 : recevoir votre portfolio dans Google Drive
 
-1. Pendant la séance de lancement, une fois dans le groupe WhatsApp (étape 7), envoyez au formateur en message privé : votre prénom, votre nom et votre adresse Gmail.
+1. Pendant la séance de lancement, vous remplissez le formulaire **S00-2 · Diagnostic d'entrée**. Vous y indiquez votre adresse Gmail.
 2. Après la séance, vous recevez par e-mail une invitation au dossier « Portfolio · [votre prénom et nom] ». Vous seul et le formateur le voyez.
 3. Ouvrez le lien et ajoutez le dossier à votre Drive.
 4. Installez l'application **Google Drive** sur votre téléphone si elle n'y est pas.
@@ -94,6 +94,10 @@ Google présente désormais cet outil sous le nom « Gemini Notebook ». Dans ce
 1. Ouvrez le lien d'invitation envoyé par votre formateur.
 2. Rejoignez deux groupes : **Annonces** pour les informations officielles, **{{groupe}}** pour vos questions et l'entraide.
 3. Écrivez un message court : votre prénom, votre ville et votre objectif en une phrase.
+
+## Quiz : vérifiez vos réflexes
+
+Ouvrez le formulaire **S00-1 · Quiz · Bien démarrer** : son lien est dans le groupe **Annonces** et dans le dossier de la semaine 0. Cinq questions, votre score s'affiche à la fin, avec l'explication de chaque réponse. Vous pouvez le refaire autant de fois que vous voulez.
 
 ::: coup-de-pouce
 - Vous ne recevez pas le code par SMS ? Attendez deux minutes, vérifiez le numéro, puis demandez un nouvel envoi.

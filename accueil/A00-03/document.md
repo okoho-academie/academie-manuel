@@ -4,7 +4,7 @@ titre: "La carte de Claude : quel outil, pour quoi, gratuit ou payant"
 type: document
 public: apprenants
 jalon: J1
-version: "1.0"
+version: "1.1"
 verifie: "2026-10-30"
 ---
 
@@ -78,6 +78,28 @@ Ces instructions valent pour toutes vos conversations.
 ### Réglage 3 : la confidentialité
 
 Ouvrez **Paramètres**, puis **Confidentialité**. Le réglage **« Aider à améliorer Claude »** permet à Anthropic d'utiliser vos conversations pour entraîner ses modèles. Lisez le texte et décidez vous-même. Vous pouvez changer ce choix à tout moment.
+
+## Quiz : choisissez le bon outil
+
+Ouvrez le formulaire **S00-3 · Quiz · La carte de Claude** : son lien est dans le groupe **Annonces** et dans le dossier de la semaine 0. Huit questions, votre score s'affiche à la fin, avec l'explication de chaque réponse.
+
+## Réviser avec NotebookLM
+
+NotebookLM crée pour vous un quiz, des fiches de révision ou un résumé audio, à partir de vos documents.
+
+1. Ouvrez **notebooklm.google.com** et connectez-vous avec votre compte Google.
+2. Créez un nouveau notebook. Nommez-le **Parcours Claude Pro · Semaine 0**.
+3. Ajoutez comme sources les documents **S00-1** et **S00-3** depuis Google Drive.
+4. Dans les réglages du notebook, choisissez le **français** comme langue de sortie.
+5. Dans le panneau Studio, choisissez **Quiz**, ouvrez la personnalisation et collez cette consigne :
+
+::: prompt
+Crée un quiz de 8 questions en français sur la carte des outils de Claude. Au moins la moitié des questions sont des situations pratiques : « Un client vous demande… quel outil choisissez-vous ? ». Vérifie : l'outil adapté, l'appareil nécessaire, gratuit ou payant, et les trois réglages du compte. Explique chaque bonne réponse avec des phrases simples.
+:::
+
+6. Faites le quiz. Recommencez jusqu'à 8 bonnes réponses sur 8.
+
+Ce que dit NotebookLM se vérifie aussi : en cas de doute, la référence reste ce document.
 
 ## Mission : choisir le bon outil
 

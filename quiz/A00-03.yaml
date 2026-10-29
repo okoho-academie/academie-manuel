@@ -1,0 +1,37 @@
+# Quiz S00-3 · La carte de Claude · source unique (Google Forms, app, NotebookLM)
+code: A00-03
+titre: "Quiz · La carte de Claude"
+description: "8 questions. Votre score s'affiche à la fin, avec l'explication de chaque réponse."
+questions:
+  - q: "Vous voulez écrire un message WhatsApp pour annoncer une promotion. Quel outil choisissez-vous ?"
+    choix: ["La discussion avec Claude", "Claude Code", "Cowork"]
+    bonne: 0
+    explication: "Un texte court se rédige dans la discussion, gratuitement, sur téléphone ou ordinateur."
+  - q: "Une cliente veut une affiche pour sa boutique. Quel outil est fait pour cela ?"
+    choix: ["Les projets", "Claude Design", "La recherche web"]
+    bonne: 1
+    explication: "Claude Design sert aux visuels : affiche, flyer, maquette d'écran. Il est inclus dans le compte gratuit, avec les limites d'usage."
+  - q: "Vous travaillez toute l'année pour le même client. Où rangez-vous ses conversations et documents ?"
+    choix: ["Dans un projet", "Dans un nouveau compte Claude", "Dans Claude Code"]
+    bonne: 0
+    explication: "Un projet regroupe conversations, documents et consignes d'un même client. Le compte gratuit permet jusqu'à 5 projets."
+  - q: "Un client vous demande de trier et renommer 200 photos sur son ordinateur. De quoi avez-vous besoin ?"
+    choix: ["De l'application téléphone, gratuite", "De Cowork dans l'application ordinateur, avec un abonnement payant", "De la recherche web"]
+    bonne: 1
+    explication: "Cowork travaille sur les fichiers de l'ordinateur, en plusieurs étapes. Il demande l'application Windows ou Mac et un abonnement Pro ou supérieur."
+  - q: "Un restaurant veut un site avec réservation en ligne. Quel outil vous permet de le construire avec du code ?"
+    choix: ["Claude Code, sur ordinateur, payant", "Claude Design, sur téléphone", "La discussion, sur téléphone"]
+    bonne: 0
+    explication: "Claude Code construit et publie des sites et applications. Il demande un ordinateur et un abonnement Pro ou supérieur."
+  - q: "Vous avez installé Claude sur votre téléphone. Pour l'ordinateur, que faites-vous ?"
+    choix: ["Je crée un deuxième compte", "Je me connecte avec le même compte", "J'utilise le compte d'un ami"]
+    bonne: 1
+    explication: "Un seul compte, personnel, sur tous vos appareils. Vos conversations vous suivent."
+  - q: "Où changez-vous la langue de l'interface sur ordinateur ?"
+    choix: ["Profil en bas à gauche, puis Langue", "Dans chaque conversation", "Ce n'est pas possible"]
+    bonne: 0
+    explication: "Profil en bas à gauche, section Langue. Claude répond de toute façon dans la langue de votre message."
+  - q: "Que pouvez-vous faire avec le compte gratuit dès aujourd'hui ?"
+    choix: ["Seulement poser des questions", "Discuter, chercher sur le web, créer des pages et documents, utiliser Claude Design et jusqu'à 5 projets", "Tout, sans aucune limite"]
+    bonne: 1
+    explication: "Le compte gratuit couvre tout le cycle 1. Il a des limites d'usage. Cowork et Claude Code demandent un abonnement."

@@ -4,7 +4,7 @@ titre: "Diagnostic d'entrée"
 type: document
 public: apprenants
 jalon: J1
-version: "2.1"
+version: "2.2"
 ---
 
 ::: objectifs
@@ -17,7 +17,7 @@ version: "2.1"
 
 Votre formateur adapte le rythme, les exemples et les ateliers à vos réponses. Il n'y a pas de bonne ou de mauvaise réponse : plus vous êtes précis, plus le parcours vous servira. Vos réponses restent confidentielles entre vous et OKOHO Académie.
 
-Durée : 20 minutes. Pendant la séance de lancement, notez vos réponses dans l'application **Notes** de votre téléphone. Dès que vous recevez votre portfolio, copiez-les dans le document **S00-2 · Diagnostic d'entrée** qui s'y trouve.
+Durée : 20 minutes. Répondez dans le **formulaire en ligne S00-2 · Diagnostic d'entrée** : son lien est dans le groupe WhatsApp **Annonces** et dans le dossier de la semaine 0. Ce document vous permet de lire les questions à l'avance.
 
 ## Partie 1 : votre situation
 
@@ -73,5 +73,5 @@ Répondez aux cinq questions de Claude, puis notez ici :
 Complétez la phrase : « À la fin du parcours, je serai capable de … »
 
 ::: livrable
-Le document **S00-2 · Diagnostic d'entrée** rempli dans votre portfolio, avant {{date:S01}}.
+Le formulaire **S00-2 · Diagnostic d'entrée** envoyé, si possible pendant la séance de lancement, au plus tard avant {{date:S01}}. Votre adresse Gmail sert à créer votre portfolio.
 :::

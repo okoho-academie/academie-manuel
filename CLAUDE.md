@@ -25,6 +25,7 @@ Gerüststufe `echafaudage` nach Partie: I = 1, II = 2, III = 3, IV = 2 bei neuem
 - Alle drei lesen `design/tokens.json` und `design/logos/`: Logo OKOHO Académie im Kopf, Montserrat für Titel, Open Sans für Text, Encadrés in academie-tint mit orangefarbener Linie, Tabellenkopf blue-deep, Fußzeile mit Kontakt und Seitenzahl, Pflichtkennzeichnung.
 - Für Lernende im Drive: PDF. Word (.docx) nur für Dokumente zum Ausfüllen oder Bearbeiten. Keine unformatierten Google Docs aus Markdown.
 - Folien: Claude Slides mit Design System OKOHO (Académie-Farben).
+- Quiz und Formulare: Quelle `quiz/<CODE>.yaml` (Quiz) bzw. `quiz/<CODE>-formulaire.yaml`; `tools/build_forms.py <Drive-Ordner-ID> SNN` erzeugt ein Google-Apps-Script (Logo, Autokorrektur, Erklärungen), das der Formateur einmal ausführt. Jede Séance erhält ein Quiz und eine NotebookLM-Konsigne (Dokument 05).
 
 ## Arbeitsablauf
 - Jede Séance auf eigenem Branch `seance/<CODE>`, Merge nach `main` erst nach Freigabe durch Bertrand.
