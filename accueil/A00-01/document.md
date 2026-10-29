@@ -4,14 +4,14 @@ titre: "Bien démarrer : vos comptes et vos outils"
 type: document
 public: apprenants
 jalon: J1
-version: "2.0"
+version: "2.1"
 captures: "2026-10-25"
 ---
 
 ::: objectifs
 - Vous créez votre compte Claude et installez l'application sur votre téléphone.
 - Vous créez ou vérifiez votre compte Google pour Google Drive et NotebookLM.
-- Vous ouvrez votre dossier personnel (portfolio) et rejoignez le groupe WhatsApp du parcours.
+- Vous rejoignez le groupe WhatsApp du parcours et demandez votre dossier personnel (portfolio).
 :::
 
 ## Pourquoi c'est utile
@@ -81,12 +81,12 @@ Lisez la réponse. Si elle s'affiche, votre compte fonctionne.
 
 Google présente désormais cet outil sous le nom « Gemini Notebook ». Dans ce parcours, nous disons encore souvent « NotebookLM » : il s'agit du même service. Si Google vous demande de vérifier votre âge, faites-le dans votre compte Google.
 
-## Étape 6 : ouvrir votre portfolio dans Google Drive
+## Étape 6 : recevoir votre portfolio dans Google Drive
 
-1. Vous recevez un e-mail d'invitation pour le dossier « Portfolio · [votre prénom et nom] ».
-2. Ouvrez le lien et ajoutez le dossier à votre Drive.
-3. Installez l'application **Google Drive** sur votre téléphone si elle n'y est pas.
-4. Dans votre portfolio, ouvrez le document **S00-2 · Diagnostic d'entrée** : vous le remplirez pendant la séance de lancement.
+1. Pendant la séance de lancement, une fois dans le groupe WhatsApp (étape 7), envoyez au formateur en message privé : votre prénom, votre nom et votre adresse Gmail.
+2. Après la séance, vous recevez par e-mail une invitation au dossier « Portfolio · [votre prénom et nom] ». Vous seul et le formateur le voyez.
+3. Ouvrez le lien et ajoutez le dossier à votre Drive.
+4. Installez l'application **Google Drive** sur votre téléphone si elle n'y est pas.
 5. Toutes les semaines, vous déposez vos livrables dans ce portfolio.
 
 ## Étape 7 : rejoindre la communauté WhatsApp
