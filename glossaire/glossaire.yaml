@@ -1,0 +1,99 @@
+# Glossaire · OKOHO Académie · une entrée par terme, définition en français simple
+# seances : codes de séance, ou « Parcours » / « Toutes »
+termes:
+- terme: Artefact
+  definition: Page, application ou document créé par Claude dans une conversation, que l'on peut ouvrir, modifier et partager par un lien.
+  seances:
+  - M05-S1
+- terme: Cahier des charges
+  definition: 'Document qui décrit précisément ce que le client attend : objectifs, contenus, délais, budget.'
+  seances:
+  - M17-S1
+- terme: Client pilote
+  definition: Personne ou entreprise de votre entourage pour laquelle vous réalisez vos exercices sur un cas réel.
+  seances:
+  - Parcours
+- terme: Compétence (skill)
+  definition: Méthode de travail enregistrée que Claude réutilise pour réaliser une tâche toujours de la même façon.
+  seances:
+  - M12-S1
+- terme: Connecteur
+  definition: Lien entre Claude et une autre application (Google Drive, Gmail…) qui permet à Claude d'y lire ou d'y créer des contenus.
+  seances:
+  - M11-S2
+- terme: Consigne (prompt)
+  definition: Instruction écrite que vous donnez à Claude.
+  seances:
+  - M02-S1
+- terme: Contexte
+  definition: Informations de départ que vous donnez à Claude pour qu'il comprenne votre situation.
+  seances:
+  - M02-S1
+- terme: Conversation
+  definition: Échange avec Claude, du premier message à la dernière réponse.
+  seances:
+  - M01-S1
+- terme: Déployer
+  definition: Mettre un site ou une application en ligne pour qu'il soit accessible sur Internet.
+  seances:
+  - M14-S3
+- terme: Domaine
+  definition: Adresse d'un site web, par exemple monentreprise.cm.
+  seances:
+  - M05-S3
+- terme: Hallucination
+  definition: Réponse fausse donnée par l'IA avec assurance. Elle doit toujours être vérifiée.
+  seances:
+  - M03-S1
+- terme: Hébergement
+  definition: Service qui garde les fichiers d'un site sur un serveur pour qu'il reste en ligne.
+  seances:
+  - M05-S3
+- terme: Itération
+  definition: Améliorer une réponse étape par étape en donnant de nouvelles consignes.
+  seances:
+  - M02-S2
+- terme: Jalon
+  definition: Étape importante du parcours, validée par un livrable et une attestation OKOHO Académie.
+  seances:
+  - Parcours
+- terme: Landing page
+  definition: Page web unique qui présente une offre et invite le visiteur à agir (appeler, écrire, acheter).
+  seances:
+  - M05-S1
+- terme: Livrable
+  definition: Résultat concret remis à la fin d'une séance ou d'un projet.
+  seances:
+  - Toutes
+- terme: Modèle
+  definition: Version de Claude choisie pour une tâche ; certains sont plus rapides, d'autres plus puissants.
+  seances:
+  - M01-S1
+- terme: NotebookLM
+  definition: Outil de Google qui transforme des documents en résumés audio, vidéos, quiz et autres supports d'apprentissage.
+  seances:
+  - Toutes
+- terme: Projet (Claude)
+  definition: Espace de travail qui garde des instructions et des documents pour toutes les conversations d'un même sujet.
+  seances:
+  - M04-S1
+- terme: Proposition commerciale
+  definition: Document qui présente au client la solution, le prix et les conditions.
+  seances:
+  - M16-S3
+- terme: Tâche planifiée
+  definition: Travail que Claude exécute automatiquement à une heure ou une fréquence définie.
+  seances:
+  - M11-S3
+- terme: Terminal
+  definition: Fenêtre de l'ordinateur où l'on écrit des commandes ; utilisé avec Claude Code.
+  seances:
+  - M14-S1
+- terme: Travail agentique
+  definition: 'Claude réalise seul une tâche en plusieurs étapes : chercher, créer des fichiers, utiliser des applications.'
+  seances:
+  - M11-S1
+- terme: Version (Git)
+  definition: Sauvegarde datée de l'état d'un projet, qui permet de revenir en arrière.
+  seances:
+  - M14-S2

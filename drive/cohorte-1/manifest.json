@@ -1,0 +1,30 @@
+{
+  "cohorte": "cohorte-1",
+  "racine": "OKOHO Académie · Parcours Claude Pro",
+  "fichiers": [
+    {
+      "chemin": "Cohorte 1 · Espace participants/00 · COMMENCEZ ICI.pdf",
+      "sha": "5fbcd1a9f81c1302"
+    },
+    {
+      "chemin": "Cohorte 1 · Espace participants/01 · Programme et calendrier/Programme et calendrier · Cohorte 1.pdf",
+      "sha": "f3e73ba442b15f44"
+    },
+    {
+      "chemin": "Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 00 · 31.10.2026 · Séance de lancement/S00-1 · Guide · Bien démarrer, vos comptes et vos outils.pdf",
+      "sha": "80c52832f0797956"
+    },
+    {
+      "chemin": "Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 00 · 31.10.2026 · Séance de lancement/S00-2 · À remplir · Diagnostic d'entrée.pdf",
+      "sha": "5ab1ad7dc8a3e475"
+    },
+    {
+      "chemin": "Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 00 · 31.10.2026 · Séance de lancement/S00-3 · Guide · La carte de Claude, quel outil, pour quoi, gratuit ou payant.pdf",
+      "sha": "f22c359b1e04d306"
+    },
+    {
+      "chemin": "Formateur (privé)/Dramaturgies/Dramaturgie · Séance de lancement.pdf",
+      "sha": "a3d5e21e91826fd3"
+    }
+  ]
+}

@@ -1,0 +1,178 @@
+# Déroulé type du Parcours Claude Pro, sans dates. Base de chaque cohorte et du parcours en autonomie.
+semaines:
+- n: 0
+  titre: Séance de lancement
+  items:
+  - type: Guide
+    code: A00-01
+  - type: À remplir
+    code: A00-02
+  - type: Guide
+    code: A00-03
+- n: 1
+  titre: Prise en main de Claude
+  cycle: 1
+  items:
+  - type: Séance en direct
+    code: M01-S1
+  - type: En autonomie
+    code: M01-S2
+- n: 2
+  titre: L'art du prompt
+  cycle: 1
+  items:
+  - type: Séance en direct
+    code: M02-S1
+  - type: En autonomie
+    code: M02-S2
+- n: 3
+  titre: Première page web
+  cycle: 1
+  items:
+  - type: Séance en direct
+    code: M05-S1
+  - type: En autonomie
+    code: M03-S1
+- n: 4
+  titre: Démo Day J1
+  cycle: 1
+  jalon: J1
+  items:
+  - type: En autonomie
+    code: M02-S3
+  - type: En autonomie
+    code: M03-S2
+- n: 5
+  titre: Les projets Claude
+  cycle: 2
+  items:
+  - type: Séance en direct
+    code: M04-S1
+  - type: En autonomie
+    code: M04-S2
+- n: 6
+  titre: Flyer et site de plusieurs pages
+  cycle: 2
+  items:
+  - type: Séance en direct
+    code: M06-S1
+  - type: En autonomie
+    code: M05-S2
+  - type: En autonomie
+    code: M08-S1
+- n: 7
+  titre: Publier sur son domaine
+  cycle: 2
+  items:
+  - type: Séance en direct
+    code: M05-S3
+  - type: En autonomie
+    code: M07-S1
+- n: 8
+  titre: Démo Day J2
+  cycle: 2
+  jalon: J2
+  items:
+  - type: En autonomie
+    code: M05-S4
+- n: 9
+  titre: Recherche et marché
+  cycle: 3
+  items:
+  - type: Séance en direct
+    code: M10-S1
+  - type: En autonomie
+    code: M10-S2
+- n: 10
+  titre: Catalogue de services et choix du profil
+  cycle: 3
+  note: Séance de votre profil
+  items:
+  - type: Séance en direct
+    code: M16-S1
+- n: 11
+  titre: Clinique par profil
+  cycle: 3
+  note: Séance de votre profil
+  items: []
+- n: 12
+  titre: Démo Day J3
+  cycle: 3
+  jalon: J3
+  items:
+  - type: En autonomie
+    code: M16-S2
+- n: 13
+  titre: Tâches en plusieurs étapes
+  cycle: 4
+  items:
+  - type: Séance en direct
+    code: M11-S1
+  - type: En autonomie
+    code: M12-S1
+- n: 14
+  titre: Créer son skill
+  cycle: 4
+  note: Séance de votre profil
+  items:
+  - type: Séance en direct
+    code: M12-S2
+- n: 15
+  titre: Clinique
+  cycle: 4
+  note: Séance de votre profil
+  items: []
+- n: 16
+  titre: Jeu de rôle client
+  cycle: 4
+  note: Séance de votre profil
+  items: []
+- n: 17
+  titre: Démo Day J4
+  cycle: 4
+  jalon: J4
+  items:
+  - type: En autonomie
+    code: M17-S1
+- n: 18
+  titre: Proposition commerciale
+  cycle: 5
+  items:
+  - type: Séance en direct
+    code: M16-S3
+  - type: En autonomie
+    code: M17-S2
+- n: 19
+  titre: Acquérir un client
+  cycle: 5
+  items:
+  - type: Séance en direct
+    code: M18-S1
+  - type: En autonomie
+    code: M17-S3
+- n: 20
+  titre: Clinique projet client
+  cycle: 5
+  items:
+  - type: En autonomie
+    code: M18-S2
+- n: 21
+  titre: Clinique projet client
+  cycle: 5
+  note: Réaliser le projet (suite)
+  items: []
+- n: 22
+  titre: Démo Day J5
+  cycle: 5
+  jalon: J5
+  items:
+  - type: Séance en direct
+    code: M18-S3
+  - type: En autonomie
+    code: M18-S4
+cycles:
+  1: Je maîtrise Claude et je publie
+  2: Je produis pour mon client pilote
+  3: Je me spécialise
+  4: J'automatise et je construis
+  5: Nous livrons

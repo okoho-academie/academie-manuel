@@ -1,0 +1,49 @@
+# Calendrier de la cohorte 1 · OKOHO Académie
+# SEUL endroit où figurent des dates. Documents et séances restent sans date ni nom de cohorte :
+# ils utilisent des variables, remplacées au build (tools/common.py, resolve) :
+#   {{cohorte}} {{groupe}} {{jour}} {{nb_semaines}} {{debut}} {{fin}} {{date:SNN}} {{calendrier}} {{jalons}}
+# Sans cohorte (parcours en autonomie), chaque variable prend un texte neutre.
+# Nouvelle cohorte : copier ce fichier en cohorte-N.yaml, changer dates et noms, lancer tools/build.py.
+#
+# Nommage Drive : dossier "Semaine NN · JJ.MM.AAAA · Thème", fichier "SNN-ordre · Type · Code Titre",
+# livrable "SNN-ordre_Prenom.ext". Types : Guide, À remplir, Séance en direct, En autonomie.
+cohorte: 1
+nom: "Cohorte 1"
+groupe: "Cohorte 1"          # nom du groupe WhatsApp d'entraide
+jour: samedi                 # jour des séances en direct
+programme:
+  code: A00-00
+  nom_drive: "Programme et calendrier · Cohorte 1"
+cycles:
+  1: "Je maîtrise Claude et je publie"
+  2: "Je produis pour mon client pilote"
+  3: "Je me spécialise"
+  4: "J'automatise et je construis"
+  5: "Nous livrons"
+pauses:
+  - {apres: 7, dates: ["2026-12-26", "2027-01-02"], note: "Pas de séance. Révision avec NotebookLM"}
+  - {apres: 18, dates: ["2027-03-27"], note: "Pas de séance"}
+semaines:
+  - {n: 0, date: "2026-10-31", titre: "Séance de lancement", items: [{type: Guide, code: A00-01}, {type: À remplir, code: A00-02}, {type: Guide, code: A00-03}]}
+  - {n: 1, date: "2026-11-07", titre: "Prise en main de Claude", cycle: 1, items: [{type: Séance en direct, code: M01-S1}, {type: En autonomie, code: M01-S2}]}
+  - {n: 2, date: "2026-11-14", titre: "L'art du prompt", cycle: 1, items: [{type: Séance en direct, code: M02-S1}, {type: En autonomie, code: M02-S2}]}
+  - {n: 3, date: "2026-11-21", titre: "Première page web", cycle: 1, items: [{type: Séance en direct, code: M05-S1}, {type: En autonomie, code: M03-S1}]}
+  - {n: 4, date: "2026-11-28", titre: "Démo Day J1", cycle: 1, jalon: J1, items: [{type: En autonomie, code: M02-S3}, {type: En autonomie, code: M03-S2}]}
+  - {n: 5, date: "2026-12-05", titre: "Les projets Claude", cycle: 2, items: [{type: Séance en direct, code: M04-S1}, {type: En autonomie, code: M04-S2}]}
+  - {n: 6, date: "2026-12-12", titre: "Flyer et site de plusieurs pages", cycle: 2, items: [{type: Séance en direct, code: M06-S1}, {type: En autonomie, code: M05-S2}, {type: En autonomie, code: M08-S1}]}
+  - {n: 7, date: "2026-12-19", titre: "Publier sur son domaine", cycle: 2, items: [{type: Séance en direct, code: M05-S3}, {type: En autonomie, code: M07-S1}]}
+  - {n: 8, date: "2027-01-09", titre: "Démo Day J2", cycle: 2, jalon: J2, items: [{type: En autonomie, code: M05-S4}]}
+  - {n: 9, date: "2027-01-16", titre: "Recherche et marché", cycle: 3, items: [{type: Séance en direct, code: M10-S1}, {type: En autonomie, code: M10-S2}]}
+  - {n: 10, date: "2027-01-23", titre: "Catalogue de services et choix du profil", cycle: 3, note: "Séance de votre profil", items: [{type: Séance en direct, code: M16-S1}]}
+  - {n: 11, date: "2027-01-30", titre: "Clinique par profil", cycle: 3, note: "Séance de votre profil", items: []}
+  - {n: 12, date: "2027-02-06", titre: "Démo Day J3", cycle: 3, jalon: J3, items: [{type: En autonomie, code: M16-S2}]}
+  - {n: 13, date: "2027-02-13", titre: "Tâches en plusieurs étapes", cycle: 4, items: [{type: Séance en direct, code: M11-S1}, {type: En autonomie, code: M12-S1}]}
+  - {n: 14, date: "2027-02-20", titre: "Créer son skill", cycle: 4, note: "Séance de votre profil", items: [{type: Séance en direct, code: M12-S2}]}
+  - {n: 15, date: "2027-02-27", titre: "Clinique", cycle: 4, note: "Séance de votre profil", items: []}
+  - {n: 16, date: "2027-03-06", titre: "Jeu de rôle client", cycle: 4, note: "Séance de votre profil", items: []}
+  - {n: 17, date: "2027-03-13", titre: "Démo Day J4", cycle: 4, jalon: J4, items: [{type: En autonomie, code: M17-S1}]}
+  - {n: 18, date: "2027-03-20", titre: "Proposition commerciale", cycle: 5, items: [{type: Séance en direct, code: M16-S3}, {type: En autonomie, code: M17-S2}]}
+  - {n: 19, date: "2027-04-03", titre: "Acquérir un client", cycle: 5, items: [{type: Séance en direct, code: M18-S1}, {type: En autonomie, code: M17-S3}]}
+  - {n: 20, date: "2027-04-10", titre: "Clinique projet client", cycle: 5, items: [{type: En autonomie, code: M18-S2}]}
+  - {n: 21, date: "2027-04-17", titre: "Clinique projet client", cycle: 5, note: "Réaliser le projet (suite)", items: []}
+  - {n: 22, date: "2027-04-24", titre: "Démo Day J5", cycle: 5, jalon: J5, items: [{type: Séance en direct, code: M18-S3}, {type: En autonomie, code: M18-S4}]}
