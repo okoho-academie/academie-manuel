@@ -29,6 +29,13 @@ function github_(chemin) {
   return r;
 }
 
+// GitHub livre les fichiers en « octet-stream » : sans type explicite, Drive n'affiche pas d'aperçu.
+function type_(nom) {
+  if (/\.pdf$/i.test(nom)) return 'application/pdf';
+  if (/\.docx$/i.test(nom)) return 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+  return 'application/octet-stream';
+}
+
 function dossier_(parent, nom) {
   var it = parent.getFoldersByName(nom);
   return it.hasNext() ? it.next() : parent.createFolder(nom);
@@ -49,18 +56,18 @@ function synchroniser() {
     var present = false, it = d.getFilesByName(nom);
     while (it.hasNext()) {
       var x = it.next();
-      if (x.getDescription() === 'sha:' + f.sha && !present) { present = true; }
+      if (x.getDescription() === 'sha:' + f.sha && x.getMimeType() === type_(nom) && !present) { present = true; }
       else { x.setTrashed(true); }
     }
     if (!present) {
-      var blob = github_(base + f.chemin).getBlob().setName(nom);
+      var blob = github_(base + f.chemin).getBlob().setName(nom).setContentType(type_(nom));
       d.createFile(blob).setDescription('sha:' + f.sha);
       nouveaux.push(f.chemin);
     }
   });
   // PDF et Word absents de la publication (anciennes versions, dépôts manuels) : corbeille.
   // Les formulaires et documents Google ne sont jamais touchés.
-  var geres = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+  var geres = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', 'application/octet-stream'];
   Object.keys(dossiers).forEach(function (id) {
     var it = dossiers[id].getFiles();
     while (it.hasNext()) {
