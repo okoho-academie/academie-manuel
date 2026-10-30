@@ -8,12 +8,12 @@
 # Nommage Drive : dossier "Semaine NN · JJ.MM.AAAA · Thème", fichier "SNN-ordre · Type · Code Titre",
 # livrable "SNN-ordre_Prenom.ext". Types : Guide, À remplir, Séance en direct, En autonomie.
 cohorte: 1
-nom: "Cohorte 1"
-groupe: "Cohorte 1"          # nom du groupe WhatsApp d'entraide
+nom: "OKOHO Parcours Claude Pro · Cohorte 1"
+groupe: "OKOHO Parcours Claude Pro · Cohorte 1"   # nom du groupe WhatsApp d'entraide
 jour: samedi                 # jour des séances en direct
 programme:
   code: A00-00
-  nom_drive: "Programme et calendrier · Cohorte 1"
+  nom_drive: "Programme et calendrier · OKOHO Parcours Claude Pro · Cohorte 1"
 cycles:
   1: "Je maîtrise Claude et je publie"
   2: "Je produis pour mon client pilote"

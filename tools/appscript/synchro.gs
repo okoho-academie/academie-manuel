@@ -58,13 +58,14 @@ function synchroniser() {
       nouveaux.push(f.chemin);
     }
   });
-  // Fichiers publiés autrefois et retirés de la publication : corbeille
+  // PDF et Word absents de la publication (anciennes versions, dépôts manuels) : corbeille.
+  // Les formulaires et documents Google ne sont jamais touchés.
+  var geres = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
   Object.keys(dossiers).forEach(function (id) {
     var it = dossiers[id].getFiles();
     while (it.hasNext()) {
       var x = it.next();
-      var desc = x.getDescription() || '';
-      if (desc.indexOf('sha:') === 0 && !attendus[id + '/' + x.getName()]) x.setTrashed(true);
+      if (geres.indexOf(x.getMimeType()) >= 0 && !attendus[id + '/' + x.getName()]) x.setTrashed(true);
     }
   });
   Logger.log(nouveaux.length ? 'Mis à jour : \n' + nouveaux.join('\n') : 'Rien à mettre à jour.');
