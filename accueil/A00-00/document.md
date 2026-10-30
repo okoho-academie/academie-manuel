@@ -4,7 +4,7 @@ titre: "Votre parcours : programme et calendrier"
 type: document
 public: apprenants
 jalon: J1
-version: "2.0"
+version: "2.1"
 ---
 
 ::: objectifs
@@ -50,20 +50,21 @@ Le formateur peut adapter le calendrier au rythme du groupe. Toute modification 
 
 | Lieu | À quoi il sert |
 |---|---|
-| Dossier Google Drive « OKOHO Académie · Parcours Claude Pro » | Tous les documents du parcours, rangés semaine par semaine |
+| Dossier Google Drive « {{cohorte}} · Espace participants » | Tous les documents du parcours, rangés semaine par semaine |
 | Votre portfolio (Google Drive) | Vos livrables et votre diagnostic d'entrée. Vous seul et le formateur y avez accès |
 | Application OKOHO Académie (academie.okoho.de) | Lieu d'apprentissage principal à partir de la semaine 2 : séances, progression, dépôts |
 | WhatsApp, groupe **Annonces** | Informations officielles : heures, documents publiés, changements |
 | WhatsApp, groupe **{{groupe}}** | Questions, entraide, partage de résultats |
 
-Dans le dossier Google Drive, les dossiers sont numérotés dans l'ordre d'utilisation :
+Dans l'espace participants, les dossiers sont numérotés dans l'ordre d'utilisation :
 
 - **01 · Programme et calendrier** : ce document, toujours à jour.
 - **02 · Séances semaine par semaine** : un dossier par semaine, par exemple « Semaine 01 · Prise en main de Claude », précédé de la date de la séance. Il est publié au plus tard le vendredi avant la séance.
 - **03 · Réviser avec NotebookLM** : les sources à importer dans NotebookLM.
-- **04 · Portfolios** : vous y voyez seulement votre propre portfolio.
-- **05 · Projets en équipe** : les travaux communs de la cohorte.
-- **06 · Ressources et liens utiles** : outils et adresses du parcours.
+- **04 · Projets en équipe** : les travaux communs du groupe.
+- **05 · Ressources et liens utiles** : outils et adresses du parcours.
+
+Votre portfolio n'est pas dans cet espace : il vous est partagé séparément, et vous seul le voyez avec le formateur.
 
 ## Comment reconnaître un document
 

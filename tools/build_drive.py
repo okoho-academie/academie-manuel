@@ -14,6 +14,7 @@ Règle de nommage (source : parcours/cohorte-N.yaml) :
 Usage : python3 tools/build_drive.py [cohorte-1]
 """
 import json, shutil, subprocess, sys
+from pathlib import Path
 from datetime import date
 from common import ROOT, OUT, load_yaml, read_seance, resolve
 
@@ -63,6 +64,10 @@ def gdoc_md(src, cal, titre=None):
                 "OKOHO Consulting GmbH, sans partenariat avec Anthropic."]
     return re.sub(r"\n{3,}", "\n\n", "\n".join(out)).strip() + "\n"
 
+def sha(p):
+    import hashlib
+    return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:16]
+
 def main():
     nom = sys.argv[1] if len(sys.argv) > 1 else "cohorte-1"
     cal = load_yaml(ROOT / "parcours" / f"{nom}.yaml")
@@ -72,10 +77,12 @@ def main():
     dest = OUT / "drive" / nom
     if dest.exists():
         shutil.rmtree(dest)
-    dest.mkdir(parents=True)
-    manifest, manquants = [], []
+    espace = f"{cal['nom']} · Espace participants"
+    formateur = "Formateur (privé)"
+    (dest / espace).mkdir(parents=True)
+    manquants = []
     for s in cal["semaines"]:
-        dossier = "02 · Séances semaine par semaine/" + folder_name(s)
+        dossier = f"{espace}/02 · Séances semaine par semaine/" + folder_name(s)
         for i, item in enumerate(s.get("items", []), 1):
             meta, info = source_of(item["code"])
             if meta and meta.get("status") == "brouillon":
@@ -91,26 +98,32 @@ def main():
                                 "--object-streams=generate", str(pdf), str(cible)], check=True)
             else:
                 shutil.copy(pdf, cible)
-            manifest.append({"semaine": s["n"], "dossier": dossier, "fichier": f"{nomf}.pdf",
-                             "code": item["code"], "version": str(meta.get("version")),
-                             "livrable": f"S{s['n']:02d}-{i}_Prenom"})
             print(f"drive : {dossier} / {nomf}.pdf")
-    # Tout document au design Académie : PDF pour les apprenants, Word (.docx) en version modifiable
     from build_docx import build as build_docx
-    word = dest / "_word"
-    word.mkdir()
+    tmp = OUT / "docx" / nom
+    tmp.mkdir(parents=True, exist_ok=True)
+    def docx_pdf(src, cible, label=None, lang="fr"):
+        d = build_docx(src, cal, tmp / (Path(cible).stem + ".docx"), label=label, lang=lang)
+        subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", str(tmp), str(d)],
+                       check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        Path(cible).parent.mkdir(parents=True, exist_ok=True)
+        shutil.move(str(tmp / (Path(cible).stem + ".pdf")), cible)
     prog = cal.get("programme", {})
-    nom_prog = prog.get("nom_drive", "Programme et calendrier")
-    (dest / "01 · Programme et calendrier").mkdir()
+    nom_prog = clean(prog.get("nom_drive", "Programme et calendrier"))
+    (dest / espace / "01 · Programme et calendrier").mkdir(parents=True)
     src_prog = OUT / "pdf" / nom / f"OKOHO_PCP_{prog.get('code', 'A00-00')}_Guide_v{source_of(prog.get('code', 'A00-00'))[1][1]}.pdf"
-    shutil.copy(src_prog, dest / "01 · Programme et calendrier" / f"{clean(nom_prog)}.pdf")
-    build_docx(ROOT / "accueil" / prog.get("code", "A00-00") / "document.md", cal, word / f"{clean(nom_prog)}.docx")
-    build_docx(ROOT / "accueil" / "A00-02" / "document.md", cal, word / "S00-2 · Diagnostic d'entrée · Prénom Nom.docx")
-    ci = build_docx(ROOT / "parcours" / "drive" / "commencez-ici.md", cal, word / "00 · COMMENCEZ ICI.docx", label="BIENVENUE")
-    subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", str(dest), str(ci)],
-                   check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    shutil.copy(src_prog, dest / espace / "01 · Programme et calendrier" / f"{nom_prog}.pdf")
+    docx_pdf(ROOT / "parcours" / "drive" / "commencez-ici.md", dest / espace / "00 · COMMENCEZ ICI.pdf", label="BIENVENUE")
+    # Dramaturgies du formateur (formateur/*.md) : privé
+    for f in sorted((ROOT / "formateur").glob("*.md")):
+        meta, _ = read_seance(f)
+        docx_pdf(f, dest / formateur / "Dramaturgies" / f"{clean(meta['titre'])}.pdf", label="FORMATEUR")
+        print(f"drive : {formateur} / Dramaturgies / {meta['titre']}")
+    fichiers = sorted(p for p in dest.rglob("*") if p.is_file())
+    manifest = {"cohorte": nom, "racine": "OKOHO Académie · Parcours Claude Pro",
+                "fichiers": [{"chemin": str(p.relative_to(dest)), "sha": sha(p)} for p in fichiers]}
     (dest / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"build_drive : {len(manifest)} fichier(s) prêts dans out/drive/{nom}, {len(manquants)} séance(s) pas encore validée(s)")
+    print(f"build_drive : {len(fichiers)} fichier(s) dans out/drive/{nom}, {len(manquants)} séance(s) pas encore validée(s)")
     return 0
 
 if __name__ == "__main__":

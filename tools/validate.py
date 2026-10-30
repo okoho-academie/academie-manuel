@@ -106,7 +106,7 @@ def main():
             errs.append(f"dossier « {f.parent.name} » différent du code « {meta['code']} »")
         for e in errs: print(f"ERREUR  {rel} : {e}")
         n_err += len(errs)
-    for f in sorted((ROOT / "parcours" / "drive").glob("*.md")):
+    for f in sorted((ROOT / "parcours" / "drive").glob("*.md")) + sorted((ROOT / "formateur").glob("*.md")):
         for e in dates_interdites(f.read_text(encoding="utf-8")):
             print(f"ERREUR  {f.relative_to(ROOT)} : {e}"); n_err += 1
     print(f"validate : {len(files)} séance(s), {len(docs)} document(s) d'accueil, {n_err} erreur(s), {n_warn} avertissement(s)")
