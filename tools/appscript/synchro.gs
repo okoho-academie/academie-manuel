@@ -7,9 +7,13 @@
  */
 var CONFIG = {
   racineId: '{{RACINE_ID}}',            // dossier privé « OKOHO Académie · Parcours Claude Pro »
-  depot: 'okoho-academie/academie-manuel',
-  branche: 'publication',
-  cohorte: '{{COHORTE}}'
+  cohorte: '{{COHORTE}}',
+  // Deux sources : le cours (public pour les participants) et le privé du formateur (contrats, manuel).
+  // La seconde exige que le jeton GITHUB_TOKEN ait aussi accès au dépôt academie-pilotage ; sinon elle est ignorée.
+  sources: [
+    { depot: 'okoho-academie/academie-manuel', branche: 'publication', base: 'drive/{{COHORTE}}/' },
+    { depot: 'okoho-academie/academie-pilotage', branche: 'publication-prive', base: 'prive/', facultatif: true }
+  ]
 };
 
 function jeton_() {
@@ -18,9 +22,9 @@ function jeton_() {
   return t;
 }
 
-function github_(chemin) {
-  var url = 'https://api.github.com/repos/' + CONFIG.depot + '/contents/' +
-    chemin.split('/').map(encodeURIComponent).join('/') + '?ref=' + CONFIG.branche;
+function github_(src, chemin) {
+  var url = 'https://api.github.com/repos/' + src.depot + '/contents/' +
+    chemin.split('/').map(encodeURIComponent).join('/') + '?ref=' + src.branche;
   var r = UrlFetchApp.fetch(url, {
     headers: { Authorization: 'Bearer ' + jeton_(), Accept: 'application/vnd.github.raw' },
     muteHttpExceptions: true
@@ -42,28 +46,31 @@ function dossier_(parent, nom) {
 }
 
 function synchroniser() {
-  var base = 'drive/' + CONFIG.cohorte + '/';
-  var manifeste = JSON.parse(github_(base + 'manifest.json').getContentText());
   var racine = DriveApp.getFolderById(CONFIG.racineId);
-  var attendus = {}, dossiers = {}, nouveaux = [];
-  manifeste.fichiers.forEach(function (f) {
-    var parts = f.chemin.split('/');
-    var nom = parts.pop();
-    var d = racine;
-    parts.forEach(function (p) { d = dossier_(d, p); });
-    dossiers[d.getId()] = d;
-    attendus[d.getId() + '/' + nom] = true;
-    var present = false, it = d.getFilesByName(nom);
-    while (it.hasNext()) {
-      var x = it.next();
-      if (x.getDescription() === 'sha:' + f.sha && x.getMimeType() === type_(nom) && !present) { present = true; }
-      else { x.setTrashed(true); }
-    }
-    if (!present) {
-      var blob = github_(base + f.chemin).getBlob().setName(nom).setContentType(type_(nom));
-      d.createFile(blob).setDescription('sha:' + f.sha);
-      nouveaux.push(f.chemin);
-    }
+  var attendus = {}, dossiers = {}, nouveaux = [], erreurs = [];
+  CONFIG.sources.forEach(function (src) {
+    var manifeste;
+    try { manifeste = JSON.parse(github_(src, src.base + 'manifest.json').getContentText()); }
+    catch (e) { if (src.facultatif) { erreurs.push(src.depot + ' ignoré (' + e.message + ')'); return; } throw e; }
+    manifeste.fichiers.forEach(function (f) {
+      var parts = f.chemin.split('/');
+      var nom = parts.pop();
+      var d = racine;
+      parts.forEach(function (p) { d = dossier_(d, p); });
+      dossiers[d.getId()] = d;
+      attendus[d.getId() + '/' + nom] = true;
+      var present = false, it = d.getFilesByName(nom);
+      while (it.hasNext()) {
+        var x = it.next();
+        if (x.getDescription() === 'sha:' + f.sha && x.getMimeType() === type_(nom) && !present) { present = true; }
+        else { x.setTrashed(true); }
+      }
+      if (!present) {
+        var blob = github_(src, src.base + f.chemin).getBlob().setName(nom).setContentType(type_(nom));
+        d.createFile(blob).setDescription('sha:' + f.sha);
+        nouveaux.push(f.chemin);
+      }
+    });
   });
   // PDF et Word absents de la publication (anciennes versions, dépôts manuels) : corbeille.
   // Les formulaires et documents Google ne sont jamais touchés.
@@ -76,6 +83,7 @@ function synchroniser() {
     }
   });
   Logger.log(nouveaux.length ? 'Mis à jour : \n' + nouveaux.join('\n') : 'Rien à mettre à jour.');
+  if (erreurs.length) Logger.log('Remarque : ' + erreurs.join(' · '));
 }
 
 function installer() {
