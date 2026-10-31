@@ -3,7 +3,7 @@ code: A00-90
 titre: "Dramaturgie · Séance de lancement"
 type: document
 public: formateur
-version: "1.0"
+version: "1.1"
 ---
 
 ::: objectifs
@@ -36,20 +36,26 @@ Une séance de lancement réussie se mesure à une chose : chacun repart avec Cl
 
 ## Déroulé minute par minute (90 minutes)
 
-| Temps | Diapositive | Ce que fait le formateur | Ce que font les participants |
+| Temps | Diapo | Ce que fait le formateur | Ce que font les participants |
 |---|---|---|---|
-| 0 à 5 | Couverture | Accueil, test son et image, chacun renomme son nom à l'écran | Se connectent, disent bonjour |
-| 5 à 15 | Bienvenue | Tour de table, une minute chacun. Vous commencez pour donner l'exemple | Prénom, ville, expérience, projet, attente |
-| 15 à 23 | Promesse à Client pilote | Promesse, cinq jalons, calendrier, rythme, client pilote : rapide, sans détails | Écoutent, posent une question |
-| 23 à 28 | La carte de Claude | Démonstration en direct, 30 secondes par outil | Regardent, notent ce qui les surprend |
-| 28 à 30 | Règles | Les cinq règles, insister sur : jamais de code ni de mot de passe dans WhatsApp | Acquiescent |
-| 30 à 50 | Atelier 1 · Comptes | Accompagnement pas à pas avec S00-1. Capture en français de l'inscription Claude | Créent ou vérifient Google, Claude, application |
-| 50 à 55 | Trois réglages | Montrer sur ordinateur, puis sur téléphone | Langue, instructions, confidentialité |
-| 55 à 63 | Mission | Par deux, puis correction en 3 minutes | Choisissent l'outil pour six situations |
-| 63 à 68 | Diagnostic | Envoyer le lien du formulaire S00-2 dans « Annonces » | Commencent le formulaire, le terminent chez eux si besoin |
-| 68 à 76 | Premier échange | Consigne commune, deux ou trois réponses lues à voix haute | Écrivent la consigne, partagent dans WhatsApp |
-| 76 à 80 | Devoir et clôture | Quatre livrables, prochaine séance, question pour la semaine | Notent, posent les dernières questions |
-| 80 à 90 | Réserve | Problèmes techniques, questions individuelles | |
+| 0 à 5 | 1 · Couverture | Accueil, test son et image, chacun écrit son prénom et son nom dans Teams | Se connectent, disent bonjour |
+| 5 à 15 | 2 · Bienvenue | Tour de table, une minute chacun. Vous commencez pour donner l'exemple | Prénom, ville, expérience, projet, attente |
+| 15 à 17 | 3 · Promesse | « De l'idée au service digital vendu, avec Claude. » Une phrase, pas plus | Écoutent |
+| 17 à 19 | 4 · Cinq jalons | Les cinq Démo Days, une attestation à chaque jalon | Notent les jalons |
+| 19 à 20 | 5 · Calendrier | Cinq cycles, un résultat à chaque cycle. Renvoyer au document « Programme et calendrier » | Écoutent |
+| 20 à 21 | 6 · Rythme | Séance du samedi, autonomie dans la semaine, révision avec NotebookLM | Écoutent |
+| 21 à 23 | 7 · Client pilote | Chacun choisit un vrai client dans son entourage. Pas de décision aujourd'hui | Posent une question |
+| 23 à 28 | 8 · La carte de Claude | Démonstration en direct, 30 secondes par outil, gratuit ou payant (prix vérifiés le matin) | Regardent, notent ce qui les surprend |
+| 28 à 30 | 9 · Règles | Les cinq règles. Insister : jamais de code ni de mot de passe dans WhatsApp | Acquiescent |
+| 30 à 50 | 10 · Atelier comptes | Pas à pas avec S00-1. Capture en français de l'inscription Claude | Créent ou vérifient Google, Claude, application |
+| 50 à 55 | 11 · Trois réglages | Montrer sur ordinateur, puis sur téléphone | Langue, instructions, confidentialité |
+| 55 à 63 | 12 · Mission | Par deux, puis correction en 3 minutes | Choisissent l'outil pour six situations |
+| 63 à 68 | 13 · Diagnostic | Envoyer le lien du formulaire S00-2 dans « Annonces » | Commencent le formulaire, le terminent chez eux si besoin |
+| 68 à 75 | 14 · Premier échange | Consigne commune, deux ou trois réponses lues à voix haute | Écrivent la consigne, partagent dans WhatsApp |
+| 75 à 80 | Hors diapo · NotebookLM | Partager l'écran : dossier « 03 · Réviser avec NotebookLM », document S00. Ouvrir notebook.google.com, créer le notebook « Parcours Claude Pro », ajouter une source en direct | Regardent. Le notebook complet fait partie du devoir |
+| 80 à 84 | 15 · Devoir | Quatre livrables, les deux quiz (S00-1, S00-3), le notebook NotebookLM, prochaine séance | Notent |
+| 84 à 85 | 16 · Clôture | Question pour la semaine : quel problème de votre entourage Claude pourrait-il aider à résoudre ? | Répondent dans WhatsApp pendant la semaine |
+| 85 à 90 | Réserve | Problèmes techniques, questions individuelles | |
 
 ## Les phrases clés
 
@@ -80,7 +86,7 @@ Une séance de lancement réussie se mesure à une chose : chacun repart avec Cl
 
 ## Après la séance
 
-1. Le soir même, dans « Annonces » : remerciement, liens des trois formulaires, rappel du devoir.
+1. Le soir même, dans « Annonces » : remerciement, liens des trois formulaires, lien du document NotebookLM, rappel du devoir.
 2. Dans Claude, projet de l'Académie, saisir le bilan :
 
 ::: prompt
