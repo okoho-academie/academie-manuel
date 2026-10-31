@@ -62,6 +62,21 @@ export default function Seance({ params }: { params: { code: string } }) {
             <p>{m?.livrable ?? ref.livrable}</p>
           </div>
         )}
+        <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '2rem' }}>
+          <Link
+            href={`/seance/${params.code}/rendu`}
+            style={{ padding: '.75rem 1.5rem', borderRadius: 8, background: '#2C5697', color: '#fff', textDecoration: 'none', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '.95rem', display: 'inline-block' }}
+          >
+            📤 Déposer mon rendu
+          </Link>
+          <Link
+            href={`/quiz/${params.code}`}
+            style={{ padding: '.75rem 1.5rem', borderRadius: 8, background: '#FFF4E8', color: '#2C5697', border: '1.5px solid #2C5697', textDecoration: 'none', fontFamily: 'var(--font-display)', fontWeight: 600, fontSize: '.95rem', display: 'inline-block' }}
+          >
+            🧩 Quiz de la séance
+          </Link>
+        </div>
+        <QuestionModal seanceCode={params.code} />
       </div>
     </>
   );
