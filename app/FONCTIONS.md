@@ -41,3 +41,21 @@ Déroulement :
 6. Révocation (Admin seulement, motif écrit) : la page de vérification affiche « révoquée ».
 
 Spécimen validé : `docs/Specimen_Attestation_J1.pdf`.
+
+## 4. Optimisations validées (31.10) et calendrier
+| N° | Optimisation | Étape |
+|---|---|---|
+| 1 | Mode économie de données par défaut (hors ligne, vidéo basse qualité ou audio, fiche PDF) | v1 |
+| 2 | Bouton « Mon prochain pas » et barre de progression vers le jalon | v1 |
+| 3 | Bouton « Copier la consigne » sur chaque prompt | v1 |
+| 4 | Évaluation entre pairs dans la galerie (modèle de retour) | 14.11 |
+| 5 | File de correction, grille en un clic, brouillon de retour par l'API Claude | v1 (L2) |
+| 6 | Bilan hebdomadaire automatique | v1 (L2) |
+| 7 | Formulaire « Nouvelle cohorte » à partir du modèle | 14.11 |
+| 8 | Liste unique « À traiter » | v1 (L2) |
+| 9 | Niveau Organisation dans le modèle de données | v1 |
+| 10 | Offres Cohorte accompagnée, Autonomie, Entreprise ; paiement à la première vente | 14.11 (structure), paiement plus tard |
+| 11 | Filigrane nominatif sur les PDF téléchargés | 14.11 |
+| 12 | Données produit et témoignages consentis | J1 (28.11) |
+| 13 | Structure multilingue (fr rempli ; en, de plus tard) | v1 |
+Les étapes suivantes se lancent automatiquement (voir `HANDOFF_v1.md` §9).
