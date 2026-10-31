@@ -1,0 +1,67 @@
+# Source de vérité des jalons. Sans date. Variables {{cohorte}} résolues au build.
+jalons:
+  - code: J1
+    titre: "Communicant autonome avec Claude"
+    competences:
+      - "Rédiger une consigne claire et vérifiable"
+      - "Utiliser Claude pour produire, améliorer et corriger un texte professionnel"
+      - "Vérifier et adapter la réponse de Claude à son contexte"
+      - "Expliquer les limites de Claude à un client ou collègue"
+    seances: [M00-S0, M00-S1, M00-S2, M00-S3, M01-S1, M01-S2]
+    conditions:
+      livrables_min_niveau: 2
+      quiz_min_score: 70
+      demo_day: true
+    attestation_competences: 4
+
+  - code: J2
+    titre: "Producteur de contenus avec Claude"
+    competences:
+      - "Produire des contenus marketing adaptés à sa cible"
+      - "Créer un système de prompts réutilisables pour son secteur"
+      - "Évaluer la qualité d'un contenu généré par Claude"
+      - "Respecter les règles éthiques et légales de l'IA générative"
+    seances: [M02-S1, M02-S2, M02-S3, M02-S4]
+    conditions:
+      livrables_min_niveau: 2
+      quiz_min_score: 70
+      demo_day: true
+
+  - code: J3
+    titre: "Automatisateur de processus métier"
+    competences:
+      - "Identifier et automatiser un processus répétitif avec Claude"
+      - "Créer un assistant IA adapté à un cas d'usage métier"
+      - "Connecter Claude à des outils existants (Drive, Sheets, formulaires)"
+      - "Mesurer le gain de temps et documenter l'automatisation"
+    seances: [M03-S1, M03-S2, M03-S3, M04-S1]
+    conditions:
+      livrables_min_niveau: 2
+      quiz_min_score: 70
+      demo_day: true
+
+  - code: J4
+    titre: "Développeur de service digital"
+    competences:
+      - "Concevoir et développer un mini-service digital avec Claude"
+      - "Mettre en ligne et présenter un prototype fonctionnel"
+      - "Recueillir et intégrer les retours utilisateurs"
+      - "Préparer un pitch de 3 minutes pour un client ou investisseur"
+    seances: [M04-S2, M04-S3, M05-S1, M05-S2]
+    conditions:
+      livrables_min_niveau: 3
+      quiz_min_score: 70
+      demo_day: true
+
+  - code: J5
+    titre: "Entrepreneur numérique certifié"
+    competences:
+      - "Livrer un service digital payant à un premier client"
+      - "Documenter son processus de vente et de production"
+      - "Construire et présenter son portfolio professionnel"
+      - "Définir sa stratégie de développement à 90 jours"
+    seances: [M05-S3, M05-S4, M06-S1, M06-S2]
+    conditions:
+      livrables_min_niveau: 3
+      quiz_min_score: 80
+      demo_day: true

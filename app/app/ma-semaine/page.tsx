@@ -1,19 +1,49 @@
 import Link from 'next/link';
-import { CalendarDays, ClipboardList, Video } from 'lucide-react';
+import { CalendarDays, ClipboardList, Video, ArrowRight } from 'lucide-react';
 import { Fil } from '@/components/Fil';
 import { formaterDate } from '@/lib/acces';
 import { PERSONNE_DEMO, SEMAINE_DEMO } from '@/lib/demo';
+import { prochainPas } from '@/lib/prochain-pas';
 
 export const metadata = { title: 'Ma semaine' };
 
 export default function MaSemaine() {
   const s = SEMAINE_DEMO;
+  const pas = prochainPas({
+    seanceOuverte: s.seance.code,
+    devoirEcheance: s.devoir.echeance,
+    devoirRendu: false,
+  });
   return (
     <div className="conteneur">
       <div style={{ display: 'grid', gap: 'var(--space-3)' }}>
         <span className="label">Semaine {s.semaine} · Bonjour {PERSONNE_DEMO.prenom}</span>
         <h1>Ma semaine</h1>
         <Fil actuel={s.jalonActuel} />
+      </div>
+
+      {/* Mon prochain pas */}
+      <div style={{ margin: 'var(--space-3) 0' }}>
+        <Link
+          href={pas.href}
+          className={`bouton${pas.urgent ? ' bouton-urgent' : ''}`}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: 8,
+            background: pas.urgent ? 'var(--rouge, #DC2626)' : 'var(--blue-deep, #1E3A8A)',
+            color: '#fff',
+            padding: '10px 20px',
+            borderRadius: 'var(--radius)',
+            textDecoration: 'none',
+            fontFamily: 'var(--font-titre, Montserrat, sans-serif)',
+            fontWeight: 700,
+            fontSize: '1rem',
+          }}
+        >
+          <ArrowRight size={18} aria-hidden="true" />
+          {pas.label}
+        </Link>
       </div>
       <div className="trois">
         <Link href={`/seance/${s.seance.code}`} className="carte" style={{ textDecoration: 'none', color: 'inherit' }}>
