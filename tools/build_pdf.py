@@ -31,6 +31,7 @@ BOXES = {
     "erreurs": ("ERREURS FRÉQUENTES", "box-alert"),
     "coup-de-pouce": ("COUPS DE POUCE", "box-pouce"),
     "prompt": ("CONSIGNE À COPIER", "box-prompt"),
+    "defi": ("PISTE DÉFI · POUR ALLER PLUS LOIN", "box-aca"),
 }
 # Titres de section transformés en encadrés (séances)
 HEADING_BOXES = {"Ce que vous saurez faire": "objectifs", "Votre livrable": "livrable",

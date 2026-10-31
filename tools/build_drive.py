@@ -48,7 +48,7 @@ def gdoc_md(src, cal, titre=None):
     if m:
         t = t[m.end():]
     lab = {"objectifs": "Ce que vous saurez faire", "livrable": "Votre livrable", "prompt": "Consigne à copier",
-           "fil-rouge": "Cas fil rouge", "erreurs": "Erreurs fréquentes", "coup-de-pouce": "Coup de pouce"}
+           "fil-rouge": "Cas fil rouge", "erreurs": "Erreurs fréquentes", "coup-de-pouce": "Coup de pouce", "defi": "Piste Défi"}
     out = [f"# {titre}", ""] if titre else []
     for l in resolve(t, cal).splitlines():
         mm = re.match(r"^::: ?([\w-]+)\s*$", l)
@@ -119,10 +119,17 @@ def main():
         meta, _ = read_seance(f)
         docx_pdf(f, dest / formateur / "Dramaturgies" / f"{clean(meta['titre'])}.pdf", label="FORMATEUR")
         print(f"drive : {formateur} / Dramaturgies / {meta['titre']}")
-    # NotebookLM : consigne et sources de la semaine 00
+    # NotebookLM : consigne et sources de chaque semaine (parcours/drive/notebooklm-sNN.md)
     nb = ROOT / "parcours" / "drive" / "notebooklm-s00.md"
-    if nb.is_file():
-        docx_pdf(nb, dest / espace / "03 · Réviser avec NotebookLM" / "S00 · Votre premier notebook NotebookLM.pdf", label="NOTEBOOKLM")
+    nb_pdf = {}
+    for s in cal["semaines"]:
+        src = ROOT / "parcours" / "drive" / f"notebooklm-s{s['n']:02d}.md"
+        if not src.is_file():
+            continue
+        nom_nb = "S00 · Votre premier notebook NotebookLM" if s["n"] == 0 else clean(f"S{s['n']:02d} · Réviser avec NotebookLM · {s['titre']}")
+        nb_pdf[s["n"]] = dest / espace / "03 · Réviser avec NotebookLM" / f"{nom_nb}.pdf"
+        docx_pdf(src, nb_pdf[s["n"]], label="NOTEBOOKLM")
+        print(f"drive : 03 · Réviser avec NotebookLM / {nom_nb}.pdf")
     # Formateur (privé) : tout le matériel d'une semaine au même endroit
     # (présentation, présentation avec notes, dramaturgie, documents des participants)
     for s in cal["semaines"]:
@@ -144,8 +151,11 @@ def main():
         for f in (dest / formateur / "Dramaturgies").glob("*.pdf"):
             if s["titre"] in f.name:
                 shutil.copy(f, cible / f.name)
-        if s["n"] == 0 and nb.is_file():
-            shutil.copy(dest / espace / "03 · Réviser avec NotebookLM" / "S00 · Votre premier notebook NotebookLM.pdf", cible)
+        if s["n"] in nb_pdf:
+            shutil.copy(nb_pdf[s["n"]], cible)
+        gs = OUT / "forms" / f"creer_formulaires_S{s['n']:02d}.gs"
+        if gs.is_file():
+            shutil.copy(gs, cible / f"S{s['n']:02d} · Script des formulaires (Apps Script).txt")
         print(f"drive : {formateur} / {cible.name}")
     fichiers = sorted(p for p in dest.rglob("*") if p.is_file())
     manifest = {"cohorte": nom, "racine": "OKOHO Académie · Parcours Claude Pro",

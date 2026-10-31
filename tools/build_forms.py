@@ -6,7 +6,7 @@ Lit quiz/*.yaml et écrit un script Google Apps Script prêt à coller :
 Le formateur l'exécute une fois sur script.google.com (compte de l'Académie) :
 il crée les formulaires dans le dossier Drive de la semaine, avec logo, couleur Académie,
 correction automatique des quiz, et écrit les liens à partager dans le journal d'exécution.
-Usage : python3 tools/build_forms.py <ID_dossier_Drive> [S00] [A00-02-formulaire A00-01 A00-03]
+Usage : python3 tools/build_forms.py <ID_dossier_Drive | nom:Nom du dossier> [S00] [A00-02-formulaire A00-01 A00-03]
 """
 import base64, json, sys
 from common import ROOT, OUT, load_yaml
@@ -63,6 +63,16 @@ def form_js(d):
     lines.append(f"  liens.push([{js(d['titre'])}, f.getPublishedUrl()]);")
     return lines
 
+def ordre(code, cohorte="cohorte-1"):
+    """Position du code dans sa semaine (S01-1 → « 1 »), lue dans parcours/<cohorte>.yaml."""
+    f = ROOT / "parcours" / f"{cohorte}.yaml"
+    if f.is_file():
+        for s in load_yaml(f)["semaines"]:
+            for i, it in enumerate(s.get("items", []), 1):
+                if it["code"] == code:
+                    return str(i)
+    return ""
+
 def main():
     if len(sys.argv) < 2:
         sys.exit(__doc__)
@@ -72,12 +82,20 @@ def main():
     logo_b64 = base64.b64encode(LOGO.read_bytes()).decode()
     out = ["/**",
            f" * OKOHO Académie · Formulaires de la semaine {semaine} · généré par tools/build_forms.py",
-           " * Utilisation : script.google.com › Nouveau projet › coller ce code › Enregistrer › Exécuter « creer ».",
+           f" * Utilisation : script.google.com › Nouveau projet › coller ce code › Enregistrer › Exécuter « creerFormulaires{semaine} » (ou « creer »).",
            " * Autoriser l'accès au compte de l'Académie. Les liens à partager s'affichent dans le journal d'exécution.",
            " * Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi",
            " */",
            f"var DOSSIER_ID = {js(dossier)};",
            f"var LOGO_B64 = {js(logo_b64)};",
+           "",
+           "// DOSSIER_ID : identifiant du dossier Drive, ou « nom:<nom exact du dossier> » (le premier dossier de ce nom est utilisé).",
+           "function dossier() {",
+           "  if (DOSSIER_ID.indexOf('nom:') !== 0) return DriveApp.getFolderById(DOSSIER_ID);",
+           "  var it = DriveApp.getFoldersByName(DOSSIER_ID.slice(4));",
+           "  if (!it.hasNext()) throw new Error('Dossier introuvable : ' + DOSSIER_ID.slice(4) + '. Lancez d\\'abord « synchroniser ».');",
+           "  return it.next();",
+           "}",
            "",
            "function nouveau(titre, description) {",
            "  var f = FormApp.create(titre);",
@@ -85,22 +103,23 @@ def main():
            "  f.setConfirmationMessage('Merci. Vos réponses sont enregistrées. OKOHO Académie · Parcours Claude Pro');",
            "  f.addImageItem().setImage(Utilities.newBlob(Utilities.base64Decode(LOGO_B64), 'image/png', 'logo.png')).setWidth(220);",
            "  try { f.setPublished(true); } catch (e) {}",
-           "  DriveApp.getFileById(f.getId()).moveTo(DriveApp.getFolderById(DOSSIER_ID));",
+           "  DriveApp.getFileById(f.getId()).moveTo(dossier());",
            "  return f;",
            "}",
            "",
-           "function creer() {",
+           f"function creerFormulaires{semaine}() {{",
            "  var liens = [];"]
     for n in noms:
         d = load_yaml(ROOT / "quiz" / f"{n}.yaml")
         code = d["code"]
-        num = {"A00-01": "1", "A00-02": "2", "A00-03": "3"}.get(code, "")
+        num = {"A00-01": "1", "A00-02": "2", "A00-03": "3"}.get(code) or ordre(code)
         if "sections" in d:
             out += form_js(d)
         else:
             out += quiz_js(d, f"{semaine}-{num} · {d['titre']}")
         out.append("")
-    out += ["  liens.forEach(function (l) { Logger.log(l[0] + ' : ' + l[1]); });", "}"]
+    out += ["  liens.forEach(function (l) { Logger.log(l[0] + ' : ' + l[1]); });", "}", "",
+            "// Raccourci identique au nom historique", f"function creer() {{ creerFormulaires{semaine}(); }}"]
     dest = OUT / "forms"
     dest.mkdir(parents=True, exist_ok=True)
     p = dest / f"creer_formulaires_{semaine}.gs"

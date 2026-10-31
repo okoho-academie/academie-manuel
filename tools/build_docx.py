@@ -33,6 +33,7 @@ BOXES = {
     "erreurs": ("Encadre Erreurs", "ERREURS FRÉQUENTES", "surface", "orange-text"),
     "coup-de-pouce": ("Encadre Coup de pouce", "COUPS DE POUCE", "surface-muted", "blue-light"),
     "prompt": ("Encadre Consigne", "CONSIGNE À COPIER", "surface", "blue-primary"),
+    "defi": ("Encadre Defi", "PISTE DÉFI · POUR ALLER PLUS LOIN", "academie-tint", "blue-primary"),
 }
 
 def rgb(name):

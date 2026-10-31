@@ -44,11 +44,16 @@ termes:
 - terme: Hallucination
   definition: Réponse fausse donnée par l'IA avec assurance. Elle doit toujours être vérifiée.
   seances:
+  - M01-S2
   - M03-S1
 - terme: Hébergement
   definition: Service qui garde les fichiers d'un site sur un serveur pour qu'il reste en ligne.
   seances:
   - M05-S3
+- terme: Instructions personnelles
+  definition: 'Texte enregistré dans vos paramètres que Claude prend en compte dans toutes vos conversations : votre prénom, votre ville, le style de réponse souhaité.'
+  seances:
+  - M01-S1
 - terme: Itération
   definition: Améliorer une réponse étape par étape en donnant de nouvelles consignes.
   seances:
@@ -65,6 +70,10 @@ termes:
   definition: Résultat concret remis à la fin d'une séance ou d'un projet.
   seances:
   - Toutes
+- terme: Mode tuteur
+  definition: Façon de travailler où Claude vous pose des questions et vous guide au lieu de donner directement la réponse.
+  seances:
+  - M01-S2
 - terme: Modèle
   definition: Version de Claude choisie pour une tâche ; certains sont plus rapides, d'autres plus puissants.
   seances:
@@ -73,6 +82,10 @@ termes:
   definition: Outil de Google qui transforme des documents en résumés audio, vidéos, quiz et autres supports d'apprentissage.
   seances:
   - Toutes
+- terme: Pièce jointe
+  definition: Photo ou fichier (PDF, Word, image) que vous envoyez à Claude avec votre consigne pour qu'il le lise.
+  seances:
+  - M01-S2
 - terme: Projet (Claude)
   definition: Espace de travail qui garde des instructions et des documents pour toutes les conversations d'un même sujet.
   seances:

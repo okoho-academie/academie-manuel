@@ -8,7 +8,9 @@ from pathlib import Path
 from common import ROOT
 
 BLOBS = {"484c4cd918cc7131a5e0b404692476bf": "academie-logo-A-weiss.png",
-         "1aef23d7f7b59c4c19477ad9dc2fd221": "academie-zeichen-weiss.png"}
+         "1aef23d7f7b59c4c19477ad9dc2fd221": "academie-zeichen-weiss.png",
+         "e312762c07ba44ef10f456fda74cfd84": "academie-logo-A-weiss-600.png",
+         "5609958bda2cdaafb7d994511911e5a4": "motiv-academie.svg"}
 
 def main():
     src, out = Path(sys.argv[1]), Path(sys.argv[2])
