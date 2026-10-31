@@ -1,8 +1,10 @@
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import { Fil } from '@/components/Fil';
 import { lireSeance, seancesDisponibles } from '@/lib/seance';
 import { toutesLesSeances } from '@/lib/structure';
 import type { Jalon } from '@/lib/acces';
+import QuestionModal from './QuestionModal';
 
 const APPAREIL: Record<string, string> = {
   smartphone: 'Smartphone possible',
