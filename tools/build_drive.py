@@ -119,6 +119,34 @@ def main():
         meta, _ = read_seance(f)
         docx_pdf(f, dest / formateur / "Dramaturgies" / f"{clean(meta['titre'])}.pdf", label="FORMATEUR")
         print(f"drive : {formateur} / Dramaturgies / {meta['titre']}")
+    # NotebookLM : consigne et sources de la semaine 00
+    nb = ROOT / "parcours" / "drive" / "notebooklm-s00.md"
+    if nb.is_file():
+        docx_pdf(nb, dest / espace / "03 · Réviser avec NotebookLM" / "S00 · Votre premier notebook NotebookLM.pdf", label="NOTEBOOKLM")
+    # Formateur (privé) : tout le matériel d'une semaine au même endroit
+    # (présentation, présentation avec notes, dramaturgie, documents des participants)
+    for s in cal["semaines"]:
+        codes_s = [it["code"] for it in s.get("items", [])]
+        pres = [d for d in sorted((ROOT / "formateur" / "presentations").glob("*"))
+                if d.is_dir() and any(c.startswith(d.name.split("-")[0]) or d.name.startswith(c) for c in codes_s)]
+        espace_s = dest / espace / "02 · Séances semaine par semaine" / folder_name(s)
+        if not pres and not espace_s.exists():
+            continue
+        cible = dest / formateur / f"Semaine {s['n']:02d} · {s['titre']}"
+        cible.mkdir(parents=True, exist_ok=True)
+        for d in pres:
+            nom_p = f"Présentation · {s['titre']}"
+            subprocess.run([sys.executable, str(ROOT / "tools" / "build_slides_pdf.py"), str(d), str(cible / f"{nom_p}.pdf")], check=True)
+            subprocess.run([sys.executable, str(ROOT / "tools" / "build_slides_pdf.py"), str(d), str(cible / f"{nom_p} · avec notes.pdf"), "--notes"], check=True)
+        if espace_s.exists():
+            for f in sorted(espace_s.glob("*.pdf")):
+                shutil.copy(f, cible / f.name)
+        for f in (dest / formateur / "Dramaturgies").glob("*.pdf"):
+            if s["titre"] in f.name:
+                shutil.copy(f, cible / f.name)
+        if s["n"] == 0 and nb.is_file():
+            shutil.copy(dest / espace / "03 · Réviser avec NotebookLM" / "S00 · Votre premier notebook NotebookLM.pdf", cible)
+        print(f"drive : {formateur} / {cible.name}")
     fichiers = sorted(p for p in dest.rglob("*") if p.is_file())
     manifest = {"cohorte": nom, "racine": "OKOHO Académie · Parcours Claude Pro",
                 "fichiers": [{"chemin": str(p.relative_to(dest)), "sha": sha(p)} for p in fichiers]}
