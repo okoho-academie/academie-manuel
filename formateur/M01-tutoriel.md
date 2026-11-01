@@ -25,7 +25,7 @@ version: "1.0"
 | Temps | À l'écran | Texte (voix) |
 |---|---|---|
 | 0:00 à 0:05 | Carte d'introduction | Aucun texte : la carte s'affiche seule |
-| 0:05 à 0:30 | Application Claude ouverte | « Bonjour. En six minutes, vous allez apprendre à obtenir un texte utilisable avec Claude, en trois tours. Prenez votre téléphone et faites les gestes avec moi. » |
+| 0:05 à 0:30 | Application Claude ouverte | « Bonjour. En six minutes, vous allez apprendre à obtenir un texte utilisable avec Claude, en trois tours. Prenez votre téléphone et faites les gestes avec moi. Premier geste : demandez à Claude « Comment je m'appelle et où j'habite ? ». S'il répond juste, vos réglages fonctionnent. » |
 | 0:30 à 1:30 | Les six zones : menu, nouvelle conversation, zone de saisie, bouton +, micro, choix du modèle, profil | « Voici les six zones à connaître. » Nommer chaque zone en la touchant. « Le choix du modèle : gardez celui qui est proposé. » |
 | 1:30 à 2:30 | Tour 1 : consigne du repas copiée et envoyée | « Premier tour : demander. Je copie la consigne de la fiche et j'envoie. » Lire la première phrase de la réponse. |
 | 2:30 à 3:20 | Tour 2 : préciser | « Deuxième tour : préciser. Je ne dis pas "non". Je dis ce que je veux à la place : 19 heures, une boisson, un message court. » |

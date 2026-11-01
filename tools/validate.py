@@ -28,6 +28,9 @@ def check(value, sch, path, errs):
     if isinstance(value, int) and not isinstance(value, bool):
         if "minimum" in sch and value < sch["minimum"]: errs.append(f"{path} : < {sch['minimum']}")
         if "maximum" in sch and value > sch["maximum"]: errs.append(f"{path} : > {sch['maximum']}")
+    if isinstance(value, list):
+        if len(value) < sch.get("minItems", 0): errs.append(f"{path} : au moins {sch['minItems']} élément(s)")
+        if "maxItems" in sch and len(value) > sch["maxItems"]: errs.append(f"{path} : au plus {sch['maxItems']} élément(s)")
     if isinstance(value, list) and "items" in sch:
         for i, v in enumerate(value):
             check(v, sch["items"], f"{path}[{i}]", errs)
@@ -55,6 +58,57 @@ def dates_interdites(body):
         errs.append(f"variable invalide : {e}")
     return errs + [f"date ou cohorte en dur « {m.group(0)} » : utiliser une variable {{{{date:SNN}}}}, {{{{cohorte}}}}…"
             for m in DATE_RE.finditer(b)]
+
+def jalon_competences():
+    """Codes des compétences de jalon (manuel/jalons.yaml)."""
+    f = ROOT / "manuel" / "jalons.yaml"
+    if not f.is_file():
+        return {}
+    return {c["code"]: j["code"] for j in load_yaml(f)["jalons"] for c in j["competences"]}
+
+def trois_questions(meta, body):
+    """Règle de planification : chaque séance montre ce que l'apprenant sait faire, comment il le prouve,
+    à quoi on le reconnaît. Contrôle la présence visible de ces réponses dans la fiche."""
+    errs = []
+    comp = meta.get("competences") or []
+    jc = jalon_competences()
+    plat = re.sub(r"\s+", " ", body)
+    for c in comp:
+        if not isinstance(c, dict):
+            continue
+        if jc and c.get("jalon") not in jc:
+            errs.append(f"compétence {c.get('code')} : jalon « {c.get('jalon')} » absent de manuel/jalons.yaml")
+        elif jc and meta.get("jalon") and jc.get(c.get("jalon")) != meta["jalon"]:
+            errs.append(f"compétence {c.get('code')} : {c.get('jalon')} n'appartient pas au jalon {meta['jalon']}")
+        for champ in ("savoir_faire", "preuve", "reussi_si"):
+            v = re.sub(r"\s+", " ", str(c.get(champ, ""))).strip()
+            if v and v not in plat:
+                errs.append(f"compétence {c.get('code')} : « {champ} » doit figurer mot pour mot dans la fiche (tableau « Ce que vous saurez faire »)")
+    q = ROOT / "quiz" / f"{meta.get('code')}.yaml"
+    if not q.is_file():
+        errs.append(f"quiz/{meta.get('code')}.yaml absent : chaque séance a un quiz")
+    else:
+        d = load_yaml(q)
+        tags = {x.get("competence") for x in d.get("questions", [])}
+        for c in comp:
+            if isinstance(c, dict) and c.get("code") not in tags:
+                errs.append(f"compétence {c.get('code')} : aucune question du quiz ne la vérifie (champ « competence »)")
+        if "reussite" not in d:
+            errs.append(f"quiz/{meta.get('code')}.yaml : seuil « reussite » absent")
+    if meta.get("type") == "direct":
+        dram = [f for f in (ROOT / "formateur").glob("*.md")
+                if f.name.startswith((str(meta.get("code")), str(meta.get("module")) + "-dramaturgie"))]
+        if not dram:
+            errs.append("séance en direct sans dramaturgie (formateur/<MODULE>-dramaturgie.md)")
+        else:
+            txt = dram[0].read_text(encoding="utf-8")
+            for h in ("Grille d'observation", "Contrôle de sortie"):
+                if h not in txt:
+                    errs.append(f"{dram[0].name} : « {h} » absent")
+    for h in ("Vérifiez vos acquis",):
+        if f"## {h}" not in body:
+            errs.append(f"section obligatoire « {h} » absente")
+    return errs
 
 def main():
     _, struct = structure()
@@ -85,6 +139,7 @@ def main():
         for g in meta.get("glossaire") or []:
             if g not in gloss: warns.append(f"terme « {g} » absent de glossaire/glossaire.yaml")
         errs += dates_interdites(body)
+        errs += trois_questions(meta, body)
         for h in ("Ce que vous saurez faire", "Votre livrable"):
             if f"## {h}" not in body: errs.append(f"section obligatoire « {h} » absente")
         if "Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi" not in body:

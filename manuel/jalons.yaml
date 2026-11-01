@@ -1,0 +1,34 @@
+# Jalons du Manuel · OKOHO Académie · sans date (les dates sont dans parcours/cohorte-N.yaml)
+# Source unique pour : attestations de l'application (app/FONCTIONS.md §3), couverture des compétences
+# (tools/couverture.py), contrôle de chaque séance (tools/validate.py).
+#
+# Chaque compétence répond aux trois questions de planification, valables pour toutes les séances :
+#   1. savoir_faire : que sait faire l'apprenant à la fin ?  (verbe d'action, observable)
+#   2. preuve       : comment s'assure-t-on qu'il le sait vraiment ?  (tâche réalisée devant le formateur ou livrable)
+#   3. reussi_si    : à quoi le reconnaît-on ?  (critère visible, vérifiable en moins d'une minute)
+# Les compétences de séance (métadonnée « competences ») renvoient à une compétence de jalon (champ « jalon »).
+jalons:
+  - code: J1
+    titre: Utilisateur autonome
+    seances: [M01-S1, M01-S2, M02-S1, M02-S2, M02-S3, M03-S1, M03-S2, M05-S1]
+    conditions:
+      - Tous les livrables des séances du jalon rendus et évalués au niveau 2 ou plus.
+      - Quiz des séances du jalon réussis à 70 % ou plus (meilleure tentative).
+      - Présentation au Démo Day cochée par le Formateur, avec les quatre preuves ci-dessous.
+    competences:
+      - code: J1-C1
+        intitule: Utilise Claude de façon autonome sur ordinateur et téléphone, avec des réglages adaptés.
+        preuve: Au Démo Day, en direct sur son téléphone, retrouve une conversation par la recherche et fait lire une photo de document par Claude.
+        reussi_si: Les deux gestes sans aide en moins de trois minutes ; Claude répond en français et utilise son prénom sans qu'on le lui demande.
+      - code: J1-C2
+        intitule: Formule des consignes structurées et améliore une réponse par itération.
+        preuve: Montre une conversation pour son client pilote, de la première consigne à la version finale.
+        reussi_si: La version finale est meilleure que la première sur au moins deux points qu'il nomme lui-même.
+      - code: J1-C3
+        intitule: Publie une première page web réalisée avec Claude.
+        preuve: Ouvre le lien public de sa page sur un téléphone devant le groupe.
+        reussi_si: La page s'ouvre sans compte, présente l'offre du client pilote et un moyen de contact.
+      - code: J1-C4
+        intitule: Vérifie les informations produites et respecte les règles de confidentialité.
+        preuve: Montre une information produite par Claude qu'il a vérifiée et explique comment ; cite les données qu'il n'envoie jamais.
+        reussi_si: L'original ou la source est nommé pour la donnée vérifiée ; aucune donnée sensible dans ses livrables.

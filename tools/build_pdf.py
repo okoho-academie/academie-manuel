@@ -32,10 +32,12 @@ BOXES = {
     "coup-de-pouce": ("COUPS DE POUCE", "box-pouce"),
     "prompt": ("CONSIGNE À COPIER", "box-prompt"),
     "defi": ("PISTE DÉFI · POUR ALLER PLUS LOIN", "box-aca"),
+    "acquis": ("VÉRIFIEZ VOS ACQUIS", "box-tint"),
 }
 # Titres de section transformés en encadrés (séances)
 HEADING_BOXES = {"Ce que vous saurez faire": "objectifs", "Votre livrable": "livrable",
-                 "Cas fil rouge": "fil-rouge", "Erreurs fréquentes": "erreurs"}
+                 "Cas fil rouge": "fil-rouge", "Erreurs fréquentes": "erreurs",
+                 "Vérifiez vos acquis": "acquis"}
 JALONS = ["J1", "J2", "J3", "J4", "J5"]
 
 

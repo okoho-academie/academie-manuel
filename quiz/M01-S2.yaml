@@ -1,0 +1,35 @@
+code: M01-S2
+titre: "Quiz · Photos et fichiers"
+reussite: 5
+description: "6 questions sur l'envoi de photos et de fichiers à Claude, la vérification et la protection de vos données. Votre score s'affiche à la fin, avec l'explication de chaque réponse."
+questions:
+  - q: "Vous voulez que Claude lise une facture papier. Quel bouton touchez-vous dans l'application ?"
+    choix: ["Le micro", "Le bouton + à côté de la zone de saisie", "Le choix du modèle"]
+    bonne: 1
+    explication: "Le bouton + ouvre l'appareil photo, la galerie et vos fichiers."
+    competence: M01-S2-C1
+  - q: "Vous envoyez une photo sans rien écrire. Que se passe-t-il le plus souvent ?"
+    choix: ["Claude fait exactement le tableau dont vous avez besoin", "Claude décrit l'image, sans plus", "Claude refuse la photo"]
+    bonne: 1
+    explication: "Sans consigne, Claude ne sait pas ce que vous voulez. Dites le résultat attendu : un tableau, un résumé, une liste."
+    competence: M01-S2-C1
+  - q: "Claude vous rend un tableau à partir d'une photo de reçu. Que faites-vous avant de l'utiliser ?"
+    choix: ["Rien, la photo est nette", "Je compare au moins deux valeurs avec le reçu", "Je demande à Claude s'il est sûr"]
+    bonne: 1
+    explication: "Une photo mal cadrée ou floue donne des chiffres faux. Vous comparez toujours deux valeurs avec l'original."
+    competence: M01-S2-C2
+  - q: "Vous trouvez une erreur de quantité dans le tableau. Quelle est la meilleure réaction ?"
+    choix: ["Je recommence dans une nouvelle conversation", "Je signale l'erreur à Claude dans la même conversation et je reprends la photo si elle est floue", "Je corrige seulement sur papier"]
+    bonne: 1
+    explication: "Vous signalez l'écart dans la même conversation. Si la photo est en cause, une nouvelle photo bien éclairée règle le problème."
+    competence: M01-S2-C2
+  - q: "Lequel de ces documents pouvez-vous envoyer à Claude ?"
+    choix: ["La photo de votre carte d'identité", "Un reçu de supermarché", "Une capture de votre application bancaire"]
+    bonne: 1
+    explication: "Un reçu ordinaire ne contient pas de données sensibles. Pièces d'identité et données bancaires ne s'envoient jamais."
+    competence: M01-S2-C3
+  - q: "Qu'est-ce qu'une hallucination de l'IA ?"
+    choix: ["Une réponse fausse donnée avec assurance", "Une image générée par Claude", "Une panne de l'application"]
+    bonne: 0
+    explication: "L'IA peut inventer une information et la présenter comme sûre. C'est pour cela que vous vérifiez."
+    competence: M01-S2-C2

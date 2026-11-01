@@ -1,36 +1,45 @@
 code: M01-S1
 titre: "Quiz · Prise en main de Claude"
+reussite: 6
 description: "8 questions sur l'interface de Claude et la conversation en trois tours. Les deux dernières questions sont des questions Défi. Votre score s'affiche à la fin, avec l'explication de chaque réponse."
 questions:
   - q: "Vous voulez parler d'un sujet complètement nouveau avec Claude. Que faites-vous ?"
     choix: ["Je continue dans la dernière conversation", "J'ouvre une nouvelle conversation", "Je ferme et je rouvre l'application"]
     bonne: 1
     explication: "Un nouveau sujet, une nouvelle conversation. Votre historique reste clair et Claude ne mélange pas les sujets."
+    competence: M01-S1-C2
   - q: "Où réglez-vous la langue de l'interface et vos instructions personnelles ?"
     choix: ["Dans le profil et les paramètres", "Dans la zone de saisie", "Sous chaque réponse de Claude"]
     bonne: 0
     explication: "Langue, instructions et confidentialité se trouvent dans le profil, puis les paramètres."
+    competence: M01-S1-C1
   - q: "La réponse de Claude est trop longue. Quelle est la meilleure réaction ?"
     choix: ["« Non, pas ça. »", "« Raccourcis : trois phrases au maximum, garde la date et le prix. »", "J'ouvre une nouvelle conversation et je recommence"]
     bonne: 1
     explication: "Dites précisément ce que vous voulez : la longueur, ce qu'il faut garder. Claude corrige dans la même conversation."
+    competence: M01-S1-C2
   - q: "Quels sont les trois tours d'une bonne conversation dans cette séance ?"
     choix: ["Saluer, demander, remercier", "Demander, préciser, transformer", "Copier, coller, envoyer"]
     bonne: 1
     explication: "Vous demandez une première version, vous précisez ce qui doit changer, puis vous transformez la forme du résultat."
+    competence: M01-S1-C2
   - q: "Vous cherchez une conversation d'il y a quelques jours sur une invitation. Que faites-vous ?"
     choix: ["Je cherche « invitation » dans l'historique", "Je repose la même question à Claude", "Elle est perdue, je recommence"]
     bonne: 0
     explication: "L'historique garde vos conversations et la recherche les retrouve. D'où l'intérêt de les renommer clairement."
+    competence: M01-S1-C3
   - q: "Claude vous donne un message avec un prix et une date. Avant de l'envoyer à un client, vous :"
     choix: ["L'envoyez tout de suite, Claude ne se trompe pas", "Relisez et vérifiez le prix et la date", "Demandez à Claude s'il est sûr de lui"]
     bonne: 1
     explication: "Claude peut se tromper sur un nom, un prix ou une date. Vous restez responsable de ce que vous envoyez."
+    competence: M01-S1-C2
   - q: "Défi. Votre deuxième message partait dans la mauvaise direction. Comment corriger proprement ?"
     choix: ["J'ajoute trois messages de correction", "Je modifie ce message avec l'icône crayon et je l'envoie à nouveau", "Je recommence dans une nouvelle conversation"]
     bonne: 1
     explication: "En modifiant le message, Claude écrit une nouvelle réponse et garde l'ancienne. Les flèches permettent de comparer les versions."
+    competence: M01-S1-C2
   - q: "Défi. À quoi sert l'icône « réessayer » sous une réponse ?"
     choix: ["À envoyer la réponse à un ami", "À obtenir une autre réponse à la même consigne", "À traduire la réponse"]
     bonne: 1
     explication: "Réessayer produit une nouvelle version. Vous comparez et gardez la meilleure."
+    competence: M01-S1-C2

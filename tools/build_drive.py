@@ -48,7 +48,7 @@ def gdoc_md(src, cal, titre=None):
     if m:
         t = t[m.end():]
     lab = {"objectifs": "Ce que vous saurez faire", "livrable": "Votre livrable", "prompt": "Consigne à copier",
-           "fil-rouge": "Cas fil rouge", "erreurs": "Erreurs fréquentes", "coup-de-pouce": "Coup de pouce", "defi": "Piste Défi"}
+           "fil-rouge": "Cas fil rouge", "erreurs": "Erreurs fréquentes", "coup-de-pouce": "Coup de pouce", "defi": "Piste Défi", "acquis": "Vérifiez vos acquis"}
     out = [f"# {titre}", ""] if titre else []
     for l in resolve(t, cal).splitlines():
         mm = re.match(r"^::: ?([\w-]+)\s*$", l)
@@ -153,6 +153,10 @@ def main():
                 shutil.copy(f, cible / f.name)
         if s["n"] in nb_pdf:
             shutil.copy(nb_pdf[s["n"]], cible)
+        quiz = [c for c in codes_s if (ROOT / "quiz" / f"{c}.yaml").is_file() and not c.startswith("A00")]
+        if quiz:
+            subprocess.run([sys.executable, str(ROOT / "tools" / "build_forms.py"), f"nom:{folder_name(s)}",
+                            f"S{s['n']:02d}", *quiz], check=True, stdout=subprocess.DEVNULL)
         gs = OUT / "forms" / f"creer_formulaires_S{s['n']:02d}.gs"
         if gs.is_file():
             shutil.copy(gs, cible / f"S{s['n']:02d} · Script des formulaires (Apps Script).txt")

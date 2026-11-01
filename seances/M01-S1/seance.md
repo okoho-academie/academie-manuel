@@ -12,11 +12,27 @@ echafaudage: 1
 acces_defaut: programme
 jalon: J1
 livrable: Compte actif et première conversation documentée
+competences:
+  - code: M01-S1-C1
+    jalon: J1-C1
+    savoir_faire: Vous réglez votre compte pour que Claude vous réponde en français et connaisse votre prénom.
+    preuve: Vous demandez à Claude « Comment je m'appelle et où j'habite ? » et vous postez sa réponse dans le chat de la séance.
+    reussi_si: Claude répond en français avec votre prénom et votre ville, sans que vous les ayez écrits dans la conversation.
+  - code: M01-S1-C2
+    jalon: J1-C2
+    savoir_faire: Vous obtenez un texte utilisable en trois tours, demander, préciser, transformer.
+    preuve: Vous traitez une tâche réelle de votre quotidien en trois tours, pendant la séance.
+    reussi_si: Trois messages dans la même conversation, au moins deux changements précis au tour 2, un résultat final que vous pouvez envoyer sans le retoucher.
+  - code: M01-S1-C3
+    jalon: J1-C1
+    savoir_faire: Vous retrouvez une conversation en quelques secondes.
+    preuve: Au contrôle de sortie, le formateur nomme une de vos conversations et vous la retrouvez par la recherche.
+    reussi_si: La conversation porte un nom clair et s'affiche en moins de 30 secondes.
 glossaire: [Conversation, Modèle, Consigne (prompt), Instructions personnelles]
 index: [Compte Claude, Interface, Conversation, Modèle, Instructions personnelles, Modifier un message, Réessayer une réponse, Historique des conversations]
 videos: {tutoriel: true, vitrine: false, shorts: 0, signature: false}
 verifie: "2026-10-31"
-version: "1.0"
+version: "1.1"
 captures: null
 status: relecture
 ---
@@ -25,31 +41,37 @@ status: relecture
 
 ## Ce que vous saurez faire
 
-- Vous vérifiez votre compte Claude et vos trois réglages : langue, instructions, confidentialité.
-- Vous trouvez les six zones de l'interface, sur téléphone et sur ordinateur.
-- Vous menez une conversation en trois tours : demander, préciser, transformer.
-- Vous renommez une conversation et la retrouvez dans l'historique.
-- Vous documentez votre conversation pour votre portfolio.
+| Vous savez… | Vous le prouvez… | C'est réussi si… |
+|---|---|---|
+| Vous réglez votre compte pour que Claude vous réponde en français et connaisse votre prénom. | Vous demandez à Claude « Comment je m'appelle et où j'habite ? » et vous postez sa réponse dans le chat de la séance. | Claude répond en français avec votre prénom et votre ville, sans que vous les ayez écrits dans la conversation. |
+| Vous obtenez un texte utilisable en trois tours, demander, préciser, transformer. | Vous traitez une tâche réelle de votre quotidien en trois tours, pendant la séance. | Trois messages dans la même conversation, au moins deux changements précis au tour 2, un résultat final que vous pouvez envoyer sans le retoucher. |
+| Vous retrouvez une conversation en quelques secondes. | Au contrôle de sortie, le formateur nomme une de vos conversations et vous la retrouvez par la recherche. | La conversation porte un nom clair et s'affiche en moins de 30 secondes. |
+
+Ces trois compétences comptent pour le jalon **J1 · Utilisateur autonome**.
 
 ## Pourquoi c'est utile
 
-Une bonne réponse se construit rarement en un seul message. Celui qui sait préciser, corriger et transformer obtient en trois minutes un texte utilisable. Celui qui retrouve ses conversations ne recommence jamais de zéro. Ces gestes servent à chaque séance du parcours, puis avec chaque client.
+Une bonne réponse se construit rarement en un seul message. Celui qui sait préciser et transformer obtient en trois minutes un texte utilisable. Celui qui retrouve ses conversations ne recommence jamais de zéro. Ces gestes servent à chaque séance, puis avec chaque client.
 
 Durée : 90 minutes en direct, 45 minutes de travail personnel. Appareil : téléphone, ordinateur si vous en avez un.
 
-**Deux pistes, un même livrable.** Vous découvrez l'IA ? Suivez la fiche pas à pas. Vous utilisez déjà ChatGPT, Gemini ou DeepSeek ? Faites les mêmes étapes, puis les encadrés **Piste Défi** : ils vous montrent ce qui change avec Claude.
+**Deux pistes, les mêmes compétences.** Vous découvrez l'IA ? Suivez la fiche pas à pas. Vous utilisez déjà ChatGPT, Gemini ou DeepSeek ? Faites les mêmes étapes, puis les encadrés **Piste Défi** : ils vous montrent ce qui change avec Claude.
 
-## Avant de commencer : contrôle en trois points
+## Avant de commencer
 
-Faites ce contrôle avec votre voisin ou votre voisine de tandem. Cochez chaque point.
+- [ ] Votre téléphone est chargé, l'application Claude est ouverte.
+- [ ] Vous avez noté sur papier **une tâche réelle** : un message, une annonce ou une liste que vous devez écrire dans les prochains jours.
+- [ ] L'interface de Claude est en français.
 
-- [ ] Compte : vous êtes connecté à Claude sur votre téléphone, avec le même compte que sur l'ordinateur.
-- [ ] Langue : l'interface est en français.
-- [ ] Instructions : vos instructions personnelles contiennent votre prénom, votre ville et une demande de réponses en français simple.
+**Étape 1 : le test du prénom.** Ouvrez une nouvelle conversation et envoyez exactement ceci :
 
-Un point manque ? Suivez le guide « Bien démarrer » et la partie « Trois réglages » du guide « La carte de Claude ». Le réglage de confidentialité reste votre décision.
+::: prompt
+Comment je m'appelle et où j'habite ?
+:::
 
-![Étape 1 : réglages du compte, langue en français](captures/etape-1.png)
+Claude donne votre prénom et votre ville ? Vos instructions personnelles fonctionnent. Postez la réponse dans le chat de la séance. Claude ne sait pas ? Ouvrez **Profil** › **Paramètres** et complétez vos instructions : « Je m'appelle… J'habite à… Réponds en français simple, avec des phrases courtes. » Puis refaites le test.
+
+![Étape 1 : réglages du compte, instructions personnelles](captures/etape-1.png)
 
 ## Je vous montre
 
@@ -112,7 +134,7 @@ Maintenant, donne-moi deux versions : une très courte pour un SMS, une plus dé
 
 ![Étape 9 : renommer la conversation](captures/etape-9.png)
 
-**Étape 10 : retrouver.** Ouvrez une nouvelle conversation, puis cherchez « repas » dans l'historique. Votre conversation apparaît.
+**Étape 10 : retrouver.** Ouvrez une nouvelle conversation, puis cherchez « repas » dans l'historique. Votre conversation apparaît. Chronométrez-vous : moins de 30 secondes ?
 
 ::: defi
 **Modifier au lieu de répéter.** Revenez à votre message du tour 2. Survolez-le (ordinateur) ou appuyez longuement dessus (téléphone), puis touchez l'icône **crayon**. Remplacez « 19 heures » par « 20 heures » et envoyez. Claude écrit une nouvelle réponse et garde l'ancienne : des flèches **<** et **>** permettent de passer d'une version à l'autre.
@@ -124,7 +146,7 @@ Maintenant, donne-moi deux versions : une très courte pour un SMS, une plus dé
 
 ## Vous faites avec appui
 
-Choisissez une tâche réelle de votre semaine : un message à écrire, une question pratique, une liste à préparer. Faites-la en trois tours.
+Prenez la tâche réelle notée sur votre papier. Faites-la en trois tours.
 
 **Étape 11 : tour 1.** Copiez cette consigne et remplacez les crochets.
 
@@ -149,8 +171,9 @@ Transforme ce texte en [format, par exemple : trois versions de longueurs diffé
 Vérifiez votre travail :
 
 - [ ] Trois messages envoyés dans la même conversation
-- [ ] La dernière réponse est utilisable telle quelle
-- [ ] La conversation porte un nom clair et se retrouve par la recherche
+- [ ] Au moins deux changements précis au tour 2
+- [ ] Le résultat final peut partir tel quel
+- [ ] La conversation porte un nom clair
 
 ::: coup-de-pouce
 1. **Indice.** La réponse ne vous plaît pas ? Dites à Claude précisément ce qui ne va pas : le ton, la longueur, un mot, une information manquante.
@@ -159,25 +182,25 @@ Vérifiez votre travail :
 :::
 
 ::: defi
-**Comparer deux outils.** Envoyez votre consigne du tour 1 dans l'outil d'IA que vous connaissez déjà (ChatGPT, Gemini ou DeepSeek), puis faites les trois tours dans les deux outils. Notez trois différences : la qualité du français, le respect de vos instructions, la facilité pour corriger. Vous saurez plus tard expliquer à un client quel outil choisir et pourquoi.
+**Comparer deux outils.** Envoyez votre consigne du tour 1 dans l'outil d'IA que vous connaissez déjà (ChatGPT, Gemini ou DeepSeek), puis faites les trois tours dans les deux outils. Notez trois différences : la qualité du français, le respect de vos instructions, la facilité pour corriger. Vous saurez expliquer à un client quel outil choisir et pourquoi.
 :::
 
 ## Vous faites seul
 
-Avant la prochaine séance, menez une deuxième conversation pour une autre tâche réelle. Aucune consigne n'est fournie : vous écrivez vous-même vos trois tours.
+Avant la prochaine séance, menez une deuxième conversation en trois tours, pour **une personne de votre entourage qui a une activité** : commerce, atelier, association, service. Elle peut devenir votre client pilote. Aucune consigne n'est fournie : vous écrivez vous-même vos trois tours.
 
 Critères de qualité :
 
-- La tâche est réelle et utile pour vous ou pour votre entourage.
+- La tâche répond à un vrai besoin de cette personne.
 - Le tour 2 précise au moins deux points concrets.
 - Le tour 3 change la forme du résultat (longueur, format ou destinataire).
-- La conversation porte un nom clair.
+- Vous montrez le résultat à la personne et notez sa réaction en une phrase.
 
 Piste Défi : écrivez votre tour 2 en modifiant le message du tour 1 (icône crayon), puis comparez les deux versions avec les flèches.
 
 ## Cas fil rouge
 
-Aïcha, couturière à Bonamoussadi, ferme son atelier pour les fêtes. Tour 1 : elle demande un message pour prévenir ses clientes. Tour 2 : elle précise la date de réouverture et la promotion de janvier sur les robes en pagne. Tour 3 : elle obtient une version WhatsApp, une affiche pour la porte de l'atelier et un SMS. Elle renomme la conversation « Fermeture fêtes atelier » : l'année suivante, elle la retrouvera en dix secondes.
+Aïcha, couturière à Bonamoussadi, ferme son atelier pour les fêtes. Tour 1 : elle demande un message pour prévenir ses clientes. Tour 2 : elle précise la date de réouverture et la promotion de janvier sur les robes en pagne. Tour 3 : elle obtient une version WhatsApp, une affiche pour la porte de l'atelier et un SMS. Elle renomme la conversation « Fermeture fêtes atelier » et l'envoie le soir même à vingt clientes.
 
 ## Erreurs fréquentes
 
@@ -186,16 +209,39 @@ Aïcha, couturière à Bonamoussadi, ferme son atelier pour les fêtes. Tour 1 :
 - **Garder des conversations sans nom.** Au bout d'un mois, l'historique devient illisible. Un nom clair à chaque conversation utile.
 - **Copier la réponse sans la relire.** Claude peut se tromper sur un nom, un prix ou une date. Relisez toujours avant d'envoyer.
 
+## Vérifiez vos acquis
+
+Cochez seulement ce que vous venez de faire vous-même, sans aide.
+
+- [ ] Claude répond à « Comment je m'appelle et où j'habite ? » en français, avec votre prénom et votre ville. Sinon : étape 1.
+- [ ] Vous avez une conversation en trois tours dont le résultat peut partir tel quel. Sinon : étapes 11 à 13.
+- [ ] Vous retrouvez « Invitation repas » par la recherche en moins de 30 secondes. Sinon : étapes 9 et 10.
+- [ ] Quiz S01-1 : au moins 6 bonnes réponses sur 8.
+
 ## Votre livrable
 
-Un document Google Docs nommé **S01-1_Prenom** (par exemple S01-1_Aicha), créé dans votre portfolio, avant la prochaine séance. Il contient :
+Un document Google Docs nommé **S01-1_Prenom** (par exemple S01-1_Aicha), créé dans votre portfolio, avant la prochaine séance. Chaque capture prouve une compétence :
 
-1. Trois captures d'écran : votre tour 1, la réponse finale, la conversation renommée dans l'historique.
-2. Trois phrases : la tâche, le résultat obtenu, ce que vous demanderez autrement la prochaine fois.
+1. **Capture 1 :** la réponse de Claude à « Comment je m'appelle et où j'habite ? ».
+2. **Capture 2 :** votre tour 2 et la réponse finale de votre tâche réelle.
+3. **Capture 3 :** la recherche qui affiche votre conversation renommée.
+4. **Trois phrases :** la tâche, le résultat obtenu, ce que vous demanderez autrement la prochaine fois.
+5. **La conversation faite seul :** une capture du résultat et la réaction de la personne en une phrase.
 
 Piste Défi : ajoutez trois lignes « Claude ou [outil connu] ? » : une différence, une force de Claude, quand vous choisissez chaque outil.
 
 Sur téléphone : ouvrez l'application Google Docs, créez un document dans votre dossier portfolio, insérez les captures, puis écrivez vos phrases.
+
+### Comment votre livrable est évalué
+
+| Niveau | Ce que montre votre livrable |
+|---|---|
+| 1 · Découverte | Une conversation existe, mais en un seul tour, ou une capture manque. |
+| 2 · Application guidée | Les trois captures sont là, avec les consignes de la fiche. |
+| 3 · Autonomie | Votre tâche réelle, trois tours écrits par vous, un résultat utilisable, la conversation faite seul pour une personne de votre entourage. |
+| 4 · Transfert | Niveau 3, et le résultat a servi : message envoyé, affiche posée, réaction de la personne notée. Ou, piste Défi : la comparaison entre deux outils est argumentée. |
+
+La séance est validée au niveau 3. Le jalon J1 demande au moins le niveau 2 à chaque livrable.
 
 ## Kit NotebookLM
 
@@ -209,4 +255,4 @@ Compte Claude · Interface · Conversation · Modèle · Instructions personnell
 
 Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi
 Claude est une marque d'Anthropic. Le Parcours Claude Pro est une formation indépendante proposée par OKOHO Consulting GmbH, sans partenariat avec Anthropic. Reproduction et diffusion interdites sans autorisation écrite d'OKOHO Consulting GmbH.
-Version 1.0 · Fonctions vérifiées le 31.10.2026 (support.claude.com) · Captures d'écran réalisées le — · © 2026 OKOHO Consulting GmbH
+Version 1.1 · Fonctions vérifiées le 31.10.2026 (support.claude.com) · Captures d'écran réalisées le — · © 2026 OKOHO Consulting GmbH

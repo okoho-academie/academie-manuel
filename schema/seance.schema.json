@@ -4,36 +4,217 @@
   "title": "Métadonnées d'une séance · OKOHO Académie",
   "type": "object",
   "additionalProperties": false,
-  "required": ["code", "partie", "module", "titre", "type", "outil", "appareil", "duree", "prerequis", "echafaudage", "acces_defaut", "livrable", "glossaire", "index", "videos", "version", "status"],
+  "required": [
+    "code",
+    "partie",
+    "module",
+    "titre",
+    "type",
+    "outil",
+    "appareil",
+    "duree",
+    "prerequis",
+    "echafaudage",
+    "acces_defaut",
+    "livrable",
+    "glossaire",
+    "index",
+    "videos",
+    "version",
+    "status",
+    "competences"
+  ],
   "properties": {
-    "code": {"type": "string", "pattern": "^M[0-9]{2}-S[0-9]$"},
-    "partie": {"type": "string", "enum": ["I", "II", "III", "IV", "V"]},
-    "module": {"type": "string", "pattern": "^M[0-9]{2}$"},
-    "titre": {"type": "string", "minLength": 3},
-    "type": {"type": "string", "enum": ["direct", "autonomie"]},
-    "outil": {"type": "string", "minLength": 3},
-    "appareil": {"type": "string", "enum": ["smartphone", "laptop-recommande", "laptop-obligatoire"]},
-    "duree": {
-      "type": "object", "additionalProperties": false, "required": ["seance", "devoir"],
-      "properties": {"seance": {"type": "integer", "minimum": 0}, "devoir": {"type": "integer", "minimum": 0}}
+    "code": {
+      "type": "string",
+      "pattern": "^M[0-9]{2}-S[0-9]$"
     },
-    "prerequis": {"type": "array", "items": {"type": "string", "pattern": "^M[0-9]{2}-S[0-9]$"}},
-    "echafaudage": {"type": "integer", "minimum": 1, "maximum": 4},
-    "acces_defaut": {"type": "string", "enum": ["libre", "verrouille", "programme", "prerequis", "jalon", "manuel"]},
-    "jalon": {"type": "string", "enum": ["J1", "J2", "J3", "J4", "J5"]},
-    "livrable": {"type": "string", "minLength": 3},
-    "glossaire": {"type": "array", "items": {"type": "string"}},
-    "index": {"type": "array", "items": {"type": "string"}},
-    "videos": {
-      "type": "object", "additionalProperties": false,
+    "partie": {
+      "type": "string",
+      "enum": [
+        "I",
+        "II",
+        "III",
+        "IV",
+        "V"
+      ]
+    },
+    "module": {
+      "type": "string",
+      "pattern": "^M[0-9]{2}$"
+    },
+    "titre": {
+      "type": "string",
+      "minLength": 3
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "direct",
+        "autonomie"
+      ]
+    },
+    "outil": {
+      "type": "string",
+      "minLength": 3
+    },
+    "appareil": {
+      "type": "string",
+      "enum": [
+        "smartphone",
+        "laptop-recommande",
+        "laptop-obligatoire"
+      ]
+    },
+    "duree": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "seance",
+        "devoir"
+      ],
       "properties": {
-        "tutoriel": {"type": "boolean"}, "vitrine": {"type": "boolean"},
-        "shorts": {"type": "integer", "minimum": 0, "maximum": 5}, "signature": {"type": "boolean"}
+        "seance": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "devoir": {
+          "type": "integer",
+          "minimum": 0
+        }
       }
     },
-    "verifie": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
-    "version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
-    "captures": {"type": ["string", "null"], "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
-    "status": {"type": "string", "enum": ["brouillon", "relecture", "valide"]}
+    "prerequis": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^M[0-9]{2}-S[0-9]$"
+      }
+    },
+    "echafaudage": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4
+    },
+    "acces_defaut": {
+      "type": "string",
+      "enum": [
+        "libre",
+        "verrouille",
+        "programme",
+        "prerequis",
+        "jalon",
+        "manuel"
+      ]
+    },
+    "jalon": {
+      "type": "string",
+      "enum": [
+        "J1",
+        "J2",
+        "J3",
+        "J4",
+        "J5"
+      ]
+    },
+    "livrable": {
+      "type": "string",
+      "minLength": 3
+    },
+    "glossaire": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "index": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "videos": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tutoriel": {
+          "type": "boolean"
+        },
+        "vitrine": {
+          "type": "boolean"
+        },
+        "shorts": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "signature": {
+          "type": "boolean"
+        }
+      }
+    },
+    "verifie": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "captures": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "brouillon",
+        "relecture",
+        "valide"
+      ]
+    },
+    "competences": {
+      "description": "Trois questions de planification : que sait faire l'apprenant (savoir_faire), comment le prouve-t-il (preuve), à quoi le reconnaît-on (reussi_si). jalon = code d'une compétence de manuel/jalons.yaml.",
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 4,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "code",
+          "jalon",
+          "savoir_faire",
+          "preuve",
+          "reussi_si"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "pattern": "^M[0-9]{2}-S[0-9]-C[1-4]$"
+          },
+          "jalon": {
+            "type": "string",
+            "pattern": "^J[1-5]-C[0-9]$"
+          },
+          "savoir_faire": {
+            "type": "string",
+            "pattern": "^Vous ",
+            "minLength": 15
+          },
+          "preuve": {
+            "type": "string",
+            "minLength": 15
+          },
+          "reussi_si": {
+            "type": "string",
+            "minLength": 15
+          }
+        }
+      }
+    }
   }
 }

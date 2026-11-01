@@ -27,6 +27,18 @@ Gerüststufe `echafaudage` nach Partie: I = 1, II = 2, III = 3, IV = 2 bei neuem
 - Folien: Claude Slides mit Design System OKOHO (Académie-Farben).
 - Quiz und Formulare: Quelle `quiz/<CODE>.yaml` (Quiz) bzw. `quiz/<CODE>-formulaire.yaml`; `tools/build_forms.py <Drive-Ordner-ID> SNN` erzeugt ein Google-Apps-Script (Logo, Autokorrektur, Erklärungen), das der Formateur einmal ausführt. Jede Séance erhält ein Quiz und eine NotebookLM-Konsigne (Dokument 05).
 
+## Drei Leitfragen (Pflicht für jede Séance, jede Kohorte)
+Jede Séance beantwortet sichtbar, für Lernende und Formateur:
+1. **Was können die Teilnehmenden am Ende?** 2 bis 4 Kompetenzen, Handlungsverb, beobachtbar (`savoir_faire`, beginnt mit « Vous »).
+2. **Wie stellen wir sicher, dass sie es wirklich können?** Eine Preuve je Kompetenz: Handlung während der Séance (Direct) oder im Livrable (Autonomie), nie « avez-vous compris ? » (`preuve`).
+3. **Woran erkennen wir es?** Ein Kriterium, in unter einer Minute prüfbar (`reussi_si`).
+- Quelle: Metadatenkopf `competences` (Schema). Jede Kompetenz verweist auf eine Jalon-Kompetenz in `manuel/jalons.yaml` (`jalon: J1-C2`).
+- In der Fiche: Tabelle « Ce que vous saurez faire » (Vous savez… / Vous le prouvez… / C'est réussi si…, Texte wortgleich), Abschnitt « Vérifiez vos acquis » vor « Votre livrable », Livrable mit einem Element je Kompetenz und Grille Niveau 1 bis 4.
+- Quiz: jede Frage mit `competence`, jede Kompetenz mindestens eine Frage, Schwelle `reussite` (70 %).
+- Direct-Séance: Dramaturgie mit Grille d'observation (Prénom × Kompetenz) und Contrôle de sortie, der nie gestrichen wird. Bilan meldet das Ergebnis je Person.
+- Jalon-Pfad: `tools/couverture.py` zeigt, welche Jalon-Kompetenz noch keine Séance hat. Jalon J1 ist nach vier Live-Séances erreicht.
+- `validate.py` blockiert jede Séance, die eine dieser Regeln verletzt.
+
 ## Arbeitsablauf
 - Jede Séance auf eigenem Branch `seance/<CODE>`, Merge nach `main` erst nach Freigabe durch Bertrand.
 - Vor jeder Arbeit `git pull`. Nach jeder Änderung `python3 tools/validate.py`.

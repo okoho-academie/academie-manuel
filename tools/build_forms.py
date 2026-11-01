@@ -17,8 +17,11 @@ def js(s):
     return json.dumps(s, ensure_ascii=False)
 
 def quiz_js(d, nom):
+    desc = d["description"]
+    if "reussite" in d:
+        desc += f" Objectif : au moins {d['reussite']} bonnes réponses sur {len(d['questions'])}."
     lines = [f"  // {d['titre']}",
-             f"  var f = nouveau({js(nom)}, {js(d['description'])});",
+             f"  var f = nouveau({js(nom)}, {js(desc)});",
              "  f.setIsQuiz(true);",
              "  f.setShuffleQuestions(false);",
              "  f.addTextItem().setTitle('Prénom').setRequired(true);"]

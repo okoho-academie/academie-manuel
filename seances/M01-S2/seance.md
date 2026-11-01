@@ -12,11 +12,27 @@ echafaudage: 1
 acces_defaut: programme
 jalon: J1
 livrable: Analyse d'une photo ou d'un document du quotidien
+competences:
+  - code: M01-S2-C1
+    jalon: J1-C1
+    savoir_faire: Vous faites lire une photo de document par Claude et obtenez un tableau.
+    preuve: Vous photographiez un document papier du quotidien et demandez un tableau de ses informations principales.
+    reussi_si: Le tableau reprend la date, l'émetteur, les montants et le total du document.
+  - code: M01-S2-C2
+    jalon: J1-C4
+    savoir_faire: Vous vérifiez une réponse de Claude avant de l'utiliser.
+    preuve: Vous comparez deux valeurs du tableau avec le document original et notez le résultat.
+    reussi_si: Deux valeurs sont comparées ; chaque écart est signalé à Claude et corrigé dans la conversation.
+  - code: M01-S2-C3
+    jalon: J1-C4
+    savoir_faire: Vous choisissez ce que vous envoyez à Claude sans exposer de données sensibles.
+    preuve: Vous choisissez votre document vous-même et citez trois types de documents que vous n'envoyez jamais.
+    reussi_si: Aucune pièce d'identité, donnée bancaire, code ou donnée de santé dans vos captures ; les trois types cités sont justes.
 glossaire: [Pièce jointe, Mode tuteur, Hallucination]
 index: [Pièce jointe, Images (analyser), Fichiers (envoyer à Claude), Mobile (application Claude), Mode tuteur, Vérification des faits]
 videos: {tutoriel: true, vitrine: false, shorts: 0, signature: false}
 verifie: "2026-10-31"
-version: "1.0"
+version: "1.1"
 captures: null
 status: relecture
 ---
@@ -25,10 +41,13 @@ status: relecture
 
 ## Ce que vous saurez faire
 
-- Vous envoyez une photo à Claude depuis l'application sur votre téléphone.
-- Vous envoyez un document (PDF ou Word) et vous posez des questions sur son contenu.
-- Vous vérifiez deux informations de la réponse vous-même.
-- Vous utilisez le mode tuteur : Claude vous pose des questions au lieu de tout faire à votre place.
+| Vous savez… | Vous le prouvez… | C'est réussi si… |
+|---|---|---|
+| Vous faites lire une photo de document par Claude et obtenez un tableau. | Vous photographiez un document papier du quotidien et demandez un tableau de ses informations principales. | Le tableau reprend la date, l'émetteur, les montants et le total du document. |
+| Vous vérifiez une réponse de Claude avant de l'utiliser. | Vous comparez deux valeurs du tableau avec le document original et notez le résultat. | Deux valeurs sont comparées ; chaque écart est signalé à Claude et corrigé dans la conversation. |
+| Vous choisissez ce que vous envoyez à Claude sans exposer de données sensibles. | Vous choisissez votre document vous-même et citez trois types de documents que vous n'envoyez jamais. | Aucune pièce d'identité, donnée bancaire, code ou donnée de santé dans vos captures ; les trois types cités sont justes. |
+
+Ces trois compétences comptent pour le jalon **J1 · Utilisateur autonome**. En chemin, vous découvrez aussi l'envoi d'un document PDF ou Word et le mode tuteur.
 
 ## Pourquoi c'est utile
 
@@ -36,7 +55,7 @@ Votre téléphone devient un scanner intelligent. Une facture, un reçu, une ét
 
 Durée : 60 minutes, en autonomie. Appareil : téléphone avec l'application Claude.
 
-**Deux pistes, un même livrable.** Suivez la fiche pas à pas. Si vous êtes à l'aise, faites aussi les encadrés **Piste Défi**.
+**Deux pistes, les mêmes compétences.** Suivez la fiche pas à pas. Si vous êtes à l'aise, faites aussi les encadrés **Piste Défi**.
 
 ## Avant de commencer
 
@@ -146,14 +165,35 @@ Aïcha, couturière à Bonamoussadi, reçoit la facture de son fournisseur de ti
 - **Envoyer la photo sans consigne.** Claude décrit l'image, sans plus. Dites ce que vous voulez obtenir.
 - **Photographier de travers, à contre-jour.** Document à plat, bonne lumière, cadre complet.
 
+## Vérifiez vos acquis
+
+Cochez seulement ce que vous avez fait vous-même, sans aide.
+
+- [ ] Claude a lu votre photo et rendu un tableau avec date, émetteur, montants et total. Sinon : étapes 2 et 3.
+- [ ] Vous avez comparé deux valeurs avec l'original et corrigé les écarts. Sinon : étape 4.
+- [ ] Vous citez sans regarder trois types de documents que vous n'envoyez jamais. Sinon : « Avant de commencer ».
+- [ ] Quiz S01-2 : au moins 5 bonnes réponses sur 6.
+
 ## Votre livrable
 
-Un document Google Docs nommé **S01-2_Prenom**, créé dans votre portfolio, avant la prochaine séance. Il contient :
+Un document Google Docs nommé **S01-2_Prenom**, créé dans votre portfolio, avant la prochaine séance. Chaque élément prouve une compétence :
 
-1. Deux captures : la photo ou le document envoyé, la réponse de Claude.
-2. Cinq lignes : le document choisi, la demande, le résultat, les deux valeurs vérifiées, ce que vous en faites.
+1. **Capture 1 :** la photo envoyée (document entier, lisible) et le tableau rendu par Claude.
+2. **Capture 2 :** votre message à Claude qui signale un écart, ou la phrase « Les deux valeurs vérifiées sont justes : … ».
+3. **Cinq lignes :** le document choisi, la demande, les deux valeurs vérifiées, ce que vous en faites, les trois types de documents que vous n'envoyez jamais.
 
 Piste Défi : ajoutez votre conclusion « photo ou fichier » et le résultat de votre test d'hallucination.
+
+### Comment votre livrable est évalué
+
+| Niveau | Ce que montre votre livrable |
+|---|---|
+| 1 · Découverte | Une photo envoyée, mais le tableau manque ou aucune valeur n'est vérifiée. |
+| 2 · Application guidée | Tableau complet avec la consigne de la fiche, deux valeurs comparées. |
+| 3 · Autonomie | Un document choisi par vous, une demande écrite par vous, deux valeurs vérifiées, écarts corrigés, aucune donnée sensible. |
+| 4 · Transfert | Niveau 3, et le résultat sert à quelqu'un : un rappel de paiement, un tableau de dépenses partagé. Ou, piste Défi : la comparaison photo et fichier est argumentée. |
+
+La séance est validée au niveau 3. Le jalon J1 demande au moins le niveau 2 à chaque livrable.
 
 ## Kit NotebookLM
 
@@ -167,4 +207,4 @@ Pièce jointe · Images (analyser) · Fichiers (envoyer à Claude) · Mobile (ap
 
 Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi
 Claude est une marque d'Anthropic. Le Parcours Claude Pro est une formation indépendante proposée par OKOHO Consulting GmbH, sans partenariat avec Anthropic. Reproduction et diffusion interdites sans autorisation écrite d'OKOHO Consulting GmbH.
-Version 1.0 · Fonctions vérifiées le 31.10.2026 (support.claude.com) · Captures d'écran réalisées le — · © 2026 OKOHO Consulting GmbH
+Version 1.1 · Fonctions vérifiées le 31.10.2026 (support.claude.com) · Captures d'écran réalisées le — · © 2026 OKOHO Consulting GmbH
