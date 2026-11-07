@@ -87,6 +87,10 @@ def main():
            f" * OKOHO Académie · Formulaires de la semaine {semaine} · généré par tools/build_forms.py",
            f" * Utilisation : script.google.com › Nouveau projet › coller ce code › Enregistrer › Exécuter « creerFormulaires{semaine} » (ou « creer »).",
            " * Autoriser l'accès au compte de l'Académie. Les liens à partager s'affichent dans le journal d'exécution.",
+           " * OBLIGATOIRE après exécution, pour chaque quiz (Apps Script ne peut pas le régler) :",
+           " *   Paramètres › Quiz › Publier la note : « Immédiatement après chaque envoi »,",
+           " *   puis activer Questions manquées, Bonnes réponses, Valeur en points.",
+           " *   Sinon le quiz reste sur « Plus tard » sans collecte d'e-mails et les réponses ne s'envoient pas.",
            " * Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi",
            " */",
            f"var DOSSIER_ID = {js(dossier)};",
@@ -121,7 +125,8 @@ def main():
         else:
             out += quiz_js(d, f"{semaine}-{num} · {d['titre']}")
         out.append("")
-    out += ["  liens.forEach(function (l) { Logger.log(l[0] + ' : ' + l[1]); });", "}", "",
+    out += ["  liens.forEach(function (l) { Logger.log(l[0] + ' : ' + l[1]); });",
+            "  Logger.log('À FAIRE pour chaque quiz : Paramètres › Quiz › Publier la note « Immédiatement après chaque envoi ».');", "}", "",
             "// Raccourci identique au nom historique", f"function creer() {{ creerFormulaires{semaine}(); }}"]
     dest = OUT / "forms"
     dest.mkdir(parents=True, exist_ok=True)
