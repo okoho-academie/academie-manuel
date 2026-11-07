@@ -39,6 +39,15 @@ Jede Séance beantwortet sichtbar, für Lernende und Formateur:
 - Jalon-Pfad: `tools/couverture.py` zeigt, welche Jalon-Kompetenz noch keine Séance hat. Jalon J1 ist nach vier Live-Séances erreicht.
 - `validate.py` blockiert jede Séance, die eine dieser Regeln verletzt.
 
+## Quiz und Formulare: verbindliche Regeln (seit 07.11.2026)
+- Erstes Feld jedes Quiz: « Prénom », Kurzantwort, Pflicht, leer, sichtbar (`build_forms.py` erzeugt es).
+- Nach dem Anlegen prüft Claude jedes Quiz im Browser: Notenfreigabe « Immédiatement après chaque envoi », Questions manquées, Bonnes réponses, Valeur en points aktiv; Antworten werden angenommen; Antwortansicht zeigt « Prénom » leer und « Envoyer ».
+- Freigabe: Formulare und « Espace participants » nur « Jeder mit dem Link: Lecteur », nie Bearbeiter. Teilnehmende erhalten nur die veröffentlichten Links `/forms/d/e/…/viewform`, nie Bearbeitungslinks.
+- Reparatur eines Formulars ohne Antworten: Neuaufbau aus `quiz/*.yaml` (Muster: `academie-pilotage/appscript/Reparer_Formulaires.gs`). Ein Formular mit Antworten wird nie neu aufgebaut.
+
+## Übergabe nach jeder Woche (automatisch)
+- Sobald Inhalte und Dokumente einer Woche produziert und veröffentlicht sind, schreibt Claude ohne Aufforderung die Übergabe für den nächsten Chat: Projektwissen `claude/09_Uebergabe_naechste_Seance.md` (ersetzt) und Startprompt für « Semaine NN · produire ».
+
 ## Arbeitsablauf
 - Jede Séance auf eigenem Branch `seance/<CODE>`, Merge nach `main` erst nach Freigabe durch Bertrand.
 - Vor jeder Arbeit `git pull`. Nach jeder Änderung `python3 tools/validate.py`.
