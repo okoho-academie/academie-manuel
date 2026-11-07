@@ -7,7 +7,7 @@ sections:
     champs:
       - {type: texte, q: "Prénom", obligatoire: true}
       - {type: texte, q: "Nom", obligatoire: true}
-      - {type: texte, q: "Adresse Gmail (pour votre portfolio Google Drive)", obligatoire: true, aide: "Exemple : prenom.nom@gmail.com"}
+      - {type: texte, q: "Adresse Gmail (pour votre portfolio Google Drive)", obligatoire: true, format: gmail, aide: "Exemple : prenom.nom@gmail.com. Sans adresse Gmail, Google Drive ne peut pas ouvrir votre portfolio."}
       - {type: texte, q: "Ville et quartier", obligatoire: true}
       - {type: texte, q: "Activité actuelle", aide: "Études, emploi, commerce, recherche d'emploi…", obligatoire: true}
       - {type: texte, q: "Appareil principal (marque et modèle du téléphone)", obligatoire: true}

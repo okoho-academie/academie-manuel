@@ -45,6 +45,11 @@ Jede Séance beantwortet sichtbar, für Lernende und Formateur:
 - Freigabe: Formulare und « Espace participants » nur « Jeder mit dem Link: Lecteur », nie Bearbeiter. Teilnehmende erhalten nur die veröffentlichten Links `/forms/d/e/…/viewform`, nie Bearbeitungslinks.
 - Reparatur eines Formulars ohne Antworten: Neuaufbau aus `quiz/*.yaml` (Muster: `academie-pilotage/appscript/Reparer_Formulaires.gs`). Ein Formular mit Antworten wird nie neu aufgebaut.
 
+## Lernschleife nach jeder Séance (Pflicht)
+- Während jeder Woche notiert Claude, was in Vorbereitung, Durchführung und Werkzeugen gehakt hat: Beobachtung, Ursache, Änderung, Ziel (Skill, Werkzeug, Vorlage, Handbuch).
+- Ablage: `academie-pilotage/lernen/Learnings_Semaine_NN.md`, Verweis in der Übergabe 09.
+- Umsetzung erst nach Freigabe durch Bertrand (« OK Learnings SNN »): dann Skills, Werkzeuge und Vorlagen in einem Durchgang anpassen, `validate.py` grün, Skill-Änderungen als Vorschlag zum Speichern.
+
 ## Übergabe nach jeder Woche (automatisch)
 - Sobald Inhalte und Dokumente einer Woche produziert und veröffentlicht sind, schreibt Claude ohne Aufforderung die Übergabe für den nächsten Chat: Projektwissen `claude/09_Uebergabe_naechste_Seance.md` (ersetzt) und Startprompt für « Semaine NN · produire ».
 

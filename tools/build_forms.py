@@ -52,7 +52,12 @@ def form_js(d):
             aide = f".setHelpText({js(c['aide'])})" if c.get("aide") else ""
             t = c["type"]
             if t == "texte":
-                lines.append(f"  f.addTextItem().setTitle({js(c['q'])}){aide}.setRequired({req});")
+                val = ""
+                if c.get("format") == "gmail":
+                    val = (".setValidation(FormApp.createTextValidation()"
+                           ".setHelpText('Indiquez une adresse qui se termine par @gmail.com.')"
+                           ".requireTextMatchesPattern('^[A-Za-z0-9._%+-]+@gmail[.]com$').build())")
+                lines.append(f"  f.addTextItem().setTitle({js(c['q'])}){aide}{val}.setRequired({req});")
             elif t == "paragraphe":
                 lines.append(f"  f.addParagraphTextItem().setTitle({js(c['q'])}){aide}.setRequired({req});")
             elif t == "choix":
