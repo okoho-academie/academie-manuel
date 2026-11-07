@@ -3,60 +3,112 @@
   "racine": "OKOHO Académie · Parcours Claude Pro",
   "fichiers": [
     {
+      "chemin": "Formateur (privé)/Dramaturgies/Dramaturgie · Prise en main de Claude.pdf",
+      "sha": "659c659bec8550a3"
+    },
+    {
       "chemin": "Formateur (privé)/Dramaturgies/Dramaturgie · Séance de lancement.pdf",
-      "sha": "76f8ce2aafcf2cd9"
+      "sha": "5beda0cba5b66036"
+    },
+    {
+      "chemin": "Formateur (privé)/Dramaturgies/Tutoriel · Prise en main de Claude.pdf",
+      "sha": "df44fc70a87d52c9"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/Dramaturgie · Séance de lancement.pdf",
-      "sha": "76f8ce2aafcf2cd9"
+      "sha": "5beda0cba5b66036"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/Présentation · Séance de lancement · avec notes.pdf",
-      "sha": "a97072fda6e04ca3"
+      "sha": "0fb2edbc7e22c76a"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/Présentation · Séance de lancement.pdf",
-      "sha": "c5ea0bd03e2c576d"
+      "sha": "1a27f972f40c11e6"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/S00 · Votre premier notebook NotebookLM.pdf",
-      "sha": "659ec1ba0e2fc004"
+      "sha": "828c7e4fed007a3e"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/S00-1 · Guide · Bien démarrer, vos comptes et vos outils.pdf",
-      "sha": "d1658710b7b8b27d"
+      "sha": "1f0ade0eb275f46b"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/S00-2 · À remplir · Diagnostic d'entrée.pdf",
-      "sha": "e16daabe2fcc87ee"
+      "sha": "13e7ddc48d607989"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/S00-3 · Guide · La carte de Claude, quel outil, pour quoi, gratuit ou payant.pdf",
-      "sha": "72798d5f6599033e"
+      "sha": "49a8c73895cb4576"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/Dramaturgie · Prise en main de Claude.pdf",
+      "sha": "659c659bec8550a3"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/Présentation · Prise en main de Claude · avec notes.pdf",
+      "sha": "6dc92989f8c37ed0"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/Présentation · Prise en main de Claude.pdf",
+      "sha": "07b9255a7562c5bf"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/S01 · Réviser avec NotebookLM · Prise en main de Claude.pdf",
+      "sha": "12cec27d888f91f0"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/S01 · Script des formulaires (Apps Script).txt",
+      "sha": "5fdcb4d87c9c1cc1"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/S01-1 · Séance en direct · M01-S1 Créer son compte et découvrir l'interface.pdf",
+      "sha": "d09f83c7a4af2cd4"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/S01-2 · En autonomie · M01-S2 Fichiers, images et application mobile.pdf",
+      "sha": "f9fdcd3b4cf487f9"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/Tutoriel · Prise en main de Claude.pdf",
+      "sha": "df44fc70a87d52c9"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/00 · COMMENCEZ ICI.pdf",
-      "sha": "42e9718f44e7a69a"
+      "sha": "79ef2d6f8183029a"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/01 · Programme et calendrier/Programme et calendrier · OKOHO Parcours Claude Pro · Cohorte 1.pdf",
-      "sha": "561fe4ade9119e42"
+      "sha": "3be3554911dc9185"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 00 · 31.10.2026 · Séance de lancement/S00-1 · Guide · Bien démarrer, vos comptes et vos outils.pdf",
-      "sha": "d1658710b7b8b27d"
+      "sha": "1f0ade0eb275f46b"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 00 · 31.10.2026 · Séance de lancement/S00-2 · À remplir · Diagnostic d'entrée.pdf",
-      "sha": "e16daabe2fcc87ee"
+      "sha": "13e7ddc48d607989"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 00 · 31.10.2026 · Séance de lancement/S00-3 · Guide · La carte de Claude, quel outil, pour quoi, gratuit ou payant.pdf",
-      "sha": "72798d5f6599033e"
+      "sha": "49a8c73895cb4576"
+    },
+    {
+      "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 01 · 07.11.2026 · Prise en main de Claude/S01-1 · Séance en direct · M01-S1 Créer son compte et découvrir l'interface.pdf",
+      "sha": "d09f83c7a4af2cd4"
+    },
+    {
+      "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 01 · 07.11.2026 · Prise en main de Claude/S01-2 · En autonomie · M01-S2 Fichiers, images et application mobile.pdf",
+      "sha": "f9fdcd3b4cf487f9"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/03 · Réviser avec NotebookLM/S00 · Votre premier notebook NotebookLM.pdf",
-      "sha": "659ec1ba0e2fc004"
+      "sha": "828c7e4fed007a3e"
+    },
+    {
+      "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/03 · Réviser avec NotebookLM/S01 · Réviser avec NotebookLM · Prise en main de Claude.pdf",
+      "sha": "12cec27d888f91f0"
     }
   ]
 }

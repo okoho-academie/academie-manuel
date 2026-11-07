@@ -1,0 +1,104 @@
+/**
+ * OKOHO Académie · Formulaires de la semaine S01 · généré par tools/build_forms.py
+ * Utilisation : script.google.com › Nouveau projet › coller ce code › Enregistrer › Exécuter « creerFormulairesS01 » (ou « creer »).
+ * Autoriser l'accès au compte de l'Académie. Les liens à partager s'affichent dans le journal d'exécution.
+ * Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi
+ */
+var DOSSIER_ID = "nom:Semaine 01 · 07.11.2026 · Prise en main de Claude";
+var LOGO_B64 = "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";
+
+// DOSSIER_ID : identifiant du dossier Drive, ou « nom:<nom exact du dossier> » (le premier dossier de ce nom est utilisé).
+function dossier() {
+  if (DOSSIER_ID.indexOf('nom:') !== 0) return DriveApp.getFolderById(DOSSIER_ID);
+  var it = DriveApp.getFoldersByName(DOSSIER_ID.slice(4));
+  if (!it.hasNext()) throw new Error('Dossier introuvable : ' + DOSSIER_ID.slice(4) + '. Lancez d\'abord « synchroniser ».');
+  return it.next();
+}
+
+function nouveau(titre, description) {
+  var f = FormApp.create(titre);
+  f.setTitle(titre).setDescription(description + '\n\nUne formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi · okoho.de');
+  f.setConfirmationMessage('Merci. Vos réponses sont enregistrées. OKOHO Académie · Parcours Claude Pro');
+  f.addImageItem().setImage(Utilities.newBlob(Utilities.base64Decode(LOGO_B64), 'image/png', 'logo.png')).setWidth(220);
+  try { f.setPublished(true); } catch (e) {}
+  DriveApp.getFileById(f.getId()).moveTo(dossier());
+  return f;
+}
+
+function creerFormulairesS01() {
+  var liens = [];
+  // Quiz · Prise en main de Claude
+  var f = nouveau("S01-1 · Quiz · Prise en main de Claude", "8 questions sur l'interface de Claude et la conversation en trois tours. Les deux dernières questions sont des questions Défi. Votre score s'affiche à la fin, avec l'explication de chaque réponse. Objectif : au moins 6 bonnes réponses sur 8.");
+  f.setIsQuiz(true);
+  f.setShuffleQuestions(false);
+  f.addTextItem().setTitle('Prénom').setRequired(true);
+  var it = f.addMultipleChoiceItem().setTitle("Vous voulez parler d'un sujet complètement nouveau avec Claude. Que faites-vous ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Je continue dans la dernière conversation", false), it.createChoice("J'ouvre une nouvelle conversation", true), it.createChoice("Je ferme et je rouvre l'application", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Un nouveau sujet, une nouvelle conversation. Votre historique reste clair et Claude ne mélange pas les sujets.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Un nouveau sujet, une nouvelle conversation. Votre historique reste clair et Claude ne mélange pas les sujets.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Où réglez-vous la langue de l'interface et vos instructions personnelles ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Dans le profil et les paramètres", true), it.createChoice("Dans la zone de saisie", false), it.createChoice("Sous chaque réponse de Claude", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Langue, instructions et confidentialité se trouvent dans le profil, puis les paramètres.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Langue, instructions et confidentialité se trouvent dans le profil, puis les paramètres.").build());
+  var it = f.addMultipleChoiceItem().setTitle("La réponse de Claude est trop longue. Quelle est la meilleure réaction ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("« Non, pas ça. »", false), it.createChoice("« Raccourcis : trois phrases au maximum, garde la date et le prix. »", true), it.createChoice("J'ouvre une nouvelle conversation et je recommence", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Dites précisément ce que vous voulez : la longueur, ce qu'il faut garder. Claude corrige dans la même conversation.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Dites précisément ce que vous voulez : la longueur, ce qu'il faut garder. Claude corrige dans la même conversation.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Quels sont les trois tours d'une bonne conversation dans cette séance ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Saluer, demander, remercier", false), it.createChoice("Demander, préciser, transformer", true), it.createChoice("Copier, coller, envoyer", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Vous demandez une première version, vous précisez ce qui doit changer, puis vous transformez la forme du résultat.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Vous demandez une première version, vous précisez ce qui doit changer, puis vous transformez la forme du résultat.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Vous cherchez une conversation d'il y a quelques jours sur une invitation. Que faites-vous ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Je cherche « invitation » dans l'historique", true), it.createChoice("Je repose la même question à Claude", false), it.createChoice("Elle est perdue, je recommence", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("L'historique garde vos conversations et la recherche les retrouve. D'où l'intérêt de les renommer clairement.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("L'historique garde vos conversations et la recherche les retrouve. D'où l'intérêt de les renommer clairement.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Claude vous donne un message avec un prix et une date. Avant de l'envoyer à un client, vous :").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("L'envoyez tout de suite, Claude ne se trompe pas", false), it.createChoice("Relisez et vérifiez le prix et la date", true), it.createChoice("Demandez à Claude s'il est sûr de lui", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Claude peut se tromper sur un nom, un prix ou une date. Vous restez responsable de ce que vous envoyez.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Claude peut se tromper sur un nom, un prix ou une date. Vous restez responsable de ce que vous envoyez.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Défi. Votre deuxième message partait dans la mauvaise direction. Comment corriger proprement ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("J'ajoute trois messages de correction", false), it.createChoice("Je modifie ce message avec l'icône crayon et je l'envoie à nouveau", true), it.createChoice("Je recommence dans une nouvelle conversation", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("En modifiant le message, Claude écrit une nouvelle réponse et garde l'ancienne. Les flèches permettent de comparer les versions.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("En modifiant le message, Claude écrit une nouvelle réponse et garde l'ancienne. Les flèches permettent de comparer les versions.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Défi. À quoi sert l'icône « réessayer » sous une réponse ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("À envoyer la réponse à un ami", false), it.createChoice("À obtenir une autre réponse à la même consigne", true), it.createChoice("À traduire la réponse", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Réessayer produit une nouvelle version. Vous comparez et gardez la meilleure.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Réessayer produit une nouvelle version. Vous comparez et gardez la meilleure.").build());
+  liens.push(["S01-1 · Quiz · Prise en main de Claude", f.getPublishedUrl()]);
+
+  // Quiz · Photos et fichiers
+  var f = nouveau("S01-2 · Quiz · Photos et fichiers", "6 questions sur l'envoi de photos et de fichiers à Claude, la vérification et la protection de vos données. Votre score s'affiche à la fin, avec l'explication de chaque réponse. Objectif : au moins 5 bonnes réponses sur 6.");
+  f.setIsQuiz(true);
+  f.setShuffleQuestions(false);
+  f.addTextItem().setTitle('Prénom').setRequired(true);
+  var it = f.addMultipleChoiceItem().setTitle("Vous voulez que Claude lise une facture papier. Quel bouton touchez-vous dans l'application ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Le micro", false), it.createChoice("Le bouton + à côté de la zone de saisie", true), it.createChoice("Le choix du modèle", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Le bouton + ouvre l'appareil photo, la galerie et vos fichiers.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Le bouton + ouvre l'appareil photo, la galerie et vos fichiers.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Vous envoyez une photo sans rien écrire. Que se passe-t-il le plus souvent ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Claude fait exactement le tableau dont vous avez besoin", false), it.createChoice("Claude décrit l'image, sans plus", true), it.createChoice("Claude refuse la photo", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Sans consigne, Claude ne sait pas ce que vous voulez. Dites le résultat attendu : un tableau, un résumé, une liste.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Sans consigne, Claude ne sait pas ce que vous voulez. Dites le résultat attendu : un tableau, un résumé, une liste.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Claude vous rend un tableau à partir d'une photo de reçu. Que faites-vous avant de l'utiliser ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Rien, la photo est nette", false), it.createChoice("Je compare au moins deux valeurs avec le reçu", true), it.createChoice("Je demande à Claude s'il est sûr", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Une photo mal cadrée ou floue donne des chiffres faux. Vous comparez toujours deux valeurs avec l'original.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Une photo mal cadrée ou floue donne des chiffres faux. Vous comparez toujours deux valeurs avec l'original.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Vous trouvez une erreur de quantité dans le tableau. Quelle est la meilleure réaction ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Je recommence dans une nouvelle conversation", false), it.createChoice("Je signale l'erreur à Claude dans la même conversation et je reprends la photo si elle est floue", true), it.createChoice("Je corrige seulement sur papier", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Vous signalez l'écart dans la même conversation. Si la photo est en cause, une nouvelle photo bien éclairée règle le problème.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Vous signalez l'écart dans la même conversation. Si la photo est en cause, une nouvelle photo bien éclairée règle le problème.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Lequel de ces documents pouvez-vous envoyer à Claude ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("La photo de votre carte d'identité", false), it.createChoice("Un reçu de supermarché", true), it.createChoice("Une capture de votre application bancaire", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Un reçu ordinaire ne contient pas de données sensibles. Pièces d'identité et données bancaires ne s'envoient jamais.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Un reçu ordinaire ne contient pas de données sensibles. Pièces d'identité et données bancaires ne s'envoient jamais.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Qu'est-ce qu'une hallucination de l'IA ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Une réponse fausse donnée avec assurance", true), it.createChoice("Une image générée par Claude", false), it.createChoice("Une panne de l'application", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("L'IA peut inventer une information et la présenter comme sûre. C'est pour cela que vous vérifiez.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("L'IA peut inventer une information et la présenter comme sûre. C'est pour cela que vous vérifiez.").build());
+  liens.push(["S01-2 · Quiz · Photos et fichiers", f.getPublishedUrl()]);
+
+  liens.forEach(function (l) { Logger.log(l[0] + ' : ' + l[1]); });
+}
+
+// Raccourci identique au nom historique
+function creer() { creerFormulairesS01(); }
