@@ -37,6 +37,7 @@ function github_(src, chemin) {
 function type_(nom) {
   if (/\.pdf$/i.test(nom)) return 'application/pdf';
   if (/\.docx$/i.test(nom)) return 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+  if (/\.txt$/i.test(nom)) return 'text/plain';   // sinon le .txt est recopié à chaque synchronisation
   return 'application/octet-stream';
 }
 
@@ -82,8 +83,30 @@ function synchroniser() {
       if (geres.indexOf(x.getMimeType()) >= 0 && !attendus[id + '/' + x.getName()]) x.setTrashed(true);
     }
   });
+  garderLecteur_(racine);
   Logger.log(nouveaux.length ? 'Mis à jour : \n' + nouveaux.join('\n') : 'Rien à mettre à jour.');
   if (erreurs.length) Logger.log('Remarque : ' + erreurs.join(' · '));
+}
+
+// Règle depuis le 07.11.2026 : « Espace participants » et tout son contenu (formulaires compris)
+// restent en « Tous les utilisateurs disposant du lien : Lecteur ». Jamais « Éditeur ».
+// Chaque synchronisation remet en Lecteur ce qui serait passé en Éditeur.
+function garderLecteur_(racine) {
+  function fixe(x) {
+    try {
+      if (x.getSharingAccess() === DriveApp.Access.ANYONE_WITH_LINK && x.getSharingPermission() === DriveApp.Permission.EDIT) {
+        x.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);
+        Logger.log('Remis en Lecteur : ' + x.getName());
+      }
+    } catch (e) { Logger.log('Partage non modifiable : ' + x.getName() + ' · ' + e.message); }
+  }
+  function parcourir(d) {
+    fixe(d);
+    var f = d.getFiles(); while (f.hasNext()) fixe(f.next());
+    var s = d.getFolders(); while (s.hasNext()) parcourir(s.next());
+  }
+  var it = racine.getFolders();
+  while (it.hasNext()) { var d = it.next(); if (/Espace participants/.test(d.getName())) parcourir(d); }
 }
 
 function installer() {

@@ -11,6 +11,7 @@ cohorte: 1
 nom: "OKOHO Parcours Claude Pro · Cohorte 1"
 groupe: "OKOHO Parcours Claude Pro · Cohorte 1"   # nom du groupe WhatsApp d'entraide
 jour: samedi                 # jour des séances en direct
+horaire: "17 h 00 à 18 h 30 (heure d'Allemagne, identique à l'heure du Cameroun en hiver)"   # décidé le 07.11, à reprendre dans chaque annonce
 programme:
   code: A00-00
   nom_drive: "Programme et calendrier · OKOHO Parcours Claude Pro · Cohorte 1"
