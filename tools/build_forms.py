@@ -32,42 +32,83 @@ def quiz_js(d, nom):
         fb = js(q["explication"])
         lines.append(f"  it.setFeedbackForCorrect(FormApp.createFeedback().setText({fb}).build());")
         lines.append(f"  it.setFeedbackForIncorrect(FormApp.createFeedback().setText({fb}).build());")
+    if d.get("pouls"):
+        lines.append("  f.addPageBreakItem().setTitle('Pouls de la semaine (non noté)')"
+                     ".setHelpText('Trois questions pour adapter le parcours à votre situation. Elles ne comptent pas dans votre score.');")
+        for c in POULS:
+            lines.append(champ_js(c))
     lines.append(f"  liens.push([{js(nom)}, f.getPublishedUrl()]);")
     return lines
 
+# Trois questions non notées en fin de quiz (« pouls: true » dans quiz/<CODE>.yaml)
+POULS = [
+    {"type": "choix", "q": "Temps passé cette semaine sur le parcours, hors séance en direct",
+     "choix": ["Moins d'une heure", "1 à 2 heures", "2 à 4 heures", "Plus de 4 heures"], "obligatoire": True},
+    {"type": "paragraphe", "q": "Ce qui vous a bloqué cette semaine (une phrase suffit)", "obligatoire": False},
+    {"type": "paragraphe", "q": "Où en est votre client pilote ? Qu'avez-vous produit pour lui cette semaine ?", "obligatoire": False},
+]
+
+def champ_js(c, var=None):
+    """Une question de formulaire. var : nom de variable JavaScript si la question sert à un aiguillage."""
+    req = "true" if c.get("obligatoire") else "false"
+    aide = f".setHelpText({js(c['aide'])})" if c.get("aide") else ""
+    pre = f"  var {var} = " if var else "  "
+    t = c["type"]
+    if t == "texte":
+        val = ""
+        if c.get("format") == "gmail":
+            val = (".setValidation(FormApp.createTextValidation()"
+                   ".setHelpText('Indiquez une adresse qui se termine par @gmail.com.')"
+                   ".requireTextMatchesPattern('^[A-Za-z0-9._%+-]+@gmail[.]com$').build())")
+        return f"{pre}f.addTextItem().setTitle({js(c['q'])}){aide}{val}.setRequired({req});"
+    if t == "paragraphe":
+        return f"{pre}f.addParagraphTextItem().setTitle({js(c['q'])}){aide}.setRequired({req});"
+    if t == "choix":
+        if var:
+            return f"{pre}f.addMultipleChoiceItem().setTitle({js(c['q'])}){aide}.setRequired({req});"
+        return f"{pre}f.addMultipleChoiceItem().setTitle({js(c['q'])}){aide}.setChoiceValues({js(c['choix'])}).setRequired({req});"
+    if t == "cases":
+        return f"{pre}f.addCheckboxItem().setTitle({js(c['q'])}){aide}.setChoiceValues({js(c['choix'])}).setRequired({req});"
+    if t == "echelle":
+        return f"{pre}f.addScaleItem().setTitle({js(c['q'])}){aide}.setBounds({c['min']}, {c['max']}).setLabels({js(c['bas'])}, {js(c['haut'])}).setRequired({req});"
+    if t == "grille":
+        return f"{pre}f.addGridItem().setTitle({js(c['q'])}){aide}.setRows({js(c['lignes'])}).setColumns({js(c['colonnes'])}).setRequired({req});"
+    raise ValueError(f"type de champ inconnu : {t}")
+
 def form_js(d):
+    """Formulaire non noté. Aiguillage :
+    - section « id » : identifiant de la section ;
+    - champ choix avec « aller_a » {choix: id_section} : la réponse mène à cette section ;
+    - section « suite » : id de la section où l'on va après celle-ci (au lieu de la suivante)."""
     lines = [f"  // {d['titre']}", f"  var f = nouveau({js(d['titre'])}, {js(d['description'])});",
-             "  f.setProgressBar(true);"]
-    first = True
-    for sec in d["sections"]:
-        if not first:
-            lines.append(f"  f.addPageBreakItem().setTitle({js(sec['titre'])});")
+             "  f.setProgressBar(true);", "  var sec = {};"]
+    aiguillages, suites = [], []
+    for n, sec in enumerate(d["sections"]):
+        sid = sec.get("id", f"s{n}")
+        if n:
+            lines.append(f"  sec[{js(sid)}] = f.addPageBreakItem().setTitle({js(sec['titre'])});")
+            if sec.get("suite"):
+                suites.append((n, sec["suite"]))
         else:
             lines.append(f"  f.addSectionHeaderItem().setTitle({js(sec['titre'])});")
-        first = False
         if sec.get("texte"):
             lines.append(f"  f.addSectionHeaderItem().setHelpText({js(sec['texte'])});")
-        for c in sec["champs"]:
-            req = "true" if c.get("obligatoire") else "false"
-            aide = f".setHelpText({js(c['aide'])})" if c.get("aide") else ""
-            t = c["type"]
-            if t == "texte":
-                val = ""
-                if c.get("format") == "gmail":
-                    val = (".setValidation(FormApp.createTextValidation()"
-                           ".setHelpText('Indiquez une adresse qui se termine par @gmail.com.')"
-                           ".requireTextMatchesPattern('^[A-Za-z0-9._%+-]+@gmail[.]com$').build())")
-                lines.append(f"  f.addTextItem().setTitle({js(c['q'])}){aide}{val}.setRequired({req});")
-            elif t == "paragraphe":
-                lines.append(f"  f.addParagraphTextItem().setTitle({js(c['q'])}){aide}.setRequired({req});")
-            elif t == "choix":
-                lines.append(f"  f.addMultipleChoiceItem().setTitle({js(c['q'])}){aide}.setChoiceValues({js(c['choix'])}).setRequired({req});")
-            elif t == "cases":
-                lines.append(f"  f.addCheckboxItem().setTitle({js(c['q'])}){aide}.setChoiceValues({js(c['choix'])}).setRequired({req});")
-            elif t == "echelle":
-                lines.append(f"  f.addScaleItem().setTitle({js(c['q'])}).setBounds({c['min']}, {c['max']}).setLabels({js(c['bas'])}, {js(c['haut'])}).setRequired({req});")
-            elif t == "grille":
-                lines.append(f"  f.addGridItem().setTitle({js(c['q'])}).setRows({js(c['lignes'])}).setColumns({js(c['colonnes'])}).setRequired({req});")
+        for k, c in enumerate(sec["champs"]):
+            if c.get("aller_a"):
+                var = f"aig{n}_{k}"
+                lines.append(champ_js(c, var))
+                aiguillages.append((var, c))
+            else:
+                lines.append(champ_js(c))
+    for var, c in aiguillages:
+        ch = ", ".join(f"{var}.createChoice({js(v)}, sec[{js(c['aller_a'][v])}])" for v in c["choix"])
+        lines.append(f"  {var}.setChoices([{ch}]);")
+    # « suite » : la section n se termine sur la section cible. Google Forms règle ce saut
+    # sur le saut de page qui SUIT la section n.
+    ids = [s_.get("id", f"s{i}") for i, s_ in enumerate(d["sections"])]
+    for n, cible in suites:
+        if n + 1 < len(ids):
+            lines.append(f"  sec[{js(ids[n + 1])}].setGoToPage(sec[{js(cible)}]);")
     lines.append(f"  liens.push([{js(d['titre'])}, f.getPublishedUrl()]);")
     return lines
 
@@ -90,7 +131,7 @@ def main():
     logo_b64 = base64.b64encode(LOGO.read_bytes()).decode()
     out = ["/**",
            f" * OKOHO Académie · Formulaires de la semaine {semaine} · généré par tools/build_forms.py",
-           f" * Utilisation : script.google.com › Nouveau projet › coller ce code › Enregistrer › Exécuter « creerFormulaires{semaine} » (ou « creer »).",
+           f" * Utilisation : projet Apps Script OKOHO_Academie.gs (déjà autorisé) › Fichiers › + › Script « Formulaires_{semaine} » › coller › Enregistrer › Exécuter « creerFormulaires{semaine} ».",
            " * Autoriser l'accès au compte de l'Académie. Les liens à partager s'affichent dans le journal d'exécution.",
            " * OBLIGATOIRE après exécution, pour chaque quiz (Apps Script ne peut pas le régler) :",
            " *   Paramètres › Quiz › Publier la note : « Immédiatement après chaque envoi »,",
@@ -98,11 +139,21 @@ def main():
            " *   Sinon le quiz reste sur « Plus tard » sans collecte d'e-mails et les réponses ne s'envoient pas.",
            " * Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi",
            " */",
+           f"function creerFormulaires{semaine}() {{",
+           "  // Tout est encapsulé : le code peut être ajouté au projet OKOHO_Academie.gs sans écraser d'autres fonctions.",
            f"var DOSSIER_ID = {js(dossier)};",
            f"var LOGO_B64 = {js(logo_b64)};",
            "",
-           "// DOSSIER_ID : identifiant du dossier Drive, ou « nom:<nom exact du dossier> » (le premier dossier de ce nom est utilisé).",
+           "// DOSSIER_ID : identifiant du dossier Drive, « nom:<nom exact du dossier> » (premier dossier de ce nom)",
+           "// ou « chemin:<racine>/<sous-dossier>/… » (dossiers créés s'ils manquent, mêmes noms que « synchroniser »).",
            "function dossier() {",
+           "  if (DOSSIER_ID.indexOf('chemin:') === 0) {",
+           "    var parts = DOSSIER_ID.slice(7).split('/'), r = DriveApp.getFoldersByName(parts[0]);",
+           "    if (!r.hasNext()) throw new Error('Racine introuvable : ' + parts[0]);",
+           "    var d = r.next();",
+           "    parts.slice(1).forEach(function (p) { var it = d.getFoldersByName(p); d = it.hasNext() ? it.next() : d.createFolder(p); });",
+           "    return d;",
+           "  }",
            "  if (DOSSIER_ID.indexOf('nom:') !== 0) return DriveApp.getFolderById(DOSSIER_ID);",
            "  var it = DriveApp.getFoldersByName(DOSSIER_ID.slice(4));",
            "  if (!it.hasNext()) throw new Error('Dossier introuvable : ' + DOSSIER_ID.slice(4) + '. Lancez d\\'abord « synchroniser ».');",
@@ -115,11 +166,12 @@ def main():
            "  f.setConfirmationMessage('Merci. Vos réponses sont enregistrées. OKOHO Académie · Parcours Claude Pro');",
            "  f.addImageItem().setImage(Utilities.newBlob(Utilities.base64Decode(LOGO_B64), 'image/png', 'logo.png')).setWidth(220);",
            "  try { f.setPublished(true); } catch (e) {}",
-           "  DriveApp.getFileById(f.getId()).moveTo(dossier());",
+           "  var fichier = DriveApp.getFileById(f.getId());",
+           "  fichier.moveTo(dossier());",
+           "  fichier.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);  // jamais Éditeur",
            "  return f;",
            "}",
            "",
-           f"function creerFormulaires{semaine}() {{",
            "  var liens = [];"]
     for n in noms:
         d = load_yaml(ROOT / "quiz" / f"{n}.yaml")
@@ -132,7 +184,7 @@ def main():
         out.append("")
     out += ["  liens.forEach(function (l) { Logger.log(l[0] + ' : ' + l[1]); });",
             "  Logger.log('À FAIRE pour chaque quiz : Paramètres › Quiz › Publier la note « Immédiatement après chaque envoi ».');", "}", "",
-            "// Raccourci identique au nom historique", f"function creer() {{ creerFormulaires{semaine}(); }}"]
+            ]
     dest = OUT / "forms"
     dest.mkdir(parents=True, exist_ok=True)
     p = dest / f"creer_formulaires_{semaine}.gs"

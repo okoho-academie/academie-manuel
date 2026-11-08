@@ -48,7 +48,7 @@ def gdoc_md(src, cal, titre=None):
     if m:
         t = t[m.end():]
     lab = {"objectifs": "Ce que vous saurez faire", "livrable": "Votre livrable", "prompt": "Consigne à copier",
-           "fil-rouge": "Cas fil rouge", "erreurs": "Erreurs fréquentes", "coup-de-pouce": "Coup de pouce", "defi": "Piste Défi", "acquis": "Vérifiez vos acquis"}
+           "fil-rouge": "Cas fil rouge", "erreurs": "Erreurs fréquentes", "coup-de-pouce": "Coup de pouce", "defi": "Piste Défi", "acquis": "Vérifiez vos acquis", "structure": "Si votre client pilote est votre propre structure"}
     out = [f"# {titre}", ""] if titre else []
     for l in resolve(t, cal).splitlines():
         mm = re.match(r"^::: ?([\w-]+)\s*$", l)
@@ -114,6 +114,13 @@ def main():
     src_prog = OUT / "pdf" / nom / f"OKOHO_PCP_{prog.get('code', 'A00-00')}_Guide_v{source_of(prog.get('code', 'A00-00'))[1][1]}.pdf"
     shutil.copy(src_prog, dest / espace / "01 · Programme et calendrier" / f"{nom_prog}.pdf")
     docx_pdf(ROOT / "parcours" / "drive" / "commencez-ici.md", dest / espace / "00 · COMMENCEZ ICI.pdf", label="BIENVENUE")
+    # Kit du prestataire (PDF) et Dossier client pilote (Word à remplir) : 05 · Ressources et liens utiles
+    subprocess.run([sys.executable, str(ROOT / "tools" / "build_kit.py")], check=True, stdout=subprocess.DEVNULL)
+    res = dest / espace / "05 · Ressources et liens utiles"
+    docx_pdf(OUT / "kit" / "kit-du-prestataire.md", res / "Kit du prestataire · fiches-outils.pdf", label="KIT")
+    res.mkdir(parents=True, exist_ok=True)
+    build_docx(OUT / "kit" / "dossier-client-pilote.md", cal, res / "Dossier client pilote · à copier dans votre portfolio.docx", label="À REMPLIR")
+    print("drive : 05 · Ressources et liens utiles / Kit du prestataire, Dossier client pilote")
     # Dramaturgies du formateur (formateur/*.md) : privé
     for f in sorted((ROOT / "formateur").glob("*.md")):
         meta, _ = read_seance(f)

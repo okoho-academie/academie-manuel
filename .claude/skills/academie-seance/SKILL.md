@@ -18,3 +18,8 @@ Référence : `CLAUDE.md` (grundsätze, Scaffolding, Pflichtkennzeichnung), `sch
 - Ne jamais inventer de fonction ou de prix de Claude.
 - Quiz `quiz/<CODE>.yaml` : chaque question porte `competence`, chaque compétence a au moins une question, seuil `reussite` à 70 %.
 - Séance en direct : la dramaturgie contient la grille d'observation et le contrôle de sortie.
+- Client pilote (manuel/fil-client-pilote.yaml) : une personne, une entreprise ou la propre structure de l'apprenant (école, centre de santé, commerce, association). Pour chaque séance du fil : métadonnée `fil_client {produit, page_dossier}` et trois sections obligatoires avant « Cas fil rouge » : « Un geste, trois contextes » (guidé, transfert dans un autre secteur, client pilote), « Pour votre client pilote » (la page du Dossier client pilote produite, validation par le client ou par la personne qui valide dans la structure), « Votre fiche-outil » (titre « **Fiche-outil NN · Nom.** », consigne à trous réutilisable pour tout client ; tools/build_kit.py en fait le Kit du prestataire).
+- Encadré `::: structure` pour ce qui change quand le client pilote est la propre structure : validation interne, données jamais sorties (élèves, patients, personnel), temps gagné.
+- Quiz : questions en situation, chacune dans un secteur différent ; `pouls: true` ajoute trois questions non notées en fin de quiz.
+- Cas fil rouge : alterner client externe et propre structure d'une séance à l'autre.
+

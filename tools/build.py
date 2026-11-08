@@ -19,6 +19,7 @@ def main():
     run("validate.py")
     run("build_index.py")
     run("couverture.py")
+    run("build_kit.py")
     cible = code or "toutes les séances"
     run("build_pdf.py", *([code] if code else []))
     run("build_drive.py", "cohorte-1")

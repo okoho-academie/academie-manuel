@@ -32,7 +32,7 @@ glossaire: [Conversation, Modèle, Consigne (prompt), Instructions personnelles]
 index: [Compte Claude, Interface, Conversation, Modèle, Instructions personnelles, Modifier un message, Réessayer une réponse, Historique des conversations]
 videos: {tutoriel: true, vitrine: false, shorts: 0, signature: false}
 verifie: "2026-10-31"
-version: "1.1"
+version: "1.2"
 captures: null
 status: relecture
 ---
@@ -198,6 +198,24 @@ Critères de qualité :
 
 Piste Défi : écrivez votre tour 2 en modifiant le message du tour 1 (icône crayon), puis comparez les deux versions avec les flèches.
 
+## Votre fiche-outil
+
+**Fiche-outil 01 · La conversation en trois tours.** À garder sur votre téléphone : copiez les trois consignes dans vos notes. Elles servent pour chaque texte, chaque client.
+
+::: prompt
+1 · Demander. Je suis [activité ou situation] à [ville]. J'ai besoin de [tâche]. Le texte s'adresse à [destinataire]. Écris une première version courte.
+:::
+
+::: prompt
+2 · Préciser. Modifie trois choses : [1], [2], [3].
+:::
+
+::: prompt
+3 · Transformer. Transforme ce texte en [format : deux versions WhatsApp et SMS, un tableau, une liste à cocher].
+:::
+
+Avant d'envoyer : relu, noms, dates et prix justes. Après : la conversation porte un nom clair.
+
 ## Cas fil rouge
 
 Aïcha, couturière à Bonamoussadi, ferme son atelier pour les fêtes. Tour 1 : elle demande un message pour prévenir ses clientes. Tour 2 : elle précise la date de réouverture et la promotion de janvier sur les robes en pagne. Tour 3 : elle obtient une version WhatsApp, une affiche pour la porte de l'atelier et un SMS. Elle renomme la conversation « Fermeture fêtes atelier » et l'envoie le soir même à vingt clientes.
@@ -255,4 +273,4 @@ Compte Claude · Interface · Conversation · Modèle · Instructions personnell
 
 Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi
 Claude est une marque d'Anthropic. Le Parcours Claude Pro est une formation indépendante proposée par OKOHO Consulting GmbH, sans partenariat avec Anthropic. Reproduction et diffusion interdites sans autorisation écrite d'OKOHO Consulting GmbH.
-Version 1.1 · Fonctions vérifiées le 31.10.2026 (support.claude.com) · Captures d'écran réalisées le — · © 2026 OKOHO Consulting GmbH
+Version 1.2 · Fonctions vérifiées le 31.10.2026 (support.claude.com) · Captures d'écran réalisées le — · © 2026 OKOHO Consulting GmbH

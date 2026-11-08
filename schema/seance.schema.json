@@ -215,6 +215,25 @@
           }
         }
       }
+    },
+    "fil_client": {
+      "description": "Produit réalisé pour le client pilote dans cette séance (manuel/fil-client-pilote.yaml). page_dossier = numéro de page du Dossier client pilote.",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "produit",
+        "page_dossier"
+      ],
+      "properties": {
+        "produit": {
+          "type": "string",
+          "minLength": 5
+        },
+        "page_dossier": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
     }
   }
 }

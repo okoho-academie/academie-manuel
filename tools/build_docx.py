@@ -35,6 +35,7 @@ BOXES = {
     "prompt": ("Encadre Consigne", "CONSIGNE À COPIER", "surface", "blue-primary"),
     "defi": ("Encadre Defi", "PISTE DÉFI · POUR ALLER PLUS LOIN", "academie-tint", "blue-primary"),
     "acquis": ("Encadre Acquis", "VÉRIFIEZ VOS ACQUIS", "blue-tint", "orange-accent"),
+    "structure": ("Encadre Structure", "SI VOTRE CLIENT PILOTE EST VOTRE PROPRE STRUCTURE", "academie-tint", "blue-deep"),
 }
 
 def rgb(name):

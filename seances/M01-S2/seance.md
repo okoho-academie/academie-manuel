@@ -32,7 +32,7 @@ glossaire: [Pièce jointe, Mode tuteur, Hallucination]
 index: [Pièce jointe, Images (analyser), Fichiers (envoyer à Claude), Mobile (application Claude), Mode tuteur, Vérification des faits]
 videos: {tutoriel: true, vitrine: false, shorts: 0, signature: false}
 verifie: "2026-10-31"
-version: "1.1"
+version: "1.2"
 captures: null
 status: relecture
 ---
@@ -154,6 +154,16 @@ Critères de qualité :
 - Deux valeurs de la réponse sont vérifiées sur l'original.
 - Vous gardez une trace : la conversation porte un nom clair.
 
+## Votre fiche-outil
+
+**Fiche-outil 02 · Lire un document ou une photo.** À garder sur votre téléphone : copiez la consigne dans vos notes. Elle sert pour une facture, un reçu, un règlement, une notice.
+
+::: prompt
+Voici [type de document]. Fais un tableau de ses informations principales : [date, émetteur, montants, total, ou autres colonnes]. Réponds uniquement avec ce qui est écrit dans le document. Si une information n'y est pas, écris « absent ».
+:::
+
+Avant d'utiliser le tableau : comparez deux valeurs avec l'original et signalez chaque écart à Claude. Avant d'envoyer un document : jamais de pièce d'identité, de donnée bancaire, de code ou de donnée de santé.
+
 ## Cas fil rouge
 
 Aïcha, couturière à Bonamoussadi, reçoit la facture de son fournisseur de tissus au marché Sandaga. Elle la photographie, demande un tableau des pagnes achetés avec les prix au mètre, et vérifie deux lignes : une erreur de quantité apparaît, la photo était floue. Elle reprend la photo, tout est juste. Ensuite, elle demande à Claude un rappel : payer le solde avant la fin du mois.
@@ -207,4 +217,4 @@ Pièce jointe · Images (analyser) · Fichiers (envoyer à Claude) · Mobile (ap
 
 Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi
 Claude est une marque d'Anthropic. Le Parcours Claude Pro est une formation indépendante proposée par OKOHO Consulting GmbH, sans partenariat avec Anthropic. Reproduction et diffusion interdites sans autorisation écrite d'OKOHO Consulting GmbH.
-Version 1.1 · Fonctions vérifiées le 31.10.2026 (support.claude.com) · Captures d'écran réalisées le — · © 2026 OKOHO Consulting GmbH
+Version 1.2 · Fonctions vérifiées le 31.10.2026 (support.claude.com) · Captures d'écran réalisées le — · © 2026 OKOHO Consulting GmbH

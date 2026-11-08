@@ -1,0 +1,70 @@
+code: M02-S1
+titre: "Quiz · Les cinq éléments d'une bonne consigne"
+reussite: 6
+pouls: true
+description: "8 questions, chacune dans un contexte différent : vous appliquez la grille R-T-C-F-C à des situations nouvelles. Les deux dernières questions sont des questions Défi. Votre score s'affiche à la fin, avec l'explication de chaque réponse."
+questions:
+- q: 'Une gérante de restaurant demande : « Fais un message pour mes clients. » Quel élément de la grille manque le plus ?'
+  choix:
+  - Le rôle
+  - 'Le contexte : quels clients, quel message, pourquoi'
+  - Rien, la consigne est complète
+  bonne: 1
+  explication: Sans contexte, Claude ne sait ni à qui il écrit ni ce qu'il faut annoncer. Le texte reste général.
+  competence: M02-S1-C1
+- q: Dans « Message WhatsApp de cinq lignes au maximum », de quel élément s'agit-il ?
+  choix:
+  - Le rôle
+  - La tâche
+  - Le format
+  bonne: 2
+  explication: Le format dit la forme et la longueur du résultat.
+  competence: M02-S1-C1
+- q: Un directeur d'école veut convoquer les parents. Quelle consigne respecte les cinq éléments ?
+  choix:
+  - '« Tu es directeur d''école. Écris une convocation des parents à la réunion du trimestre, samedi à 9 h dans la cour. Les parents lisent sur WhatsApp. Format : cinq lignes. Ton respectueux, demande de répondre « Présent ». »'
+  - « Écris une convocation. »
+  - « Écris vite une convocation pour les parents, merci. »
+  bonne: 0
+  explication: Rôle, tâche, contexte (qui, quand, où, canal), format et contraintes sont tous présents.
+  competence: M02-S1-C1
+- q: Votre consigne pour une boutique marche bien. Vous voulez la réutiliser pour un garage. Que changez-vous en priorité ?
+  choix:
+  - Rien, une bonne consigne marche partout
+  - Seulement le nom de la boutique
+  - Le rôle, le contexte et le format, adaptés au garage et à ses clients
+  bonne: 2
+  explication: 'La structure de la consigne reste. Ce qui décrit la situation change : qui écrit, pour qui, sous quelle forme.'
+  competence: M02-S1-C2
+- q: La responsable d'un centre de santé veut une affiche sur les nouveaux horaires. Que mettez-vous dans le contexte ?
+  choix:
+  - Les nouveaux horaires, les publics du centre et le lieu de l'affiche
+  - La liste des patients venus cette semaine
+  - Le numéro de dossier des patients concernés
+  bonne: 0
+  explication: Le contexte décrit la situation et les publics. Les données des patients n'ont rien à faire dans une consigne.
+  competence: M02-S1-C2
+- q: Quelle fiche contexte est correcte pour un client pilote ?
+  choix:
+  - « Mme Fotso, 42 ans, née à Dschang, compte bancaire n° … »
+  - '« Atelier de couture à Bafoussam ; clientes femmes actives ; besoin : plus de commandes de fin d''année ; ton chaleureux ; contact WhatsApp de l''atelier. »'
+  - « Une couturière. »
+  bonne: 1
+  explication: 'Cinq lignes : activité, publics, besoin, ton, contact. Aucune donnée personnelle sensible.'
+  competence: M02-S1-C3
+- q: Défi. Votre client pilote est votre propre école. Que doit contenir en plus votre fiche contexte ?
+  choix:
+  - Les noms des élèves en difficulté
+  - Le salaire des enseignants
+  - La personne qui valide une publication officielle
+  bonne: 2
+  explication: Pour votre propre structure, ajoutez qui valide. Les données des élèves et du personnel ne sortent jamais.
+  competence: M02-S1-C3
+- q: Défi. Claude rend un texte trop général malgré votre consigne. Quelle est la meilleure réaction ?
+  choix:
+  - Compléter la consigne avec l'élément manquant, souvent le contexte ou le format, et la renvoyer
+  - Écrire « non, mieux que ça »
+  - Changer d'outil d'IA
+  bonne: 0
+  explication: Corrigez la consigne, pas seulement la réponse. Avec l'icône crayon, vous renvoyez la consigne complétée.
+  competence: M02-S1-C1
