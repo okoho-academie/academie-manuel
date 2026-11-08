@@ -110,10 +110,40 @@ def trois_questions(meta, body):
             errs.append(f"section obligatoire « {h} » absente")
     return errs
 
+def fil_client():
+    """Étapes du fil du client pilote (manuel/fil-client-pilote.yaml), par code de séance."""
+    f = ROOT / "manuel" / "fil-client-pilote.yaml"
+    return {e["seance"]: e for e in load_yaml(f)["etapes"]} if f.is_file() else {}
+
+SECTIONS_FIL = ("Un geste, trois contextes", "Pour votre client pilote", "Votre fiche-outil")
+
+def regle_fil(meta, body, fil):
+    """Règle du client pilote : chaque séance du fil produit une page du Dossier client pilote,
+    applique le geste dans trois contextes et laisse une fiche-outil réutilisable."""
+    e = fil.get(meta.get("code"))
+    if not e:
+        return []
+    errs = []
+    fc = meta.get("fil_client")
+    if not fc:
+        errs.append("métadonnée « fil_client » absente (séance du fil du client pilote)")
+    elif fc.get("page_dossier") != e["page"]:
+        errs.append(f"fil_client.page_dossier {fc.get('page_dossier')} ≠ {e['page']} (manuel/fil-client-pilote.yaml)")
+    for h in SECTIONS_FIL:
+        if f"## {h}" not in body:
+            errs.append(f"section obligatoire « {h} » absente (fil du client pilote)")
+    # Le parcours construit sur l'acquis : une séance avec prérequis dit quels gestes elle réutilise
+    if meta.get("prerequis") and "## Ce que vous réutilisez" not in body:
+        errs.append("section obligatoire « Ce que vous réutilisez » absente (séance avec prérequis)")
+    if meta.get("prerequis") and not re.search(r"## Ce que vous réutilisez.*?(" + "|".join(map(re.escape, meta["prerequis"])) + ")", body, re.S):
+        errs.append("« Ce que vous réutilisez » ne cite aucun prérequis")
+    return errs
+
 def main():
     _, struct = structure()
     gloss = {t["terme"] for t in load_yaml(ROOT / "glossaire" / "glossaire.yaml")["termes"]}
     files = seance_files()
+    fil = fil_client()
     n_err = n_warn = 0
     for f in files:
         rel = f.relative_to(ROOT)
@@ -140,6 +170,7 @@ def main():
             if g not in gloss: warns.append(f"terme « {g} » absent de glossaire/glossaire.yaml")
         errs += dates_interdites(body)
         errs += trois_questions(meta, body)
+        errs += regle_fil(meta, body, fil)
         for h in ("Ce que vous saurez faire", "Votre livrable"):
             if f"## {h}" not in body: errs.append(f"section obligatoire « {h} » absente")
         if "Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi" not in body:

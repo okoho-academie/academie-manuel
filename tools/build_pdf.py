@@ -33,6 +33,7 @@ BOXES = {
     "prompt": ("CONSIGNE À COPIER", "box-prompt"),
     "defi": ("PISTE DÉFI · POUR ALLER PLUS LOIN", "box-aca"),
     "acquis": ("VÉRIFIEZ VOS ACQUIS", "box-tint"),
+    "structure": ("SI VOTRE CLIENT PILOTE EST VOTRE PROPRE STRUCTURE", "box-tint"),
 }
 # Titres de section transformés en encadrés (séances)
 HEADING_BOXES = {"Ce que vous saurez faire": "objectifs", "Votre livrable": "livrable",
@@ -103,6 +104,9 @@ def render_body(text, base_dir):
             WARNINGS.append(f"bloc inconnu ::: {name}")
             chunks.append(inner); continue
         label, cls = BOXES[name]
+        if name == "prompt":
+            # Une consigne sur plusieurs lignes garde ses retours à la ligne (fiche contexte, consigne à trous)
+            inner = md_to_html(re.sub(r"(?<!\n)\n(?!\n)", "  \n", content.strip()))
         if name == "coup-de-pouce":
             inner = inner.replace("<ol>", '<ol class="pouce">', 1)
         if not content.strip():
@@ -118,6 +122,8 @@ def postprocess(h, base_dir):
     h = re.sub(r"<li>\s*\[ \]\s*", '<li class="check"><span class="cb"></span>', h)
     h = re.sub(r"<li>\s*\[[xX]\]\s*", '<li class="check"><span class="cb on">✓</span>', h)
     h = re.sub(r"<ul>(\s*<li class=\"check\")", r'<ul class="checklist">\1', h)
+    # Le texte d'une case à cocher forme un seul bloc (sinon chaque mot en gras devient une colonne)
+    h = re.sub(r'(<li class="check"><span class="cb[^"]*">[^<]*</span>)(.*?)</li>', r'\1<span class="ct">\2</span></li>', h, flags=re.S)
 
     # Images -> figures avec légende, ou emplacement « Capture à venir »
     def fig(m):

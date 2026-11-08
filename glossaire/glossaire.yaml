@@ -10,7 +10,7 @@ termes:
   seances:
   - M17-S1
 - terme: Client pilote
-  definition: Personne ou entreprise de votre entourage pour laquelle vous réalisez vos exercices sur un cas réel.
+  definition: "Personne, entreprise ou votre propre structure (école, centre de santé, commerce, association) pour laquelle vous produisez, séance après séance, des résultats réels réunis dans le Dossier client pilote."
   seances:
   - Parcours
 - terme: Compétence (skill)
@@ -110,3 +110,28 @@ termes:
   definition: Sauvegarde datée de l'état d'un projet, qui permet de revenir en arrière.
   seances:
   - M14-S2
+- terme: Canal
+  definition: 'Moyen par lequel un message arrive à son public : WhatsApp, Facebook, affiche, lettre, réunion. Chaque canal demande sa longueur, son ton et son appel à l''action.'
+  seances:
+  - M02-S2
+- terme: Critique (consigne de)
+  definition: Consigne qui demande à Claude d'évaluer un texte selon des critères choisis, avant toute réécriture.
+  seances:
+  - M02-S2
+- terme: Dossier client pilote
+  definition: Document où vous réunissez, séance après séance, les produits réalisés pour votre client pilote. Il est présenté à chaque Démo Day.
+  seances:
+  - Parcours
+- terme: Fiche contexte
+  definition: 'Cinq lignes qui décrivent un client : activité ou mission, publics, besoin, ton, contact. Elle forme le contexte de chaque consigne pour ce client.'
+  seances:
+  - M02-S1
+- terme: Fiche-outil
+  definition: 'Page d''une séance à garder et réutiliser pour chaque client : une consigne à trous, une grille, une checklist. L''ensemble forme le Kit du prestataire.'
+  seances:
+  - Parcours
+- terme: Blocage (du client)
+  definition: "Ce qui empêche le client pilote d'avancer et ce que cela lui coûte : heures perdues, clients perdus, erreurs. Chaque produit du parcours s'attaque à un blocage nommé, et son effet est mesuré."
+  seances:
+  - M02-S1
+  - Parcours

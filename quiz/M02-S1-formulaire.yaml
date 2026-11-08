@@ -1,0 +1,54 @@
+# Questionnaire de positionnement S02-0 · formulaire Google Forms (non noté)
+# Complète le diagnostic d'entrée A00-02 sans le répéter : client pilote, contextes réels,
+# temps passé sur les tâches lourdes (valeur de départ), auto-évaluation J1, consigne « avant ».
+# Les réponses restent dans le Drive privé du formateur ; elles ne vont jamais dans ce dépôt.
+code: M02-S1
+titre: "S02-0 · Votre client pilote et vos contextes"
+description: "12 minutes, avant la séance en direct. Vos réponses permettent d'adapter les exemples, les exercices et le rythme à votre situation réelle. Il n'y a pas de bonne ou de mauvaise réponse. Votre client pilote est la personne, l'entreprise ou la structure pour laquelle vous allez produire, séance après séance, de vrais résultats : une page web, des textes, des documents, des outils. Cela peut être votre propre structure : votre école, votre centre de santé, votre commerce, votre association."
+sections:
+  - id: debut
+    titre: "Partie 1 · Votre client pilote"
+    champs:
+      - {type: texte, q: "Prénom", obligatoire: true}
+      - type: choix
+        q: "Votre client pilote est :"
+        obligatoire: true
+        choix: ["Ma propre structure (école, centre de santé, commerce, association, projet)", "Une personne ou une entreprise de mon entourage"]
+        aller_a:
+          "Ma propre structure (école, centre de santé, commerce, association, projet)": interne
+          "Une personne ou une entreprise de mon entourage": externe
+  - id: interne
+    titre: "Partie 2 · Votre propre structure"
+    suite: commun
+    champs:
+      - {type: texte, q: "Votre rôle dans la structure", aide: "Exemple : directeur d'école, responsable d'un centre de santé, gérante, président d'association.", obligatoire: true}
+      - {type: choix, q: "Type de structure", choix: ["École ou établissement de formation", "Centre de santé ou structure médicale", "Commerce ou entreprise", "Association, église ou groupement", "Administration ou service public", "Autre"], obligatoire: true}
+      - {type: paragraphe, q: "Les trois tâches qui vous prennent le plus de temps chaque semaine", aide: "Exemple : rédiger les convocations, préparer le rapport mensuel, répondre aux mêmes questions sur WhatsApp.", obligatoire: true}
+      - {type: choix, q: "Combien d'heures par semaine ces trois tâches vous prennent-elles, au total ?", choix: ["Moins de 2 heures", "2 à 5 heures", "5 à 10 heures", "Plus de 10 heures"], obligatoire: true}
+      - {type: texte, q: "Qui doit valider un document ou une publication officielle de votre structure ?", aide: "Exemple : vous-même, votre hiérarchie, le conseil d'établissement, le district.", obligatoire: true}
+      - {type: paragraphe, q: "Quelles informations ne doivent jamais sortir de votre structure ?", aide: "Exemple : noms des élèves et leurs notes, dossiers des patients, salaires du personnel.", obligatoire: true}
+  - id: externe
+    titre: "Partie 2 · Votre client pilote dans votre entourage"
+    champs:
+      - {type: texte, q: "Son activité et sa ville", aide: "Exemple : vendeuse de beignets à Yaoundé, atelier de couture à Bafoussam. Pas de nom de famille.", obligatoire: true}
+      - {type: choix, q: "Votre lien avec cette personne", choix: ["Famille", "Ami ou voisin", "Ancien employeur ou collègue", "Client que je connais déjà", "Autre"], obligatoire: true}
+      - {type: choix, q: "A-t-elle accepté que vous travailliez pour elle pendant le parcours ?", choix: ["Oui", "Je lui demande cette semaine", "Pas encore choisi"], obligatoire: true}
+      - {type: paragraphe, q: "Les trois tâches qui lui prennent le plus de temps ou lui manquent le plus", aide: "Exemple : répondre aux commandes, faire connaître ses prix, tenir ses comptes.", obligatoire: true}
+      - {type: texte, q: "Un client pilote de réserve, si le premier n'est plus disponible (activité seulement)", obligatoire: false}
+  - id: commun
+    titre: "Partie 3 · Ses publics et le résultat attendu"
+    champs:
+      - {type: cases, q: "Par quels canaux votre client pilote parle-t-il à ses publics ?", choix: ["WhatsApp", "Facebook", "Affiches ou tableau d'affichage", "Courrier ou lettre", "Réunions", "Bouche à oreille", "Aucun canal organisé"], obligatoire: true}
+      - {type: paragraphe, q: "À la fin du parcours, quel résultat concret voulez-vous lui remettre ?", aide: "Exemple : une page web avec les horaires et les services, des modèles de lettres, un rapport mensuel qui se fait en une heure.", obligatoire: true}
+      - {type: cases, q: "Dans quels autres secteurs connaissez-vous quelqu'un ? Nous les utilisons pour les exercices.", choix: ["Commerce de quartier", "Restauration", "Artisanat ou bâtiment", "École ou formation", "Santé", "Association ou église", "Transport", "Agriculture", "Administration"], obligatoire: false}
+  - id: niveau
+    titre: "Partie 4 · Où en êtes-vous ?"
+    texte: "1 = je ne sais pas encore faire · 2 = avec une fiche ou de l'aide · 3 = seul pour moi · 4 = seul, pour une autre personne"
+    champs:
+      - {type: grille, q: "Évaluez-vous", lignes: ["Utiliser Claude sur mon téléphone avec mes réglages", "Écrire une consigne claire et améliorer une réponse", "Créer une page web avec Claude", "Vérifier une information et protéger des données"], colonnes: ["1", "2", "3", "4"], obligatoire: true}
+      - {type: choix, q: "Avez-vous déjà utilisé ChatGPT, Gemini ou DeepSeek plus de cinq fois ?", choix: ["Oui", "Non"], obligatoire: true}
+  - id: avant
+    titre: "Partie 5 · Votre consigne d'aujourd'hui"
+    texte: "Sans aide et sans fiche : écrivez la consigne que vous enverriez aujourd'hui à Claude pour une tâche réelle de votre client pilote. Il n'y a pas de piège. Nous la comparerons avec votre consigne de fin de séance pour voir vos progrès."
+    champs:
+      - {type: paragraphe, q: "Votre consigne, telle que vous l'écririez à Claude", obligatoire: true}

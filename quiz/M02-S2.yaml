@@ -1,0 +1,70 @@
+code: M02-S2
+titre: "Quiz · Itérer et affiner"
+reussite: 6
+pouls: true
+description: "8 questions dans des contextes différents : critiquer, adapter à un canal, vérifier. Les deux dernières questions sont des questions Défi. Votre score s'affiche à la fin, avec l'explication de chaque réponse."
+questions:
+- q: Vous voulez améliorer le texte de présentation d'un salon de coiffure. Quelle est la meilleure première consigne ?
+  choix:
+  - « Améliore ce texte. »
+  - « Réécris ce texte en plus long. »
+  - '« Critique ce texte selon trois critères : clarté, envie de prendre rendez-vous, confiance. Une note sur 5 et une amélioration par critère. Ne réécris pas encore. »'
+  bonne: 2
+  explication: La critique d'abord, avec vos critères. Vous savez ensuite exactement ce que la réécriture doit corriger.
+  competence: M02-S2-C1
+- q: Pourquoi demander « Ne réécris pas encore » dans la consigne de critique ?
+  choix:
+  - Pour décider vous-même des améliorations avant la réécriture
+  - Pour économiser des messages
+  - Parce que Claude ne sait pas réécrire
+  bonne: 0
+  explication: 'Vous gardez la main : vous lisez la critique, vous choisissez, puis vous faites réécrire.'
+  competence: M02-S2-C1
+- q: Une association invite ses membres. Quelle différence entre le message WhatsApp et l'affiche ?
+  choix:
+  - Aucune, le même texte suffit
+  - WhatsApp court avec une demande de réponse ; affiche lisible de loin, titre court, trois informations
+  - L'affiche est plus longue que le message
+  bonne: 1
+  explication: Chaque canal a sa longueur, son ton et son appel à l'action.
+  competence: M02-S2-C2
+- q: Un groupement agricole annonce un jour de vente. Pour Facebook, que changez-vous par rapport au message WhatsApp ?
+  choix:
+  - Une phrase d'accroche au début et un appel à partager
+  - Rien
+  - On retire la date et le lieu
+  bonne: 0
+  explication: Sur Facebook, le texte doit accrocher et circuler. Les informations pratiques restent.
+  competence: M02-S2-C2
+- q: Claude a écrit « livraison gratuite » dans le texte d'une boutique. Votre client n'a jamais parlé de livraison. Que faites-vous ?
+  choix:
+  - Je laisse, c'est une bonne idée commerciale
+  - Je demande à Claude s'il est sûr
+  - 'Je supprime : c''est une information inventée'
+  bonne: 2
+  explication: Seules les informations du client restent. Une promesse inventée peut coûter cher à votre client.
+  competence: M02-S2-C3
+- q: Comment repérer rapidement les informations ajoutées par Claude ?
+  choix:
+  - Relire une fois très vite
+  - Demander la liste des informations factuelles et leur origine, puis contrôler avec la source du client
+  - Faire confiance si le texte est bien écrit
+  bonne: 1
+  explication: La liste des informations factuelles montre ce qui vient de vous et ce que Claude a ajouté. Ensuite, vous contrôlez avec la source.
+  competence: M02-S2-C3
+- q: Défi. Une directrice prépare une affiche officielle pour son école. Le texte est parfait. Que reste-t-il à faire avant de l'afficher ?
+  choix:
+  - La faire valider par la personne qui en a le droit et contrôler la date avec le calendrier officiel
+  - Rien
+  - Ajouter des émojis
+  bonne: 0
+  explication: Une publication officielle de votre structure reste un projet jusqu'à sa validation. La date se contrôle avec le document officiel.
+  competence: M02-S2-C3
+- q: Défi. Vous avez demandé trois variantes d'un texte. Comment obtenir la meilleure version finale ?
+  choix:
+  - Prendre la plus longue
+  - Envoyer les trois au client
+  - Choisir la meilleure selon un critère du client et demander une version finale qui reprend un élément d'une autre variante
+  bonne: 2
+  explication: Vous décidez avec un critère clair, puis vous combinez le meilleur des variantes.
+  competence: M02-S2-C1

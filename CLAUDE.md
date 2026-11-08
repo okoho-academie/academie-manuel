@@ -39,6 +39,15 @@ Jede Séance beantwortet sichtbar, für Lernende und Formateur:
 - Jalon-Pfad: `tools/couverture.py` zeigt, welche Jalon-Kompetenz noch keine Séance hat. Jalon J1 ist nach vier Live-Séances erreicht.
 - `validate.py` blockiert jede Séance, die eine dieser Regeln verletzt.
 
+## Fil du client pilote (Pflicht, seit 08.11.2026)
+- Client pilote = eine Person, ein Unternehmen oder die eigene Struktur der Lernenden (Schule, Centre de santé, Handel, Verein). Typ `externe` braucht Einverständnis, Typ `interne` die Freigaberegel der Struktur. Gleiche Kompetenzen, gleiche Preuves.
+- Quelle: `manuel/fil-client-pilote.yaml` (Produkt und Dossier-Seite je Séance). Jede Séance dort hat `fil_client` und die Abschnitte « Un geste, trois contextes », « Pour votre client pilote », « Votre fiche-outil ». `validate.py` blockiert sonst.
+- `tools/build_kit.py` erzeugt daraus den Kit du prestataire (PDF, alle Fiches-outil) und den Dossier client pilote (Word zum Ausfüllen), beide in « 05 · Ressources et liens utiles ».
+- Engpass zuerst: Die Fiche contexte nennt den Blocage des client pilote und was er kostet. Jedes Produkt greift einen benannten Blocage an; der Dossier hält Blocage traité und Effet observé fest.
+- Aufbauen auf dem Gelernten: Jede Séance mit Prérequis hat « Ce que vous réutilisez » (Tabelle Geste, Séance, Einsatz heute, mit Verweis auf die Fiche-outil). `validate.py` blockiert sonst.
+- Daten der Kunden und Strukturen nie im Repository; Cas fil rouge bleiben fiktiv.
+- Formulare: Verzweigung (`aller_a`, `suite`), Ordnerpfad `chemin:`, Pouls de la semaine (`pouls: true`). Skript gekapselt, wird als neue Datei in OKOHO_Academie.gs ausgeführt.
+
 ## Quiz und Formulare: verbindliche Regeln (seit 07.11.2026)
 - Erstes Feld jedes Quiz: « Prénom », Kurzantwort, Pflicht, leer, sichtbar (`build_forms.py` erzeugt es).
 - Nach dem Anlegen prüft Claude jedes Quiz im Browser: Notenfreigabe « Immédiatement après chaque envoi », Questions manquées, Bonnes réponses, Valeur en points aktiv; Antworten werden angenommen; Antwortansicht zeigt « Prénom » leer und « Envoyer ».

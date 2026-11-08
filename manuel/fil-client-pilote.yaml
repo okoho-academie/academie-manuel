@@ -1,0 +1,40 @@
+# Fil du client pilote · OKOHO Académie · sans date (les semaines sont dans parcours/cohorte-N.yaml)
+# Source unique de : la règle de validation (tools/validate.py), la feuille de route remise aux apprenants
+# et le modèle « Dossier client pilote » (tools/build_drive.py).
+#
+# Client pilote : une personne, une entreprise ou votre propre structure (école, centre de santé, commerce,
+# association, projet). Deux types, mêmes compétences, mêmes preuves, même dossier :
+#   externe : quelqu'un de votre entourage, avec son accord ;
+#   interne : votre propre structure ; pas d'accord à demander, mais les règles de la structure
+#             (qui valide une publication, quelles données ne sortent jamais).
+# Chaque séance listée ici contient obligatoirement les sections :
+#   « Ce que vous réutilisez » (si la séance a des prérequis) · « Un geste, trois contextes »
+#   · « Pour votre client pilote » · « Votre fiche-outil »
+# et la métadonnée fil_client {produit, page_dossier}. Les données réelles du client ne vont jamais dans ce dépôt.
+regles:
+  donnees: "Données anonymes ou agrégées seulement. Jamais de dossier de patient, de note ou de nom d'élève, de pièce d'identité, de donnée bancaire."
+  publication_interne: "Une publication officielle de votre structure reste un projet jusqu'à la validation par la personne qui en a le droit."
+  blocage: "Chaque produit s'attaque à un blocage nommé du client pilote (fiche contexte) ; son effet est observé et noté dans le Dossier."
+  valeur: "Externe : valeur commerciale. Interne : valeur pour la structure, mesurée en heures gagnées par semaine."
+etapes:
+  - {jalon: J1, seance: M02-S1, page: 1, produit: "Fiche contexte avec le blocage principal, et premier message qui s'y attaque", externe: "Message WhatsApp à ses clients", interne: "Note ou message à son équipe ou à ses publics"}
+  - {jalon: J1, seance: M02-S2, page: 2, produit: "Texte de présentation critiqué, adapté à deux canaux et vérifié", externe: "Description WhatsApp Business et publication Facebook", interne: "Message aux parents, patients ou membres et affiche"}
+  - {jalon: J1, seance: M05-S1, page: 3, produit: "Page web v1", externe: "Page de l'offre en ligne avec lien", interne: "Page d'information (horaires, services, contact), projet soumis à validation"}
+  - {jalon: J1, seance: M03-S1, page: 4, produit: "Une information vérifiée avec sa source", externe: "Prix, horaires ou règle vérifiés", interne: "Information officielle vérifiée (calendrier, campagne, règlement)"}
+  - {jalon: J1, seance: M02-S3, page: 5, produit: "Dix consignes du client pilote, testées", externe: "Consignes pour ses tâches répétitives", interne: "Consignes pour les tâches lourdes de la structure"}
+  - {jalon: J1, seance: M03-S2, page: 6, produit: "Charte des données du client pilote", externe: "Ce que vous recevez et ce que vous refusez", interne: "Ce qui ne sort jamais de la structure"}
+  - {jalon: J2, seance: M04-S1, page: 7, produit: "Projet Claude « Assistant de [client] »", externe: "Assistant de l'entreprise", interne: "Assistant de direction"}
+  - {jalon: J2, seance: M06-S1, page: 8, produit: "Flyer ou affiche", externe: "Flyer de l'offre", interne: "Affiche ou support de sensibilisation avec source vérifiée"}
+  - {jalon: J2, seance: M05-S2, page: 9, produit: "Structure du site et textes", externe: "Site de plusieurs pages", interne: "Site d'information de la structure"}
+  - {jalon: J2, seance: M08-S1, page: 10, produit: "Trois documents professionnels", externe: "Devis, courrier, présentation", interne: "Convocation, compte rendu, rapport"}
+  - {jalon: J2, seance: M05-S3, page: 11, produit: "Site v2 sur son domaine"}
+  - {jalon: J2, seance: M07-S1, page: 12, produit: "Dix publications et textes de catalogue"}
+  - {jalon: J2, seance: M05-S4, page: 13, produit: "Formulaire de contact et profil Google"}
+  - {jalon: J3, seance: M10-S1, page: 14, produit: "Recherche documentée pour le client pilote"}
+  - {jalon: J3, seance: M10-S2, page: 15, produit: "Étude de marché ou d'environnement local"}
+  - {jalon: J3, seance: M16-S1, page: 16, produit: "Les services que vous pouvez lui proposer", interne: "Les solutions transférables à d'autres structures du même type"}
+  - {jalon: J4, seance: M11-S1, page: 17, produit: "Tâche en plusieurs étapes automatisée", interne: "Rapport mensuel produit à partir de chiffres agrégés"}
+  - {jalon: J4, seance: M12-S2, page: 18, produit: "Skill du client pilote"}
+  - {jalon: J4, seance: M17-S1, page: 19, produit: "Cahier des charges de la prochaine prestation"}
+  - {jalon: J5, seance: M16-S3, page: 20, produit: "Proposition commerciale", externe: "Offre payante au client pilote", interne: "Offre de la solution à une deuxième structure du même type"}
+  - {jalon: J5, seance: M18-S3, page: 21, produit: "Livraison et démonstration du dossier complet, heures gagnées mesurées"}
