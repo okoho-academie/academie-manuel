@@ -29,7 +29,7 @@ version: "1.0"
 | 1:10 à 1:50 | Grille R-T-C-F-C en surimpression | « Une bonne consigne répond à cinq questions. Rôle : qui écrit ? Tâche : que veut-on ? Contexte : pour qui, avec quelles informations ? Format : quelle forme, quelle longueur ? Contraintes : quoi respecter ? » |
 | 1:50 à 3:00 | Étapes 4 à 6 : la consigne s'écrit élément par élément, puis est envoyée | « Je commence par le rôle et la tâche. J'ajoute le contexte : les publics, les anciens et les nouveaux horaires. Je termine par le format et les contraintes. J'envoie tout en un message. » Lire le résultat. « Prêt à envoyer. » |
 | 3:00 à 3:40 | Même consigne, rôle et contexte changés pour une école | « Même geste, autre contexte : une école qui convoque les parents. Je change le rôle, le contexte, le format. La grille reste. » |
-| 3:40 à 4:40 | Étape 9 : fiche contexte en cinq lignes | « Le contexte de votre client, vous l'écrivez une fois : la fiche contexte. Activité, publics, besoin, ton, contact. Si votre client est votre propre structure, ajoutez qui valide. Jamais de nom de patient ou d'élève. » |
+| 3:40 à 4:40 | Étape 9 : fiche contexte en cinq lignes | « Le contexte de votre client, vous l'écrivez une fois : la fiche contexte. Activité, publics, blocage et ce qu'il coûte, ton, contact. Si votre client est votre propre structure, ajoutez qui valide. Jamais de nom de patient ou d'élève. » |
 | 4:40 à 4:55 | Fiche collée dans la partie C d'une consigne | « Ensuite, vous la collez dans chaque consigne pour ce client. » |
 | 4:55 à 5:05 | Carte de fin | « À vous : fiche M02-S1, étape 9. La fiche contexte de votre client pilote. » |
 

@@ -132,6 +132,11 @@ def regle_fil(meta, body, fil):
     for h in SECTIONS_FIL:
         if f"## {h}" not in body:
             errs.append(f"section obligatoire « {h} » absente (fil du client pilote)")
+    # Le parcours construit sur l'acquis : une séance avec prérequis dit quels gestes elle réutilise
+    if meta.get("prerequis") and "## Ce que vous réutilisez" not in body:
+        errs.append("section obligatoire « Ce que vous réutilisez » absente (séance avec prérequis)")
+    if meta.get("prerequis") and not re.search(r"## Ce que vous réutilisez.*?(" + "|".join(map(re.escape, meta["prerequis"])) + ")", body, re.S):
+        errs.append("« Ce que vous réutilisez » ne cite aucun prérequis")
     return errs
 
 def main():

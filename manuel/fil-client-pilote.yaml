@@ -8,14 +8,16 @@
 #   interne : votre propre structure ; pas d'accord à demander, mais les règles de la structure
 #             (qui valide une publication, quelles données ne sortent jamais).
 # Chaque séance listée ici contient obligatoirement les sections :
-#   « Un geste, trois contextes » · « Pour votre client pilote » · « Votre fiche-outil »
+#   « Ce que vous réutilisez » (si la séance a des prérequis) · « Un geste, trois contextes »
+#   · « Pour votre client pilote » · « Votre fiche-outil »
 # et la métadonnée fil_client {produit, page_dossier}. Les données réelles du client ne vont jamais dans ce dépôt.
 regles:
   donnees: "Données anonymes ou agrégées seulement. Jamais de dossier de patient, de note ou de nom d'élève, de pièce d'identité, de donnée bancaire."
   publication_interne: "Une publication officielle de votre structure reste un projet jusqu'à la validation par la personne qui en a le droit."
+  blocage: "Chaque produit s'attaque à un blocage nommé du client pilote (fiche contexte) ; son effet est observé et noté dans le Dossier."
   valeur: "Externe : valeur commerciale. Interne : valeur pour la structure, mesurée en heures gagnées par semaine."
 etapes:
-  - {jalon: J1, seance: M02-S1, page: 1, produit: "Fiche contexte et premier message prêt à envoyer", externe: "Message WhatsApp à ses clients", interne: "Note ou message à son équipe ou à ses publics"}
+  - {jalon: J1, seance: M02-S1, page: 1, produit: "Fiche contexte avec le blocage principal, et premier message qui s'y attaque", externe: "Message WhatsApp à ses clients", interne: "Note ou message à son équipe ou à ses publics"}
   - {jalon: J1, seance: M02-S2, page: 2, produit: "Texte de présentation critiqué, adapté à deux canaux et vérifié", externe: "Description WhatsApp Business et publication Facebook", interne: "Message aux parents, patients ou membres et affiche"}
   - {jalon: J1, seance: M05-S1, page: 3, produit: "Page web v1", externe: "Page de l'offre en ligne avec lien", interne: "Page d'information (horaires, services, contact), projet soumis à validation"}
   - {jalon: J1, seance: M03-S1, page: 4, produit: "Une information vérifiée avec sa source", externe: "Prix, horaires ou règle vérifiés", interne: "Information officielle vérifiée (calendrier, campagne, règlement)"}

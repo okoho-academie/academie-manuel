@@ -25,12 +25,12 @@ competences:
     reussi_si: Le rôle, le contexte et le format sont changés et le résultat convient au nouveau contexte.
   - code: M02-S1-C3
     jalon: J1-C2
-    savoir_faire: Vous rédigez la fiche contexte de votre client pilote.
+    savoir_faire: Vous rédigez la fiche contexte de votre client pilote, avec son blocage principal.
     preuve: Vous collez dans le chat de la séance la fiche contexte de votre client pilote, en cinq lignes.
-    reussi_si: La fiche nomme l'activité ou la mission, les publics, le besoin, le ton et le contact, sans aucune donnée de patient, d'élève ou de client nommé.
-fil_client: {produit: "Fiche contexte et premier message prêt à envoyer", page_dossier: 1}
-glossaire: [Consigne (prompt), Contexte, Client pilote, Fiche contexte, Fiche-outil, Dossier client pilote, Mode tuteur]
-index: [Consigne (cinq éléments), Grille R-T-C-F-C, Rôle, Format, Contraintes, Fiche contexte, Client pilote, Transfert, Carte contexte, Mode tuteur]
+    reussi_si: La fiche nomme l'activité ou la mission, les publics, le blocage et ce qu'il coûte, le ton et le contact, sans aucune donnée de patient, d'élève ou de client nommé.
+fil_client: {produit: "Fiche contexte avec le blocage principal, et premier message qui s'y attaque", page_dossier: 1}
+glossaire: [Consigne (prompt), Contexte, Client pilote, Fiche contexte, Blocage (du client), Fiche-outil, Dossier client pilote, Mode tuteur]
+index: [Consigne (cinq éléments), Grille R-T-C-F-C, Blocage du client, Rôle, Format, Contraintes, Fiche contexte, Client pilote, Transfert, Carte contexte, Mode tuteur]
 videos: {tutoriel: true, vitrine: false, shorts: 3, signature: false}
 verifie: "2026-11-08"
 version: "1.0"
@@ -46,13 +46,15 @@ status: relecture
 |---|---|---|
 | Vous rédigez une consigne qui contient les cinq éléments, rôle, tâche, contexte, format et contraintes. | Vous postez dans le chat de la séance la consigne écrite pour votre client pilote, chaque élément marqué R, T, C, F, C. | Les cinq éléments sont repérables et Claude rend un texte utilisable sans retouche. |
 | Vous adaptez une consigne à un autre contexte. | Vous tirez une carte contexte et adaptez en direct la consigne de l'exercice commun. | Le rôle, le contexte et le format sont changés et le résultat convient au nouveau contexte. |
-| Vous rédigez la fiche contexte de votre client pilote. | Vous collez dans le chat de la séance la fiche contexte de votre client pilote, en cinq lignes. | La fiche nomme l'activité ou la mission, les publics, le besoin, le ton et le contact, sans aucune donnée de patient, d'élève ou de client nommé. |
+| Vous rédigez la fiche contexte de votre client pilote, avec son blocage principal. | Vous collez dans le chat de la séance la fiche contexte de votre client pilote, en cinq lignes. | La fiche nomme l'activité ou la mission, les publics, le blocage et ce qu'il coûte, le ton et le contact, sans aucune donnée de patient, d'élève ou de client nommé. |
 
 Ces trois compétences comptent pour le jalon **J1 · Utilisateur autonome** (compétence J1-C2 : formuler des consignes structurées).
 
 ## Pourquoi c'est utile
 
 Une consigne vague donne une réponse moyenne, qu'il faut corriger trois fois. Une consigne complète donne en une fois un texte que vous pouvez envoyer. Avec un client, c'est la différence entre une heure de travail et dix minutes. Et une bonne consigne se réutilise : vous changez le contexte, elle sert pour un autre client.
+
+Un prestataire ne commence pas par l'outil. Il commence par ce qui bloque son client : les clients qui attendent, les messages qui prennent une heure, les rendez-vous oubliés. Dans ce parcours, chaque texte, chaque page et chaque document que vous produisez s'attaque à ce blocage, et vous mesurez l'effet.
 
 Durée : 90 minutes en direct, 60 minutes de travail personnel. Appareil : téléphone.
 
@@ -72,6 +74,17 @@ Durée : 90 minutes en direct, 60 minutes de travail personnel. Appareil : tél�
 ::: prompt
 Bonjour [prénom]. Je suis une formation pour créer des services digitaux avec l'intelligence artificielle. J'aimerais t'aider gratuitement pendant quelques mois : messages, page web, documents pour [ton activité]. Je n'utiliserai que les informations que tu me donnes pour ça, jamais de données personnelles de tes clients. Es-tu d'accord ?
 :::
+
+## Ce que vous réutilisez
+
+Cette séance s'appuie sur ce que vous savez déjà faire. Gardez votre **Kit du prestataire** ouvert.
+
+| Geste déjà appris | Séance | Où il sert aujourd'hui |
+|---|---|---|
+| Préciser et transformer une réponse (fiche-outil 01) | M01-S1 | Après la grille : tours 2 et 3 si le texte n'est pas encore parfait |
+| Modifier un message avec le crayon | M01-S1 | Compléter une consigne au lieu d'empiler les corrections (étape 7) |
+| Renommer et retrouver une conversation | M01-S1 | « Grille horaires », « Client pilote · fiche » : vous les retrouverez à chaque séance |
+| Ne jamais envoyer de données sensibles | M01-S2 | La fiche contexte : des groupes, jamais des personnes |
 
 ## Je vous montre
 
@@ -176,7 +189,7 @@ Un prestataire digital ne connaît jamais tous les métiers à l'avance. Il sait
 Fiche contexte · [activité ou structure, sans nom de famille]
 Activité ou mission : [ce que fait votre client pilote, où]
 Publics : [à qui il s'adresse : clients, parents, patients, membres…]
-Besoin : [ce qui lui prend du temps ou lui manque]
+Blocage : [ce qui bloque son activité, et ce que ça lui coûte : heures par semaine, clients perdus, erreurs]
 Ton : [chaleureux, formel, simple…]
 Contact : [comment le joindre : numéro professionnel, adresse, horaires]
 :::
@@ -191,7 +204,7 @@ Ajoutez une sixième ligne : « Validation : [qui valide une publication officie
 
 ### La consigne pour votre client pilote
 
-**Étape 10 : construire la consigne.** Choisissez la tâche réelle notée avant la séance. Copiez cette consigne à trous et remplacez les crochets :
+**Étape 10 : construire la consigne.** Choisissez la tâche réelle notée avant la séance : de préférence celle qui s'attaque au blocage de votre fiche contexte. Copiez cette consigne à trous et remplacez les crochets :
 
 ::: prompt
 Tu es [rôle : la personne qui devrait écrire ce texte].
@@ -229,7 +242,7 @@ Cette séance produit la **page 1 de votre Dossier client pilote** : la fiche co
 
 1. Ouvrez votre **Dossier client pilote** (document Word dans « 05 · Ressources et liens utiles », copié dans votre portfolio).
 2. Page 1 : collez la fiche contexte, la consigne de l'étape 10 et le texte final de Claude.
-3. Montrez le message à votre client pilote ou, si c'est votre structure, à la personne qui valide. Notez sa réaction en une phrase.
+3. Montrez le message à votre client pilote ou, si c'est votre structure, à la personne qui valide. Notez sa réaction en une phrase, et le blocage que ce message doit réduire.
 4. Si le message est validé, envoyez-le. Notez la date d'envoi.
 
 ::: structure
@@ -275,7 +288,7 @@ Pour chaque nouveau client, écrivez d'abord sa fiche contexte, une fois :
 Fiche contexte · [activité ou structure, sans nom de famille]
 Activité ou mission : […]
 Publics : […]
-Besoin : […]
+Blocage et ce qu'il coûte : […]
 Ton : […]
 Contact : […]
 Validation (propre structure) : […]
@@ -319,7 +332,7 @@ Un document nommé **S02-1_Prenom** (par exemple S02-1_Aicha), créé dans votre
 
 1. **Consigne du client pilote :** la consigne marquée R, T, C, F, C et le texte final de Claude.
 2. **Transfert :** la capture de la consigne adaptée à votre carte contexte et de la réponse.
-3. **Fiche contexte :** la fiche de votre client pilote, en cinq lignes.
+3. **Fiche contexte :** la fiche de votre client pilote, en cinq lignes, avec son blocage et ce qu'il coûte.
 4. **Les cinq tâches :** pour chacune, le contexte en une ligne, la consigne et une capture du résultat.
 5. **Trois phrases :** ce qui a changé entre votre consigne du questionnaire S02-0 et votre consigne de fin de séance, ce qui a le mieux marché, ce que vous ferez autrement.
 

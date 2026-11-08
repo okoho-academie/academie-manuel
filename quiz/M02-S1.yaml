@@ -47,10 +47,10 @@ questions:
 - q: Quelle fiche contexte est correcte pour un client pilote ?
   choix:
   - « Mme Fotso, 42 ans, née à Dschang, compte bancaire n° … »
-  - '« Atelier de couture à Bafoussam ; clientes femmes actives ; besoin : plus de commandes de fin d''année ; ton chaleureux ; contact WhatsApp de l''atelier. »'
+  - '« Atelier de couture à Bafoussam ; clientes femmes actives ; blocage : peu de commandes de fin d''année, deux semaines sans travail ; ton chaleureux ; contact WhatsApp de l''atelier. »'
   - « Une couturière. »
   bonne: 1
-  explication: 'Cinq lignes : activité, publics, besoin, ton, contact. Aucune donnée personnelle sensible.'
+  explication: 'Cinq lignes : activité, publics, blocage et ce qu''il coûte, ton, contact. Aucune donnée personnelle sensible.'
   competence: M02-S1-C3
 - q: Défi. Votre client pilote est votre propre école. Que doit contenir en plus votre fiche contexte ?
   choix:

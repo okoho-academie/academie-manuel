@@ -52,7 +52,7 @@ Ces trois compétences comptent pour le jalon **J1 · Utilisateur autonome** : J
 
 ## Pourquoi c'est utile
 
-Un client ne paie pas une première version. Il paie un texte juste, adapté à ses publics, sans erreur. Trois gestes font cette différence : faire critiquer avant de réécrire, adapter au canal, vérifier chaque information. Ils servent pour chaque texte, chaque client.
+Un client ne paie pas une première version. Il paie un texte qui règle son problème : moins de questions répétées, plus de commandes, des parents qui viennent à la réunion. Un texte juste, adapté à ses publics, sans erreur. Trois gestes font cette différence : faire critiquer avant de réécrire, adapter au canal, vérifier chaque information. Ils servent pour chaque texte, chaque client.
 
 Durée : 60 minutes de séance en autonomie, 45 minutes de travail personnel. Appareil : téléphone.
 
@@ -63,6 +63,17 @@ Durée : 60 minutes de séance en autonomie, 45 minutes de travail personnel. Ap
 - [ ] Vous avez la **fiche contexte** de votre client pilote (séance M02-S1).
 - [ ] Vous avez choisi **un texte réel** de votre client pilote à améliorer : sa présentation, une annonce, un message qu'il envoie souvent. S'il n'existe pas encore, écrivez une première version en deux phrases.
 - [ ] Vous avez sous la main **la source** de ses informations : liste de prix, calendrier, horaires, numéro de contact.
+
+## Ce que vous réutilisez
+
+Cette séance s'appuie sur ce que vous savez déjà faire. Gardez votre **Kit du prestataire** ouvert.
+
+| Geste déjà appris | Séance | Où il sert aujourd'hui |
+|---|---|---|
+| La fiche contexte et la grille R-T-C-F-C (fiche-outil 03) | M02-S1 | Vous collez la fiche avant chaque critique (étape 9) |
+| Faire lire une photo de document et comparer deux valeurs (fiche-outil 02) | M01-S2 | Vous photographiez la source du client pour vérifier le texte (étape 13) |
+| Préciser et transformer (fiche-outil 01) | M01-S1 | L'adaptation à deux canaux est une transformation guidée (étape 12) |
+| Renommer une conversation | M01-S1 | « [client pilote] · présentation » : votre pièce du Démo Day se retrouve en secondes |
 
 ## Je vous montre
 
@@ -155,7 +166,7 @@ Maintenant, le texte réel de votre client pilote.
 **Étape 10 : critiquer.** Copiez et complétez :
 
 ::: prompt
-Voici la fiche contexte de mon client pilote : [fiche contexte]. Voici son texte actuel : « [texte] ». Critique ce texte selon trois critères : 1. [critère, par exemple : clarté pour ses publics], 2. [critère], 3. [critère]. Pour chaque critère, une note sur 5 et une amélioration précise. Ne réécris pas encore.
+Voici la fiche contexte de mon client pilote : [fiche contexte]. Voici son texte actuel : « [texte] ». Critique ce texte selon trois critères : 1. [critère, par exemple : le texte aide-t-il à réduire le blocage de la fiche ?], 2. [critère], 3. [critère]. Pour chaque critère, une note sur 5 et une amélioration précise. Ne réécris pas encore.
 :::
 
 **Étape 11 : réécrire.**
@@ -170,7 +181,7 @@ Réécris le texte en appliquant tes trois améliorations. Utilise seulement ces
 Adapte ce texte à deux canaux : 1. [canal 1, forme et longueur], 2. [canal 2, forme et longueur]. Pour chaque canal, change la longueur, le ton et l'appel à l'action.
 :::
 
-**Étape 13 : vérifier.** Envoyez la consigne de vérification de l'étape 7. Puis contrôlez vous-même trois informations avec la source de votre client : la liste de prix, le calendrier, la carte de visite. Notez chaque contrôle sur une ligne : information, source, résultat.
+**Étape 13 : vérifier.** Envoyez la consigne de vérification de l'étape 7. Puis photographiez la source de votre client (liste de prix, calendrier, carte de visite) et faites-en un tableau avec la fiche-outil 02. Comparez trois informations du texte avec ce tableau et avec la photo elle-même. Notez chaque contrôle sur une ligne : information, source, résultat.
 
 Vérifiez votre travail :
 
@@ -182,8 +193,8 @@ Vérifiez votre travail :
 
 ::: coup-de-pouce
 1. **Indice.** Vous ne savez pas quels critères choisir ? Demandez-vous ce que les publics de votre client doivent comprendre, ressentir et faire après avoir lu le texte. Trois questions, trois critères.
-2. **Solution partielle.** Critères qui marchent presque toujours : clarté pour le public, appel à l'action, confiance (adresse, horaires, contact). Pour un canal : WhatsApp court et direct ; affiche lisible de loin ; Facebook avec une phrase d'accroche.
-3. **Solution complète.** « Voici la fiche contexte de mon client pilote : atelier de couture à Bafoussam, clientes femmes actives, besoin : plus de commandes de fin d'année, ton chaleureux, contact WhatsApp de l'atelier. Voici son texte actuel : « Couture tous modèles. » Critique ce texte selon trois critères : 1. clarté pour une nouvelle cliente, 2. envie de commander, 3. confiance. Pour chaque critère, une note sur 5 et une amélioration précise. Ne réécris pas encore. »
+2. **Solution partielle.** Critères qui marchent presque toujours : le texte réduit-il le blocage du client, clarté pour le public, appel à l'action, confiance (adresse, horaires, contact). Pour un canal : WhatsApp court et direct ; affiche lisible de loin ; Facebook avec une phrase d'accroche.
+3. **Solution complète.** « Voici la fiche contexte de mon client pilote : atelier de couture à Bafoussam, clientes femmes actives, blocage : peu de commandes de fin d'année, deux semaines sans travail, ton chaleureux, contact WhatsApp de l'atelier. Voici son texte actuel : « Couture tous modèles. » Critique ce texte selon trois critères : 1. clarté pour une nouvelle cliente, 2. envie de commander, 3. confiance. Pour chaque critère, une note sur 5 et une amélioration précise. Ne réécris pas encore. »
 :::
 
 ::: structure
@@ -262,7 +273,7 @@ Un document nommé **S02-2_Prenom** (par exemple S02-2_Aicha), créé dans votre
 2. **Deux canaux :** les deux versions du texte de votre client pilote.
 3. **Vérification :** vos trois contrôles, une ligne chacun : information, source, résultat.
 4. **Avant-après :** le texte de départ et le texte final, côte à côte, avec deux améliorations que vous nommez vous-même.
-5. **Trois phrases :** la réaction de votre client pilote, ce qui a le mieux marché, ce que vous ferez autrement.
+5. **Trois phrases :** le blocage que ce texte doit réduire et ce que vous observerez pour savoir s'il marche, la réaction de votre client pilote, ce que vous ferez autrement.
 
 Et dans votre **Dossier client pilote**, la page 2 remplie.
 

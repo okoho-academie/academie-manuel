@@ -22,7 +22,7 @@ Le même geste dans trois contextes : la consigne commune, une carte contexte, l
 |---|---|---|
 | **C1** Rédiger une consigne avec les cinq éléments | Minute 58 à 74 : chacun poste dans le chat la consigne pour son client pilote, lettres R, T, C, F, C devant chaque partie | Cinq éléments repérables, texte de Claude utilisable sans retouche |
 | **C2** Adapter une consigne à un autre contexte | Minute 34 à 46 : chacun reçoit une carte contexte et poste la consigne adaptée | Rôle, contexte et format changés, résultat qui convient au nouveau contexte |
-| **C3** Rédiger la fiche contexte du client pilote | Minute 46 à 58 : chacun colle sa fiche de cinq lignes dans le chat | Activité ou mission, publics, besoin, ton, contact ; aucune donnée sensible |
+| **C3** Rédiger la fiche contexte du client pilote | Minute 46 à 58 : chacun colle sa fiche de cinq lignes dans le chat | Activité ou mission, publics, blocage et ce qu'il coûte, ton, contact ; aucune donnée sensible |
 
 Les trois compétences construisent J1-C2 (consignes structurées). Le livrable de M02-S2 deviendra la pièce J1-C2 du Démo Day.
 
@@ -112,7 +112,8 @@ Temps de parole sans pratique : diapos 3, 5, 15 et 16, moins de dix minutes au t
 - **Preuve :** « Je ne vous demande pas si vous avez compris. Postez-la. »
 - **Contexte :** « Claude ne connaît ni votre client ni votre ville. Le contexte, c'est vous qui le donnez. »
 - **Transfert :** « Un prestataire ne connaît pas tous les métiers. Il pose les mêmes cinq questions à chaque client. »
-- **Propre structure :** « Votre école est votre premier client. Traitez-la comme un client : un besoin, un livrable, une validation. »
+- **Propre structure :** « Votre école est votre premier client. Traitez-la comme un client : un blocage, un livrable, une validation, un effet mesuré. »
+- **Blocage :** « Un prestataire ne vend pas un texte. Il règle un problème. Quel est le blocage de votre client, et combien lui coûte-t-il ? »
 - **Clôture :** « Votre fiche contexte est le premier document de votre client. Vous la réutiliserez dans chaque séance. »
 
 ## Plan B

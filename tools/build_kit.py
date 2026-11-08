@@ -68,9 +68,17 @@ def dossier():
            "| Type | Externe (personne de mon entourage) / Interne (ma propre structure) |",
            "| Accord obtenu le (externe) ou personne qui valide (interne) | |",
            "| Tâches qui prennent le plus de temps, heures par semaine au départ | |", "",
+           "## Le diagnostic de départ", "",
+           "Avant de produire, nommez ce qui bloque. Chaque page de ce dossier dit quel blocage le produit traite et ce qui a changé.", "",
+           "| Diagnostic | Votre réponse |", "|---|---|",
+           "| Le blocage principal (ce qui empêche d'avancer) | |",
+           "| Sa cause, selon le client | |",
+           "| Ce qu'il coûte : heures par semaine, clients perdus, erreurs | |",
+           "| Le résultat visé à la fin du parcours | |", "",
            "## Les règles", "",
            f"- **Données.** {r['donnees']}",
            f"- **Publication.** {r['publication_interne']}",
+           f"- **Blocage.** {r['blocage']}",
            f"- **Valeur.** {r['valeur']}", "",
            "## Feuille de route", "",
            "| Page | Séance | Produit | Jalon |", "|---|---|---|---|"]
@@ -87,12 +95,13 @@ def dossier():
         if ex:
             out += [ex, ""]
         out += ["| Rubrique | Votre réponse |", "|---|---|",
+                "| Blocage traité | |",
                 "| Ce que j'ai produit | |",
                 "| Consigne principale utilisée | |",
                 "| Résultat (texte, capture ou lien) | |",
                 "| Réaction du client ou validation (date) | |",
                 "| Utilisé ou publié ? Où ? | |",
-                "| Temps gagné (interne) ou résultat obtenu (externe) | |", ""]
+                "| Effet observé : temps gagné, réponses, commandes, présence | |", ""]
     out += ["---", "", MENTION]
     return "\n".join(out) + "\n"
 

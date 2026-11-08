@@ -130,3 +130,8 @@ termes:
   definition: 'Page d''une séance à garder et réutiliser pour chaque client : une consigne à trous, une grille, une checklist. L''ensemble forme le Kit du prestataire.'
   seances:
   - Parcours
+- terme: Blocage (du client)
+  definition: "Ce qui empêche le client pilote d'avancer et ce que cela lui coûte : heures perdues, clients perdus, erreurs. Chaque produit du parcours s'attaque à un blocage nommé, et son effet est mesuré."
+  seances:
+  - M02-S1
+  - Parcours
