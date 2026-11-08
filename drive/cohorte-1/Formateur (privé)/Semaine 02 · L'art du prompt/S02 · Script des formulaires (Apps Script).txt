@@ -1,0 +1,134 @@
+/**
+ * OKOHO Académie · Formulaires de la semaine S02 · généré par tools/build_forms.py
+ * Utilisation : projet Apps Script OKOHO_Academie.gs (déjà autorisé) › Fichiers › + › Script « Formulaires_S02 » › coller › Enregistrer › Exécuter « creerFormulairesS02 ».
+ * Autoriser l'accès au compte de l'Académie. Les liens à partager s'affichent dans le journal d'exécution.
+ * OBLIGATOIRE après exécution, pour chaque quiz (Apps Script ne peut pas le régler) :
+ *   Paramètres › Quiz › Publier la note : « Immédiatement après chaque envoi »,
+ *   puis activer Questions manquées, Bonnes réponses, Valeur en points.
+ *   Sinon le quiz reste sur « Plus tard » sans collecte d'e-mails et les réponses ne s'envoient pas.
+ * Une formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi
+ */
+function creerFormulairesS02() {
+  // Tout est encapsulé : le code peut être ajouté au projet OKOHO_Academie.gs sans écraser d'autres fonctions.
+var DOSSIER_ID = "nom:Semaine 02 · 14.11.2026 · L'art du prompt";
+var LOGO_B64 = "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";
+
+// DOSSIER_ID : identifiant du dossier Drive, « nom:<nom exact du dossier> » (premier dossier de ce nom)
+// ou « chemin:<racine>/<sous-dossier>/… » (dossiers créés s'ils manquent, mêmes noms que « synchroniser »).
+function dossier() {
+  if (DOSSIER_ID.indexOf('chemin:') === 0) {
+    var parts = DOSSIER_ID.slice(7).split('/'), r = DriveApp.getFoldersByName(parts[0]);
+    if (!r.hasNext()) throw new Error('Racine introuvable : ' + parts[0]);
+    var d = r.next();
+    parts.slice(1).forEach(function (p) { var it = d.getFoldersByName(p); d = it.hasNext() ? it.next() : d.createFolder(p); });
+    return d;
+  }
+  if (DOSSIER_ID.indexOf('nom:') !== 0) return DriveApp.getFolderById(DOSSIER_ID);
+  var it = DriveApp.getFoldersByName(DOSSIER_ID.slice(4));
+  if (!it.hasNext()) throw new Error('Dossier introuvable : ' + DOSSIER_ID.slice(4) + '. Lancez d\'abord « synchroniser ».');
+  return it.next();
+}
+
+function nouveau(titre, description) {
+  var f = FormApp.create(titre);
+  f.setTitle(titre).setDescription(description + '\n\nUne formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi · okoho.de');
+  f.setConfirmationMessage('Merci. Vos réponses sont enregistrées. OKOHO Académie · Parcours Claude Pro');
+  f.addImageItem().setImage(Utilities.newBlob(Utilities.base64Decode(LOGO_B64), 'image/png', 'logo.png')).setWidth(220);
+  try { f.setPublished(true); } catch (e) {}
+  var fichier = DriveApp.getFileById(f.getId());
+  fichier.moveTo(dossier());
+  fichier.setSharing(DriveApp.Access.ANYONE_WITH_LINK, DriveApp.Permission.VIEW);  // jamais Éditeur
+  return f;
+}
+
+  var liens = [];
+  // Quiz · Les cinq éléments d'une bonne consigne
+  var f = nouveau("S02-1 · Quiz · Les cinq éléments d'une bonne consigne", "8 questions, chacune dans un contexte différent : vous appliquez la grille R-T-C-F-C à des situations nouvelles. Les deux dernières questions sont des questions Défi. Votre score s'affiche à la fin, avec l'explication de chaque réponse. Objectif : au moins 6 bonnes réponses sur 8.");
+  f.setIsQuiz(true);
+  f.setShuffleQuestions(false);
+  f.addTextItem().setTitle('Prénom').setRequired(true);
+  var it = f.addMultipleChoiceItem().setTitle("Une gérante de restaurant demande : « Fais un message pour mes clients. » Quel élément de la grille manque le plus ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Le rôle", false), it.createChoice("Le contexte : quels clients, quel message, pourquoi", true), it.createChoice("Rien, la consigne est complète", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Sans contexte, Claude ne sait ni à qui il écrit ni ce qu'il faut annoncer. Le texte reste général.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Sans contexte, Claude ne sait ni à qui il écrit ni ce qu'il faut annoncer. Le texte reste général.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Dans « Message WhatsApp de cinq lignes au maximum », de quel élément s'agit-il ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Le rôle", false), it.createChoice("La tâche", false), it.createChoice("Le format", true)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Le format dit la forme et la longueur du résultat.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Le format dit la forme et la longueur du résultat.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Un directeur d'école veut convoquer les parents. Quelle consigne respecte les cinq éléments ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("« Tu es directeur d'école. Écris une convocation des parents à la réunion du trimestre, samedi à 9 h dans la cour. Les parents lisent sur WhatsApp. Format : cinq lignes. Ton respectueux, demande de répondre « Présent ». »", true), it.createChoice("« Écris une convocation. »", false), it.createChoice("« Écris vite une convocation pour les parents, merci. »", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Rôle, tâche, contexte (qui, quand, où, canal), format et contraintes sont tous présents.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Rôle, tâche, contexte (qui, quand, où, canal), format et contraintes sont tous présents.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Votre consigne pour une boutique marche bien. Vous voulez la réutiliser pour un garage. Que changez-vous en priorité ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Rien, une bonne consigne marche partout", false), it.createChoice("Seulement le nom de la boutique", false), it.createChoice("Le rôle, le contexte et le format, adaptés au garage et à ses clients", true)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("La structure de la consigne reste. Ce qui décrit la situation change : qui écrit, pour qui, sous quelle forme.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("La structure de la consigne reste. Ce qui décrit la situation change : qui écrit, pour qui, sous quelle forme.").build());
+  var it = f.addMultipleChoiceItem().setTitle("La responsable d'un centre de santé veut une affiche sur les nouveaux horaires. Que mettez-vous dans le contexte ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Les nouveaux horaires, les publics du centre et le lieu de l'affiche", true), it.createChoice("La liste des patients venus cette semaine", false), it.createChoice("Le numéro de dossier des patients concernés", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Le contexte décrit la situation et les publics. Les données des patients n'ont rien à faire dans une consigne.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Le contexte décrit la situation et les publics. Les données des patients n'ont rien à faire dans une consigne.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Quelle fiche contexte est correcte pour un client pilote ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("« Mme Fotso, 42 ans, née à Dschang, compte bancaire n° … »", false), it.createChoice("« Atelier de couture à Bafoussam ; clientes femmes actives ; blocage : peu de commandes de fin d'année, deux semaines sans travail ; ton chaleureux ; contact WhatsApp de l'atelier. »", true), it.createChoice("« Une couturière. »", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Cinq lignes : activité, publics, blocage et ce qu'il coûte, ton, contact. Aucune donnée personnelle sensible.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Cinq lignes : activité, publics, blocage et ce qu'il coûte, ton, contact. Aucune donnée personnelle sensible.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Défi. Votre client pilote est votre propre école. Que doit contenir en plus votre fiche contexte ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Les noms des élèves en difficulté", false), it.createChoice("Le salaire des enseignants", false), it.createChoice("La personne qui valide une publication officielle", true)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Pour votre propre structure, ajoutez qui valide. Les données des élèves et du personnel ne sortent jamais.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Pour votre propre structure, ajoutez qui valide. Les données des élèves et du personnel ne sortent jamais.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Défi. Claude rend un texte trop général malgré votre consigne. Quelle est la meilleure réaction ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Compléter la consigne avec l'élément manquant, souvent le contexte ou le format, et la renvoyer", true), it.createChoice("Écrire « non, mieux que ça »", false), it.createChoice("Changer d'outil d'IA", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Corrigez la consigne, pas seulement la réponse. Avec l'icône crayon, vous renvoyez la consigne complétée.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Corrigez la consigne, pas seulement la réponse. Avec l'icône crayon, vous renvoyez la consigne complétée.").build());
+  f.addPageBreakItem().setTitle('Pouls de la semaine (non noté)').setHelpText('Trois questions pour adapter le parcours à votre situation. Elles ne comptent pas dans votre score.');
+  f.addMultipleChoiceItem().setTitle("Temps passé cette semaine sur le parcours, hors séance en direct").setChoiceValues(["Moins d'une heure", "1 à 2 heures", "2 à 4 heures", "Plus de 4 heures"]).setRequired(true);
+  f.addParagraphTextItem().setTitle("Ce qui vous a bloqué cette semaine (une phrase suffit)").setRequired(false);
+  f.addParagraphTextItem().setTitle("Où en est votre client pilote ? Qu'avez-vous produit pour lui cette semaine ?").setRequired(false);
+  liens.push(["S02-1 · Quiz · Les cinq éléments d'une bonne consigne", f.getPublishedUrl()]);
+
+  // Quiz · Itérer et affiner
+  var f = nouveau("S02-2 · Quiz · Itérer et affiner", "8 questions dans des contextes différents : critiquer, adapter à un canal, vérifier. Les deux dernières questions sont des questions Défi. Votre score s'affiche à la fin, avec l'explication de chaque réponse. Objectif : au moins 6 bonnes réponses sur 8.");
+  f.setIsQuiz(true);
+  f.setShuffleQuestions(false);
+  f.addTextItem().setTitle('Prénom').setRequired(true);
+  var it = f.addMultipleChoiceItem().setTitle("Vous voulez améliorer le texte de présentation d'un salon de coiffure. Quelle est la meilleure première consigne ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("« Améliore ce texte. »", false), it.createChoice("« Réécris ce texte en plus long. »", false), it.createChoice("« Critique ce texte selon trois critères : clarté, envie de prendre rendez-vous, confiance. Une note sur 5 et une amélioration par critère. Ne réécris pas encore. »", true)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("La critique d'abord, avec vos critères. Vous savez ensuite exactement ce que la réécriture doit corriger.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("La critique d'abord, avec vos critères. Vous savez ensuite exactement ce que la réécriture doit corriger.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Pourquoi demander « Ne réécris pas encore » dans la consigne de critique ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Pour décider vous-même des améliorations avant la réécriture", true), it.createChoice("Pour économiser des messages", false), it.createChoice("Parce que Claude ne sait pas réécrire", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Vous gardez la main : vous lisez la critique, vous choisissez, puis vous faites réécrire.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Vous gardez la main : vous lisez la critique, vous choisissez, puis vous faites réécrire.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Une association invite ses membres. Quelle différence entre le message WhatsApp et l'affiche ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Aucune, le même texte suffit", false), it.createChoice("WhatsApp court avec une demande de réponse ; affiche lisible de loin, titre court, trois informations", true), it.createChoice("L'affiche est plus longue que le message", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Chaque canal a sa longueur, son ton et son appel à l'action.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Chaque canal a sa longueur, son ton et son appel à l'action.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Un groupement agricole annonce un jour de vente. Pour Facebook, que changez-vous par rapport au message WhatsApp ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Une phrase d'accroche au début et un appel à partager", true), it.createChoice("Rien", false), it.createChoice("On retire la date et le lieu", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Sur Facebook, le texte doit accrocher et circuler. Les informations pratiques restent.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Sur Facebook, le texte doit accrocher et circuler. Les informations pratiques restent.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Claude a écrit « livraison gratuite » dans le texte d'une boutique. Votre client n'a jamais parlé de livraison. Que faites-vous ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Je laisse, c'est une bonne idée commerciale", false), it.createChoice("Je demande à Claude s'il est sûr", false), it.createChoice("Je supprime : c'est une information inventée", true)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Seules les informations du client restent. Une promesse inventée peut coûter cher à votre client.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Seules les informations du client restent. Une promesse inventée peut coûter cher à votre client.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Comment repérer rapidement les informations ajoutées par Claude ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Relire une fois très vite", false), it.createChoice("Demander la liste des informations factuelles et leur origine, puis contrôler avec la source du client", true), it.createChoice("Faire confiance si le texte est bien écrit", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("La liste des informations factuelles montre ce qui vient de vous et ce que Claude a ajouté. Ensuite, vous contrôlez avec la source.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("La liste des informations factuelles montre ce qui vient de vous et ce que Claude a ajouté. Ensuite, vous contrôlez avec la source.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Défi. Une directrice prépare une affiche officielle pour son école. Le texte est parfait. Que reste-t-il à faire avant de l'afficher ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("La faire valider par la personne qui en a le droit et contrôler la date avec le calendrier officiel", true), it.createChoice("Rien", false), it.createChoice("Ajouter des émojis", false)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Une publication officielle de votre structure reste un projet jusqu'à sa validation. La date se contrôle avec le document officiel.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Une publication officielle de votre structure reste un projet jusqu'à sa validation. La date se contrôle avec le document officiel.").build());
+  var it = f.addMultipleChoiceItem().setTitle("Défi. Vous avez demandé trois variantes d'un texte. Comment obtenir la meilleure version finale ?").setRequired(true).setPoints(1);
+  it.setChoices([it.createChoice("Prendre la plus longue", false), it.createChoice("Envoyer les trois au client", false), it.createChoice("Choisir la meilleure selon un critère du client et demander une version finale qui reprend un élément d'une autre variante", true)]);
+  it.setFeedbackForCorrect(FormApp.createFeedback().setText("Vous décidez avec un critère clair, puis vous combinez le meilleur des variantes.").build());
+  it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Vous décidez avec un critère clair, puis vous combinez le meilleur des variantes.").build());
+  f.addPageBreakItem().setTitle('Pouls de la semaine (non noté)').setHelpText('Trois questions pour adapter le parcours à votre situation. Elles ne comptent pas dans votre score.');
+  f.addMultipleChoiceItem().setTitle("Temps passé cette semaine sur le parcours, hors séance en direct").setChoiceValues(["Moins d'une heure", "1 à 2 heures", "2 à 4 heures", "Plus de 4 heures"]).setRequired(true);
+  f.addParagraphTextItem().setTitle("Ce qui vous a bloqué cette semaine (une phrase suffit)").setRequired(false);
+  f.addParagraphTextItem().setTitle("Où en est votre client pilote ? Qu'avez-vous produit pour lui cette semaine ?").setRequired(false);
+  liens.push(["S02-2 · Quiz · Itérer et affiner", f.getPublishedUrl()]);
+
+  liens.forEach(function (l) { Logger.log(l[0] + ' : ' + l[1]); });
+  Logger.log('À FAIRE pour chaque quiz : Paramètres › Quiz › Publier la note « Immédiatement après chaque envoi ».');
+}
+

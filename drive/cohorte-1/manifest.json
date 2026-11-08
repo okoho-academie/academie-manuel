@@ -3,112 +3,188 @@
   "racine": "OKOHO Académie · Parcours Claude Pro",
   "fichiers": [
     {
+      "chemin": "Formateur (privé)/Dramaturgies/Dramaturgie · L'art du prompt.pdf",
+      "sha": "2b71a864d5990070"
+    },
+    {
       "chemin": "Formateur (privé)/Dramaturgies/Dramaturgie · Prise en main de Claude.pdf",
-      "sha": "659c659bec8550a3"
+      "sha": "4affd0b5035b6852"
     },
     {
       "chemin": "Formateur (privé)/Dramaturgies/Dramaturgie · Séance de lancement.pdf",
-      "sha": "5beda0cba5b66036"
+      "sha": "e73c64d96d6db497"
+    },
+    {
+      "chemin": "Formateur (privé)/Dramaturgies/Shorts et pack WhatsApp · L'art du prompt.pdf",
+      "sha": "b8d4732641da1ae9"
+    },
+    {
+      "chemin": "Formateur (privé)/Dramaturgies/Tutoriel · L'art du prompt.pdf",
+      "sha": "3bb0ed9bdc5f95a4"
     },
     {
       "chemin": "Formateur (privé)/Dramaturgies/Tutoriel · Prise en main de Claude.pdf",
-      "sha": "df44fc70a87d52c9"
+      "sha": "ea037d2d0c87bd36"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/Dramaturgie · Séance de lancement.pdf",
-      "sha": "5beda0cba5b66036"
+      "sha": "e73c64d96d6db497"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/Présentation · Séance de lancement · avec notes.pdf",
-      "sha": "0fb2edbc7e22c76a"
+      "sha": "2ed91a6b6024fd5f"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/Présentation · Séance de lancement.pdf",
-      "sha": "1a27f972f40c11e6"
+      "sha": "968bf501a06f893a"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/S00 · Votre premier notebook NotebookLM.pdf",
-      "sha": "828c7e4fed007a3e"
+      "sha": "73fe686feb3645e7"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/S00-1 · Guide · Bien démarrer, vos comptes et vos outils.pdf",
-      "sha": "1f0ade0eb275f46b"
+      "sha": "194d336003b8fc4a"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/S00-2 · À remplir · Diagnostic d'entrée.pdf",
-      "sha": "13e7ddc48d607989"
+      "sha": "da99a4ae4fc32bef"
     },
     {
       "chemin": "Formateur (privé)/Semaine 00 · Séance de lancement/S00-3 · Guide · La carte de Claude, quel outil, pour quoi, gratuit ou payant.pdf",
-      "sha": "49a8c73895cb4576"
+      "sha": "58d3535d3899208d"
     },
     {
       "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/Dramaturgie · Prise en main de Claude.pdf",
-      "sha": "659c659bec8550a3"
+      "sha": "4affd0b5035b6852"
     },
     {
       "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/Présentation · Prise en main de Claude · avec notes.pdf",
-      "sha": "6dc92989f8c37ed0"
+      "sha": "2f19acbc14128cda"
     },
     {
       "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/Présentation · Prise en main de Claude.pdf",
-      "sha": "07b9255a7562c5bf"
+      "sha": "9f34e62a5554d1e4"
     },
     {
       "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/S01 · Réviser avec NotebookLM · Prise en main de Claude.pdf",
-      "sha": "12cec27d888f91f0"
+      "sha": "3cd7e7400976b98a"
     },
     {
       "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/S01 · Script des formulaires (Apps Script).txt",
-      "sha": "5fdcb4d87c9c1cc1"
+      "sha": "12b6289f0d5e0e8c"
     },
     {
       "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/S01-1 · Séance en direct · M01-S1 Créer son compte et découvrir l'interface.pdf",
-      "sha": "d09f83c7a4af2cd4"
+      "sha": "3d475ca695b164ab"
     },
     {
       "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/S01-2 · En autonomie · M01-S2 Fichiers, images et application mobile.pdf",
-      "sha": "f9fdcd3b4cf487f9"
+      "sha": "0bdca99ea42f2243"
     },
     {
       "chemin": "Formateur (privé)/Semaine 01 · Prise en main de Claude/Tutoriel · Prise en main de Claude.pdf",
-      "sha": "df44fc70a87d52c9"
+      "sha": "ea037d2d0c87bd36"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 02 · L'art du prompt/Dramaturgie · L'art du prompt.pdf",
+      "sha": "2b71a864d5990070"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 02 · L'art du prompt/Présentation · L'art du prompt · avec notes.pdf",
+      "sha": "e30e9b0a8cfd91b3"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 02 · L'art du prompt/Présentation · L'art du prompt.pdf",
+      "sha": "cb2e398a23b59a6d"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 02 · L'art du prompt/S02 · Réviser avec NotebookLM · L'art du prompt.pdf",
+      "sha": "12f784967abface7"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 02 · L'art du prompt/S02 · Script des formulaires (Apps Script).txt",
+      "sha": "304dcbfb033561e8"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 02 · L'art du prompt/S02-1 · Séance en direct · M02-S1 Les cinq éléments d'une bonne consigne.pdf",
+      "sha": "2be2cc2db305914c"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 02 · L'art du prompt/S02-2 · En autonomie · M02-S2 Itérer et affiner.pdf",
+      "sha": "e20db7eca75e6eb6"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 02 · L'art du prompt/Shorts et pack WhatsApp · L'art du prompt.pdf",
+      "sha": "b8d4732641da1ae9"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 02 · L'art du prompt/Tutoriel · L'art du prompt.pdf",
+      "sha": "3bb0ed9bdc5f95a4"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 04 · Démo Day J1/Présentation · Démo Day J1 · avec notes.pdf",
+      "sha": "8d6100b81f6cc07b"
+    },
+    {
+      "chemin": "Formateur (privé)/Semaine 04 · Démo Day J1/Présentation · Démo Day J1.pdf",
+      "sha": "697542570f59d05d"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/00 · COMMENCEZ ICI.pdf",
-      "sha": "79ef2d6f8183029a"
+      "sha": "e500423169133a71"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/01 · Programme et calendrier/Programme et calendrier · OKOHO Parcours Claude Pro · Cohorte 1.pdf",
-      "sha": "3be3554911dc9185"
+      "sha": "dbb9dd34a39ebaed"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 00 · 31.10.2026 · Séance de lancement/S00-1 · Guide · Bien démarrer, vos comptes et vos outils.pdf",
-      "sha": "1f0ade0eb275f46b"
+      "sha": "194d336003b8fc4a"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 00 · 31.10.2026 · Séance de lancement/S00-2 · À remplir · Diagnostic d'entrée.pdf",
-      "sha": "13e7ddc48d607989"
+      "sha": "da99a4ae4fc32bef"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 00 · 31.10.2026 · Séance de lancement/S00-3 · Guide · La carte de Claude, quel outil, pour quoi, gratuit ou payant.pdf",
-      "sha": "49a8c73895cb4576"
+      "sha": "58d3535d3899208d"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 01 · 07.11.2026 · Prise en main de Claude/S01-1 · Séance en direct · M01-S1 Créer son compte et découvrir l'interface.pdf",
-      "sha": "d09f83c7a4af2cd4"
+      "sha": "3d475ca695b164ab"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 01 · 07.11.2026 · Prise en main de Claude/S01-2 · En autonomie · M01-S2 Fichiers, images et application mobile.pdf",
-      "sha": "f9fdcd3b4cf487f9"
+      "sha": "0bdca99ea42f2243"
+    },
+    {
+      "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 02 · 14.11.2026 · L'art du prompt/S02-1 · Séance en direct · M02-S1 Les cinq éléments d'une bonne consigne.pdf",
+      "sha": "2be2cc2db305914c"
+    },
+    {
+      "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/02 · Séances semaine par semaine/Semaine 02 · 14.11.2026 · L'art du prompt/S02-2 · En autonomie · M02-S2 Itérer et affiner.pdf",
+      "sha": "e20db7eca75e6eb6"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/03 · Réviser avec NotebookLM/S00 · Votre premier notebook NotebookLM.pdf",
-      "sha": "828c7e4fed007a3e"
+      "sha": "73fe686feb3645e7"
     },
     {
       "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/03 · Réviser avec NotebookLM/S01 · Réviser avec NotebookLM · Prise en main de Claude.pdf",
-      "sha": "12cec27d888f91f0"
+      "sha": "3cd7e7400976b98a"
+    },
+    {
+      "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/03 · Réviser avec NotebookLM/S02 · Réviser avec NotebookLM · L'art du prompt.pdf",
+      "sha": "12f784967abface7"
+    },
+    {
+      "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/05 · Ressources et liens utiles/Dossier client pilote · à copier dans votre portfolio.docx",
+      "sha": "d09d048447f38670"
+    },
+    {
+      "chemin": "OKOHO Parcours Claude Pro · Cohorte 1 · Espace participants/05 · Ressources et liens utiles/Kit du prestataire · fiches-outils.pdf",
+      "sha": "5351a6e09f792598"
     }
   ]
 }
