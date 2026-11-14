@@ -77,7 +77,7 @@ def capture(fichier, cadre, dest, legende=None):
     c = Image.open(fichier).convert("RGB")
     if cadre:
         c = c.crop(tuple(cadre))
-    zone_h = H - (220 if legende else 120)
+    zone_h = H - (340 if legende else 260)   # bande basse de 200 px réservée aux sous-titres
     c.thumbnail((W - 200, zone_h), Image.LANCZOS)
     if c.width < W - 200 and c.height < zone_h:
         f = min((W - 200) / c.width, zone_h / c.height)
