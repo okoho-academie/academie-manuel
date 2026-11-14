@@ -1,0 +1,45 @@
+# Tutoriel M02-S1 · storyboard (source de tools/build_tutoriel.py) · texte dit en français, sans date
+code: M02-S1
+titre: "Les cinq éléments d'une bonne consigne"
+sous_titre: "La grille R-T-C-F-C et la fiche contexte de votre client"
+action: "Fiche M02-S1, étape 9 : la fiche contexte de votre client pilote."
+voix: fr_FR-siwis-medium
+plans:
+  - image: carte:intro
+    min: 4
+    texte: ""
+  - image: capture:c1-vague.png
+    legende: "Une consigne vague"
+    texte: >-
+      Bonjour. En cinq minutes, vous allez écrire une consigne qui donne un texte prêt à envoyer, du premier coup.
+      Regardez d'abord une consigne vague : écris un message pour dire que les horaires changent.
+      La réponse est générale. Pas de jours précis, pas de public, un ton au hasard. Il faudrait tout corriger.
+  - image: diapo:grille
+    texte: >-
+      Une bonne consigne répond à cinq questions. Rôle : qui doit écrire ? Tâche : que voulez-vous obtenir ?
+      Contexte : pour qui, pourquoi, avec quelles informations ? Format : quelle forme, quelle longueur ?
+      Contraintes : que faut-il respecter ou éviter ? Le contexte est le plus souvent oublié. C'est pourtant lui qui change le plus le résultat.
+  - image: capture:c2-complete.png
+    legende: "La même tâche, avec la grille"
+    texte: >-
+      Même tâche, avec la grille. Le rôle et la tâche d'abord. Puis le contexte : les publics, les anciens et les nouveaux horaires.
+      Puis le format et les contraintes : un message WhatsApp de cinq lignes, ton chaleureux, avec le numéro de contact.
+      On envoie tout en un seul message. Le texte est prêt à envoyer.
+  - image: capture:c3-ecole.png
+    legende: "Même geste, autre contexte"
+    texte: >-
+      Même geste, autre contexte : une école qui convoque les parents. On change le rôle, le contexte et le format. La grille reste.
+      C'est ce que fait un prestataire digital : il pose les mêmes cinq questions à chaque nouveau client.
+  - image: diapo:fiche
+    texte: >-
+      Le contexte de votre client, vous l'écrivez une seule fois : c'est la fiche contexte. Cinq lignes : l'activité ou la mission, les publics,
+      le blocage et ce qu'il coûte, le ton, et le contact. Si votre client est votre propre structure, ajoutez qui valide les publications.
+      Jamais de nom de patient, d'élève ou de client : des groupes, jamais des personnes.
+  - image: capture:c4-fiche.png
+    legende: "La fiche contexte, collée dans la consigne"
+    texte: >-
+      Ensuite, vous collez la fiche dans la partie contexte de chaque consigne pour ce client.
+      Et vous choisissez une tâche qui s'attaque à son blocage. Voilà votre premier service.
+  - image: carte:outro
+    min: 4
+    texte: "À vous : fiche M02-S1, étape 9. Écrivez la fiche contexte de votre client pilote."
