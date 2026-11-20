@@ -19,7 +19,7 @@ jalons:
     competences:
       - code: J1-C1
         intitule: Utilise Claude de façon autonome sur ordinateur et téléphone, avec des réglages adaptés.
-        preuve: Au Démo Day, en direct sur son téléphone, retrouve une conversation par la recherche et fait lire une photo de document par Claude.
+        preuve: Au Démo Day, en direct sur son téléphone ou sa tablette, retrouve une conversation par la recherche et fait lire une photo de document par Claude.
         reussi_si: Les deux gestes sans aide en moins de trois minutes ; Claude répond en français et utilise son prénom sans qu'on le lui demande.
       - code: J1-C2
         intitule: Formule des consignes structurées et améliore une réponse par itération.

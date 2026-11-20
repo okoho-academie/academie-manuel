@@ -135,3 +135,35 @@ termes:
   seances:
   - M02-S1
   - Parcours
+- terme: Publier (un artefact)
+  definition: Rendre une page créée par Claude visible par un lien public, que l'on ouvre sans compte. On publie sur claude.ai, dans le navigateur.
+  seances:
+  - M05-S1
+- terme: Lien public
+  definition: Adresse d'une page publiée que toute personne peut ouvrir, sans compte Claude.
+  seances:
+  - M05-S1
+- terme: Navigation privée
+  definition: Fenêtre du navigateur sans connexion à vos comptes ; elle montre une page comme la voit un visiteur.
+  seances:
+  - M05-S1
+- terme: Gabarit de consigne
+  definition: Consigne à trous que vous complétez avec les informations de votre client ; elle garde la même structure pour chaque client.
+  seances:
+  - M05-S1
+- terme: Portfolio
+  definition: Votre dossier personnel dans Google Drive où vous rangez vos preuves, vos livrables et votre Dossier client pilote ; vous seul et le formateur le voyez.
+  seances:
+  - Parcours
+- terme: Source officielle
+  definition: Organisme qui publie lui-même une information (ministère, administration, établissement), à distinguer d'un message ou d'un site qui la répète.
+  seances:
+  - M03-S1
+- terme: Recherche web
+  definition: Fonction qui permet à Claude de chercher sur Internet et de citer ses sources avec leur lien.
+  seances:
+  - M03-S1
+- terme: Message viral
+  definition: Message transféré de groupe en groupe, souvent sans source ; il doit être vérifié avant d'être cru ou partagé.
+  seances:
+  - M03-S1

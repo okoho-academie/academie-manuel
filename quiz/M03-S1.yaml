@@ -1,0 +1,70 @@
+code: M03-S1
+titre: "Quiz · Vérifier : erreurs, sources, limites"
+reussite: 6
+pouls: true
+description: "8 questions dans des métiers différents : repérer ce qu'il faut vérifier, trouver la bonne source, demander au client ce que lui seul sait. Les deux dernières questions sont des questions Défi. Votre score s'affiche à la fin, avec l'explication de chaque réponse."
+questions:
+- q: Claude a écrit un message pour une pharmacie de garde. Quelle information devez-vous vérifier en premier ?
+  choix:
+  - Le ton du message
+  - Les dates et heures de garde
+  - Le nombre d'émojis
+  bonne: 1
+  explication: Les dates, heures, prix, noms et règles sont des faits. Une erreur sur la garde envoie des patients devant une porte fermée.
+  competence: M03-S1-C1
+- q: Comment repérer vite les informations que Claude a ajoutées dans un texte ?
+  choix:
+  - Lui demander la liste des informations factuelles et si chacune vient de vous ou de lui
+  - Relire très vite
+  - Lui demander s'il est sûr
+  bonne: 0
+  explication: La liste montre ce qui vient de vous et ce que Claude a ajouté. Vous savez alors quoi vérifier.
+  competence: M03-S1-C1
+- q: 'Un message transféré dit : « Le gouvernement offre une aide à chaque famille, inscrivez-vous avant minuit sur ce lien. » Que faites-vous ?'
+  choix:
+  - Je clique sur le lien pour voir
+  - Je le partage à mes contacts par précaution
+  - Je cherche l'information sur le site officiel de l'organisme concerné, sans cliquer sur le lien
+  bonne: 2
+  explication: L'urgence, le lien et l'appel à partager sont des signes d'arnaque. La vérité est sur le site officiel, pas dans le lien.
+  competence: M03-S1-C2
+- q: Quelle est la meilleure source pour la date de rentrée scolaire ?
+  choix:
+  - Un message transféré dans un groupe de parents
+  - Le site ou la note officielle du ministère ou de la hiérarchie
+  - Un blog qui en parle
+  bonne: 1
+  explication: La source, c'est l'organisme qui publie l'information. Le reste ne fait que la répéter, parfois mal.
+  competence: M03-S1-C2
+- q: La source officielle dit autre chose que Claude. Que faites-vous ?
+  choix:
+  - Je signale l'écart à Claude dans la conversation et je garde ce que dit la source
+  - Je garde la réponse de Claude, elle est mieux écrite
+  - Je mélange les deux
+  bonne: 0
+  explication: La source fait foi. Vous signalez l'écart pour que la suite de la conversation reste juste.
+  competence: M03-S1-C2
+- q: Un institut de formation veut afficher le coût de chaque étape d'une démarche administrative. D'où viennent les montants ?
+  choix:
+  - De Claude, il a donné un tableau précis
+  - D'un forum
+  - De l'institut lui-même ou de l'organisme officiel qui fixe ces montants
+  bonne: 2
+  explication: Les prix viennent du client ou de l'organisme officiel, jamais de Claude. Claude prépare seulement le tableau et les questions.
+  competence: M03-S1-C3
+- q: Défi. Vous préparez la page d'un restaurant et il vous manque les prix. Quelle consigne donnez-vous à Claude ?
+  choix:
+  - « Mets des prix réalistes pour la ville. »
+  - « Écris un message au gérant pour lui demander de confirmer ses prix, sans proposer aucun chiffre. »
+  - « Laisse les prix d'un autre restaurant. »
+  bonne: 1
+  explication: Seul le client connaît ses prix. Le message lui demande de les confirmer, sans chiffre inventé.
+  competence: M03-S1-C3
+- q: Défi. Claude vous répond « Oui, je suis sûr » à propos d'une date. Est-ce suffisant ?
+  choix:
+  - Non, je demande la source, je l'ouvre et je compare
+  - Oui, Claude a confirmé
+  - Oui, si la réponse est bien écrite
+  bonne: 0
+  explication: Claude peut se tromper avec assurance. Seule la source ouverte et comparée confirme une information.
+  competence: M03-S1-C1

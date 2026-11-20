@@ -1,0 +1,70 @@
+code: M05-S1
+titre: "Quiz · Une page web en une conversation"
+reussite: 6
+pouls: true
+description: "8 questions dans des métiers différents : créer une page à partir d'une fiche contexte, l'améliorer par des tours ciblés, la publier et contrôler le lien. Les deux dernières questions sont des questions Défi. Votre score s'affiche à la fin, avec l'explication de chaque réponse."
+questions:
+- q: Une boutique de quartier reçoit sans cesse les mêmes questions sur ses horaires. Que mettez-vous en premier dans la consigne de sa page ?
+  choix:
+  - Les couleurs préférées de la gérante
+  - L'objectif et le blocage traité, puis la fiche contexte de la boutique
+  - Une liste de tous les produits
+  bonne: 1
+  explication: La page s'attaque à un blocage précis. L'objectif et le blocage disent à Claude ce que la page doit régler.
+  competence: M05-S1-C1
+- q: 'Quelles parties doit avoir une page web v1 ?'
+  choix:
+  - Un titre qui dit l'offre, ce que l'on propose, pourquoi venir, le contact
+  - Un titre, une histoire de l'entreprise, un formulaire
+  - Seulement le numéro de téléphone
+  bonne: 0
+  explication: Un titre qui dit l'offre et trois parties suffisent pour répondre aux questions qui bloquent le client.
+  competence: M05-S1-C1
+- q: La page d'un centre de santé ne montre pas les horaires de consultation. Quelle est la meilleure consigne ?
+  choix:
+  - « Améliore la page. »
+  - « Recommence tout. »
+  - « Modifie seulement deux choses : ajoute les horaires de consultation sous le titre et un bouton pour appeler l'accueil. Ne change rien d'autre. »
+  bonne: 2
+  explication: Un tour ciblé nomme ce qui change et ce qui reste. La page s'améliore sans perdre ce qui était bon.
+  competence: M05-S1-C2
+- q: Pourquoi écrire « Ne change rien d'autre » dans un tour ciblé ?
+  choix:
+  - Pour garder ce qui était déjà bon sur la page
+  - Pour aller plus vite
+  - Parce que Claude ne sait pas tout modifier
+  bonne: 0
+  explication: Sans cette phrase, Claude peut réécrire toute la page et perdre ce que vous aviez validé.
+  competence: M05-S1-C2
+- q: Vous voulez publier la page de votre client depuis votre téléphone. Où trouvez-vous le bouton Publier ?
+  choix:
+  - Dans l'application Claude, sous la page
+  - Sur claude.ai, ouvert dans le navigateur du téléphone ou de l'ordinateur
+  - Dans WhatsApp
+  bonne: 1
+  explication: L'application Claude ne permet pas de changer le partage. On publie sur claude.ai, dans le navigateur.
+  competence: M05-S1-C3
+- q: Une association a publié sa page. Comment vérifiez-vous ce que voit un visiteur ?
+  choix:
+  - Je regarde la page dans ma conversation
+  - Je demande à Claude si la page est en ligne
+  - J'ouvre le lien public dans une fenêtre de navigation privée
+  bonne: 2
+  explication: En navigation privée, vous n'êtes pas connecté. Vous voyez exactement ce que voit un visiteur sans compte.
+  competence: M05-S1-C3
+- q: Défi. Claude a ajouté sur la page d'un atelier « livraison gratuite dans toute la ville ». Le client n'en a jamais parlé. Que faites-vous avant de publier ?
+  choix:
+  - Je publie, c'est un bon argument
+  - Je retire la phrase, ou je demande au client de la confirmer avant de la publier
+  - Je change « gratuite » en « rapide »
+  bonne: 1
+  explication: Sur la page, seules les informations confirmées par le client restent. Une promesse inventée peut coûter cher à votre client.
+  competence: M05-S1-C3
+- q: Défi. Le directeur d'une école veut une page d'information, mais une publication officielle doit être validée par sa hiérarchie. Que faites-vous ?
+  choix:
+  - Je publie et j'envoie le lien à tous les parents
+  - J'attends la fin de l'année
+  - Je publie une version projet marquée « à valider » et j'envoie le lien d'abord à la personne qui valide
+  bonne: 2
+  explication: Une publication officielle reste un projet jusqu'à la validation. Le lien va d'abord à la personne qui en a le droit.
+  competence: M05-S1-C1
