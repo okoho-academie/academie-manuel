@@ -1,0 +1,50 @@
+# Tutoriel M05-S1 · storyboard (source de tools/build_tutoriel.py) · texte dit en français, sans date
+# Captures : pages d'exemple (atelier fictif), rendues en largeur téléphone. Les écrans de Claude sont montrés par les diapositives.
+code: M05-S1
+titre: "Une page web en une conversation"
+sous_titre: "Du blocage de votre client à un lien qu'il ouvre sur son téléphone"
+action: "Fiche M05-S1, étape 7 : la page de votre client pilote."
+voix: fr_FR-siwis-medium
+plans:
+  - image: carte:intro
+    min: 4
+    texte: ""
+  - image: diapo:exemple
+    texte: >-
+      Bonjour. En quelques minutes, vous allez créer la page web de votre client pilote, avec Claude, sur votre téléphone.
+      Tout commence par une consigne. Elle dit l'objectif de la page, le blocage du client, son contexte, la structure et les contraintes.
+      Ici, un atelier de couture reçoit dix appels par jour pour les mêmes questions. La page doit y répondre en dix secondes.
+  - image: diapo:page-v1
+    texte: >-
+      Une bonne page v1, c'est un titre et trois parties. Le titre dit l'offre. Puis ce que l'on propose, en trois points.
+      Pourquoi venir, en trois raisons vraies. Et le contact : comment agir, maintenant. Pas un site complet : une page qui règle un blocage.
+  - image: diapo:capacites
+    texte: >-
+      Avant de commencer, vérifiez un réglage. Dans Paramètres, puis Capacités, activez l'option qui permet à Claude d'exécuter du code et de créer des fichiers.
+      Sans elle, Claude répond en texte, sans page.
+  - image: capture:page-v1.png
+    cadre: [0, 0, 780, 1400]
+    legende: "Exemple : la première version"
+    texte: >-
+      Voici la première version, sur un téléphone. Les quatre parties sont là. Mais le titre est trop long, et pour commander, il faut descendre jusqu'en bas.
+  - image: diapo:tour
+    texte: >-
+      Alors, un tour ciblé. Ne dites jamais : améliore. Nommez deux changements, et ce qui reste.
+      Modifie seulement deux choses : un titre de six mots, et un bouton WhatsApp en haut. Ne change rien d'autre.
+  - image: capture:avant-apres.png
+    cadre: [0, 0, 1640, 1400]
+    legende: "Avant, après : deux changements"
+    texte: >-
+      Avant, après. Le titre dit l'offre en six mots, le bouton pour commander est en haut. Le reste n'a pas bougé.
+  - image: diapo:publier
+    texte: >-
+      Pour publier, ouvrez claude.ai dans le navigateur, Chrome ou Safari, avec le même compte. L'application ne permet pas de publier.
+      Ouvrez la conversation, puis la page, touchez Publier, et copiez le lien public.
+  - image: diapo:controle
+    texte: >-
+      Avant d'envoyer le lien, contrôlez-le comme un visiteur : ouvrez-le dans une fenêtre de navigation privée.
+      La page s'ouvre sans compte, l'offre et le contact sont visibles, et chaque information vient de votre client. Aucun prix inventé, aucune donnée sensible.
+      Si la page est celle de votre propre structure, le lien va d'abord à la personne qui valide.
+  - image: carte:outro
+    min: 4
+    texte: "À vous : fiche M05-S1, étape 7. Créez la page de votre client pilote."
