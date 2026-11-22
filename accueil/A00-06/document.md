@@ -4,7 +4,7 @@ titre: "Apprendre à Claude à vous connaître"
 type: document
 public: apprenants
 jalon: J1
-version: "1.0"
+version: "1.1"
 captures: "2026-11-22"
 ---
 
@@ -20,15 +20,15 @@ Sans réglage, Claude vous traite comme un inconnu à chaque conversation. Vous 
 
 Claude peut vous connaître à trois niveaux :
 
-| Niveau | Ce que c'est | Où | Quand ça s'applique |
-|---|---|---|---|
-| **Instructions** | Le texte que vous écrivez sur vous et sur la façon de vous répondre | Réglages de votre compte | Dans toutes vos conversations |
-| **Mémoire** | Ce que Claude retient de lui-même au fil de vos conversations | Réglages de votre compte, rubrique Memory | Dans les conversations suivantes |
-| **Projet** | Un espace par client, avec ses instructions et ses fichiers | Menu Projets | Seulement dans les conversations de ce projet |
+| Niveau | Ce que c'est | Quand ça s'applique |
+|---|---|---|
+| **Instructions** | Le texte que vous écrivez sur vous et sur la façon de vous répondre | Dans toutes vos nouvelles conversations |
+| **Mémoire** | Ce que Claude retient au fil de vos conversations | Dans les conversations suivantes |
+| **Projet** | Un espace par client, avec ses instructions et ses fichiers | Seulement dans les conversations de ce projet |
 
-Ce guide vous fait faire les trois, dans cet ordre. Le plus simple : c'est Claude qui vous pose les questions.
+Vous n'avez rien à chercher seul. Une seule consigne fait de Claude votre accompagnateur : il vous pose les questions, écrit les textes, puis vous dit à chaque étape où toucher, quoi copier et quoi activer. Vous avancez à votre rythme, une étape à la fois.
 
-Durée : environ 1 heure. Appareil : téléphone, tablette ou ordinateur. Pour les réglages, l'ordinateur ou le navigateur du téléphone (claude.ai) est le plus sûr.
+Durée : environ 1 heure. Appareil : le téléphone suffit. Si un réglage est introuvable dans l'application, ouvrez **claude.ai** dans le navigateur.
 
 | Vous savez… | Vous le prouvez… | C'est réussi si… |
 |---|---|---|
@@ -36,134 +36,135 @@ Durée : environ 1 heure. Appareil : téléphone, tablette ou ordinateur. Pour l
 | Vous vérifiez ce que Claude a retenu de vous et vous corrigez ce qui est faux ou manque. | Dans une nouvelle conversation, vous demandez « Que sais-tu de moi ? », vous faites une correction, et vous déposez la capture. | Claude cite votre activité, votre client pilote et votre façon préférée de recevoir les réponses, sans que vous les ayez écrits dans cette conversation. |
 | Vous créez un projet pour votre client pilote, avec ses propres instructions. | Dans une nouvelle conversation du projet, vous demandez « Quel est le blocage de mon client pilote ? » et vous déposez la capture. | Claude nomme le blocage et ce qu'il coûte, tel qu'il figure dans votre fiche contexte. |
 
+## Ce que vous réutilisez
+
+| Geste | Appris dans | Utilisé ici pour |
+|---|---|---|
+| Les cinq éléments d'une bonne consigne (R, T, C, F, C) | M02-S1 | Comprendre pourquoi la consigne d'accompagnement fonctionne |
+| Envoyer une capture d'écran à Claude | M01-S2 | Montrer à Claude où vous êtes quand vous ne trouvez pas un réglage |
+| Corriger par un tour précis | M02-S2 | Corriger un bloc ou une information fausse |
+| La fiche contexte du client pilote | M02-S1 ou guide A00-05 | Remplir le projet de votre client pilote |
+
 ## Avant de commencer
 
 - [ ] Votre compte Claude est ouvert (guide **A00-01 · Bien démarrer**).
 - [ ] Votre fiche contexte du client pilote est prête (guide **A00-05**, étape 3, ou séance M02-S1).
 - [ ] Votre portfolio est ouvert (guide **A00-04**).
-- [ ] Vous avez 45 minutes sans interruption pour l'entretien.
+- [ ] Vous avez une heure sans interruption.
 
-**Ce que vous ne donnez jamais à Claude, ni dans l'entretien ni dans les réglages :** mot de passe, numéro de carte d'identité ou de passeport, numéro de compte bancaire ou Mobile Money, données de santé, noms de patients, d'élèves ou de clients. Pour votre client pilote : des groupes (« les parents », « les patients du matin »), jamais des personnes.
+**Ce que vous ne donnez jamais à Claude :** mot de passe, numéro de carte d'identité ou de passeport, numéro de compte bancaire ou Mobile Money, données de santé, noms de patients, d'élèves ou de clients. Pour votre client pilote : des groupes (« les parents », « les patients du matin »), jamais des personnes.
 
-## Étape 1 : l'entretien
+## Étape 1 : envoyer la consigne d'accompagnement
 
-Ouvrez une **nouvelle conversation**. Nommez-la « Mon profil Claude ». Copiez ce message en entier, sans rien changer :
+Ouvrez une **nouvelle conversation**. Nommez-la « Mon profil Claude ». Copiez le message ci-dessous **en entier**, sans rien changer, et envoyez-le.
 
 ::: prompt
-Je veux que tu me connaisses bien pour mieux m'aider. Mène un entretien avec moi.
+R · RÔLE
+Tu es mon accompagnateur pour régler mon compte Claude. Je suis débutant : tu m'expliques avec des mots simples, en français, des phrases courtes.
 
-Règles :
-- Pose une seule question à la fois et attends ma réponse.
-- Douze questions au maximum, en français simple.
-- Si ma réponse est vague, demande un exemple concret.
-- Ne me demande jamais de mot de passe, de numéro de pièce d'identité, de compte bancaire ni de données de santé.
+T · TÂCHE
+Tu fais trois choses, dans cet ordre, et tu attends ma réponse à chaque fois :
+1. Tu me poses des questions pour bien me connaître.
+2. Tu écris pour moi trois textes à copier.
+3. Tu me guides, étape par étape, pour les mettre au bon endroit et vérifier que ça marche.
 
-Thèmes, dans cet ordre :
-1. Qui je suis : prénom, ville, métier ou situation.
-2. Mes activités : ce que je fais chaque semaine, pour qui.
-3. Mon client pilote : son activité, ses publics, son blocage et ce qu'il coûte.
-4. Mes outils et mon appareil : téléphone, ordinateur, WhatsApp, autres.
-5. Comment je veux tes réponses : longueur, ton, format (liste, tableau, texte à copier).
-6. Ce que je ne veux pas : ce qui m'agace ou me fait perdre du temps dans tes réponses.
-7. Ma langue : la langue de tes réponses et le niveau de langue.
+C · CONTEXTE
+Voici où se trouvent les réglages (aide officielle de Claude, interface en anglais) :
+- Instructions personnelles : mes initiales en bas à gauche › Settings › Your Claude › Instructions. Ancien affichage : Settings › Account › Instructions for Claude.
+- Mémoire : Settings › Your Claude › « Generate memory from chats » doit être activé. Pour voir ce que tu as retenu : Manage, à côté de Your memory, puis Topics.
+- Projets : menu Projects › créer un projet › instructions du projet et fichiers.
+- Les instructions s'appliquent aux nouvelles conversations seulement.
+Si mon écran ne correspond pas à ces indications, ne devine pas : demande-moi une capture d'écran et guide-moi à partir de ce que tu vois.
 
-À la fin de l'entretien, donne-moi trois blocs séparés, prêts à copier :
-BLOC A · Mes instructions personnelles : six rubriques (Qui je suis, Mes activités, Mon client pilote, Comment me répondre, Ce que je ne veux pas, Langue), phrases courtes, un écran au maximum.
+F · FORMAT
+Partie 1, l'entretien : une seule question à la fois, douze questions au maximum, sur ces thèmes dans cet ordre : qui je suis (prénom, ville, métier ou situation) ; mes activités chaque semaine et pour qui ; mon client pilote (activité, publics, blocage et ce qu'il coûte) ; mon appareil et mes outils ; comment je veux tes réponses (longueur, ton, liste ou texte à copier) ; ce qui m'agace dans tes réponses ; ma langue. Si ma réponse est vague, demande un exemple concret.
+Partie 2, les trois textes, chacun dans un bloc séparé facile à copier :
+BLOC A · Mes instructions personnelles : six rubriques (Qui je suis, Mes activités, Mon client pilote, Comment me répondre, Ce que je ne veux pas, Langue), un écran au maximum.
 BLOC B · À retenir : cinq à huit faits sur moi, une ligne chacun.
-BLOC C · Instructions du projet client pilote : le contexte du client, son blocage, le ton à utiliser, ce que Claude ne doit jamais inventer.
+BLOC C · Instructions du projet client pilote : son contexte, son blocage, le ton à utiliser, ce que tu ne dois jamais inventer.
+Demande-moi de relire et de corriger chaque bloc avant de continuer.
+Partie 3, le guidage : une seule action par message. Chaque message dit : où toucher, quoi copier ou activer, ce que je dois voir à l'écran quand c'est réussi. Puis tu attends que j'écrive « fait » ou que je t'envoie une capture. Dans cet ordre :
+a) enregistrer le BLOC A dans les instructions ;
+b) vérifier que la mémoire est activée, puis me faire t'envoyer le BLOC B avec « Retiens ces informations sur moi » ;
+c) me faire ouvrir une nouvelle conversation et te demander « Que sais-tu de moi ? », puis corriger ce qui est faux ;
+d) créer le projet de mon client pilote, coller le BLOC C, ajouter ma fiche contexte, puis tester avec « Quel est le blocage de mon client pilote ? » ;
+e) à chacune des étapes a, c et d, me rappeler de faire une capture pour mon portfolio : A00-06_Prenom_1.png, A00-06_Prenom_2.png, A00-06_Prenom_3.png.
 
-Commence par la première question.
+C · CONTRAINTES
+- Ne me demande jamais de mot de passe, de numéro de pièce d'identité, de compte bancaire ni de données de santé. Si j'en écris un par erreur, dis-le-moi et ne le mets dans aucun bloc.
+- Pour mon client pilote, uniquement des groupes, jamais le nom d'un patient, d'un élève ou d'un client.
+- N'invente aucun bouton ni aucun menu. En cas de doute, demande une capture.
+- Si je suis perdu, reprends l'étape en cours avec d'autres mots, sans passer à la suite.
+
+Commence par me dire en deux phrases ce que nous allons faire ensemble, puis pose ta première question.
 :::
 
-Répondez à chaque question comme à une personne qui vous aide. Des réponses concrètes donnent de meilleurs résultats : « Je réponds aux clients surtout le soir sur WhatsApp » vaut mieux que « Je travaille beaucoup ».
+À partir de là, Claude mène. Répondez comme à une personne qui vous aide. Des réponses concrètes donnent de meilleurs résultats : « Je réponds aux clients surtout le soir sur WhatsApp » vaut mieux que « Je travaille beaucoup ».
 
-À la fin, relisez les trois blocs. Une ligne est fausse ? Écrivez :
+**Pourquoi cette consigne fonctionne.** Elle contient les cinq éléments de M02-S1. Le **contexte** donne à Claude l'emplacement exact des réglages : il ne devine pas. Le **format** l'oblige à une seule action par message : vous ne vous perdez pas. Les **contraintes** protègent vos données.
+
+## Étape 2 : suivre le guidage et vérifier
+
+Claude vous guide maintenant. Pendant le guidage, trois phrases vous aident :
+
+| Situation | Écrivez à Claude |
+|---|---|
+| Vous avez fini l'action | « Fait. » |
+| Votre écran ne ressemble pas à ce que Claude décrit | « Je ne vois pas ça. Voici ma capture. » et joignez une capture d'écran |
+| Vous n'avez pas compris | « Explique-moi encore, plus simplement. » |
+
+Une ligne d'un bloc est fausse ? Corrigez par un tour précis :
 
 ::: prompt
 Corrige dans le bloc [A, B ou C] : [ce qui est faux] devient [la bonne information]. Redonne-moi le bloc complet.
 :::
 
-## Étape 2 : enregistrer vos instructions
+**C'est terminé quand** vous avez les trois captures dans votre portfolio et que Claude répond juste aux deux questions de test.
 
-1. Touchez ou cliquez vos **initiales** en bas à gauche, puis **Settings** (Paramètres).
-2. Ouvrez **Your Claude**, puis la rubrique **Instructions**. Dans l'ancien affichage : **Account**, puis **Instructions for Claude**.
-3. Collez le **BLOC A**. Enregistrez.
-4. Faites une capture de vos instructions enregistrées. Déposez-la dans votre portfolio sous le nom **A00-06_Prenom_1.png**.
+## Repères : où se trouvent les réglages
 
-Les libellés de ce guide sont ceux de l'interface en anglais. Si votre interface est en français, cherchez les mêmes rubriques sous leur nom traduit. Vous ne trouvez pas le réglage dans l'application ? Ouvrez **claude.ai** dans le navigateur.
+Gardez ces repères pour vérifier ce que Claude vous dit, ou pour refaire un réglage plus tard.
 
-Les instructions s'appliquent aux **nouvelles** conversations, pas à celle qui est déjà ouverte.
+| Pour… | Allez dans… |
+|---|---|
+| Vos instructions personnelles | Initiales en bas à gauche › **Settings** › **Your Claude** › **Instructions**. Ancien affichage : **Account** › **Instructions for Claude** |
+| Activer la mémoire | **Settings** › **Your Claude** › **Generate memory from chats** |
+| Voir, modifier ou supprimer ce que Claude a retenu | **Settings** › **Your Claude** › **Manage** à côté de **Your memory** › **Topics** |
+| Créer le projet du client pilote | Menu **Projects** › nouveau projet › instructions du projet et fichiers |
+| Une conversation sans mémoire | Icône fantôme en haut à droite (mode incognito) |
 
-## Étape 3 : vérifier et corriger la mémoire
+Les libellés sont ceux de l'interface en anglais. Si votre interface est en français, cherchez les mêmes rubriques sous leur nom traduit.
 
-1. Dans **Settings**, puis **Your Claude**, vérifiez que **Generate memory from chats** est activé.
-2. Revenez à la conversation « Mon profil Claude ». Envoyez le **BLOC B** avec cette phrase devant :
+**Bon à savoir.** La mémoire existe aussi dans le plan gratuit. La recherche dans vos anciennes conversations (**Search and reference chats**) est réservée aux plans payants. Chaque projet a sa propre mémoire : dans un projet, Claude utilise la mémoire de ce projet et votre mémoire générale, pas celle des autres projets. Un projet par client, les informations ne se mélangent pas.
 
-::: prompt
-Retiens ces informations sur moi pour nos prochaines conversations :
-[collez ici le BLOC B]
-:::
+Pour faire oublier une information à Claude, écrivez simplement : « Oublie que [information]. »
 
-3. Ouvrez une **nouvelle conversation** et envoyez :
-
-::: prompt
-Que sais-tu de moi ? Réponds en cinq lignes : mon activité, mon client pilote, comment je veux tes réponses, ce que je ne veux pas, ma langue.
-:::
-
-4. Une information est fausse ou manque ? Corrigez-la tout de suite :
-
-::: prompt
-Corrige ce que tu sais de moi : [information fausse] est faux. La bonne information est : [information juste].
-:::
-
-Pour oublier une information : « Oublie que [information]. »
-
-5. Faites une capture de la réponse et de votre correction. Déposez-la sous le nom **A00-06_Prenom_2.png**.
-
-Pour voir tout ce que Claude a retenu : **Settings**, puis **Your Claude**, puis **Manage** à côté de **Your memory**. La liste s'affiche sous **Topics**. Vous pouvez y modifier ou supprimer chaque élément.
-
-**Bon à savoir.** La mémoire existe aussi dans le plan gratuit. La recherche dans vos anciennes conversations (**Search and reference chats**) est réservée aux plans payants. Une conversation en mode incognito (icône fantôme en haut à droite) n'utilise pas la mémoire et n'y ajoute rien.
-
-## Étape 4 : le projet de votre client pilote
-
-1. Ouvrez **Projects** (Projets) dans le menu, puis créez un projet. Nom : l'activité de votre client pilote, sans nom de famille, par exemple « Boutique de pagnes · Bonamoussadi ».
-2. Dans les instructions du projet, collez le **BLOC C**.
-3. Ajoutez votre **fiche contexte** comme fichier du projet.
-4. Dans ce projet, ouvrez une **nouvelle conversation** et envoyez :
-
-::: prompt
-Quel est le blocage de mon client pilote, et que lui coûte-t-il ?
-:::
-
-5. Claude répond avec le blocage de votre fiche ? C'est réussi. Faites une capture et déposez-la sous le nom **A00-06_Prenom_3.png**.
-
-Chaque projet a sa propre mémoire. Dans un projet, Claude utilise la mémoire de ce projet et votre mémoire générale, pas celle des autres projets. Un projet par client : les informations ne se mélangent pas.
-
-## Étape 5 : entretenir, une fois par semaine
+## Étape 3 : entretenir, une fois par semaine
 
 Claude vous connaît mieux chaque semaine si vous lui donnez l'occasion de faire le point. Une fois par semaine, dans une nouvelle conversation :
 
 ::: prompt
-Voici mes instructions personnelles actuelles : [collez votre BLOC A]. D'après nos échanges de cette semaine, qu'est-ce qui manque ou n'est plus juste ? Propose une version mise à jour, toujours en six rubriques et sur un écran.
+Voici mes instructions personnelles actuelles : [collez votre BLOC A]. D'après nos échanges de cette semaine, qu'est-ce qui manque ou n'est plus juste ? Propose une version mise à jour, toujours en six rubriques et sur un écran. Puis dis-moi où la coller, étape par étape.
 :::
 
-Relisez. Gardez seulement ce qui est vrai. Collez la nouvelle version dans **Instructions**.
+Relisez. Gardez seulement ce qui est vrai. Puis vérifiez avec « Que sais-tu de moi ? ».
 
 ::: coup-de-pouce
-1. Claude pose plusieurs questions d'un coup ? Répondez : « Une seule question à la fois, s'il te plaît. »
-2. Claude ne connaît rien de vous dans la nouvelle conversation ? Vérifiez que vous avez enregistré les instructions (étape 2) et que la conversation n'est pas en mode incognito.
-3. Le BLOC A est trop long ? Écrivez : « Raccourcis le bloc A à dix lignes. Garde les six rubriques. »
+1. Claude pose plusieurs questions d'un coup ou donne plusieurs actions à la fois ? Répondez : « Une seule question, une seule action à la fois, s'il te plaît. »
+2. Claude décrit un bouton que vous ne voyez pas ? Envoyez une capture d'écran et écrivez : « Voici mon écran. Où dois-je toucher ? » Si rien ne correspond, utilisez le tableau des repères.
+3. Claude ne connaît rien de vous dans la nouvelle conversation ? Vérifiez que les instructions sont enregistrées et que la conversation n'est pas en mode incognito.
 :::
 
 ::: erreurs
-- **Tout raconter dans les instructions.** Un écran suffit. Les détails d'un client vont dans son projet, pas dans vos instructions personnelles.
+- **Changer la consigne d'accompagnement.** Copiez-la en entier. Si vous enlevez le contexte, Claude devine les menus et peut se tromper.
+- **Tout raconter dans les instructions.** Un écran suffit. Les détails d'un client vont dans son projet.
 - **Coller le BLOC C dans vos instructions personnelles.** Le contexte d'un client reste dans son projet.
 - **Mettre des données sensibles.** Pas de mot de passe, pas de pièce d'identité, pas de compte, pas de noms de patients, d'élèves ou de clients.
 - **Ne jamais vérifier.** La mémoire peut retenir une information fausse. « Que sais-tu de moi ? » une fois par semaine.
 :::
 
 ::: fil-rouge
-Aïcha est infirmière à Garoua et prépare des contenus de prévention pour le centre de santé de son quartier, son client pilote. Pendant l'entretien, Claude lui demande un exemple concret de ce qui l'agace : « Les réponses trop longues que je ne peux pas lire entre deux patients. » Son BLOC A dit : « Réponses de cinq lignes au maximum, puis un texte prêt à copier pour WhatsApp. » Dans le projet « Centre de santé · prévention », le BLOC C précise : « Ne jamais inventer d'horaires ni de tarifs, toujours demander au centre. » Le lendemain, dans une nouvelle conversation, Claude lui répond en cinq lignes, sans qu'elle le redemande.
+Aïcha est infirmière à Garoua et prépare des contenus de prévention pour le centre de santé de son quartier, son client pilote. Elle envoie la consigne d'accompagnement depuis son téléphone. Claude lui demande un exemple de ce qui l'agace : « Les réponses trop longues que je ne peux pas lire entre deux patients. » Au moment d'enregistrer les instructions, elle ne trouve pas **Your Claude** : elle envoie une capture, et Claude lui montre le bon endroit. Son BLOC A dit : « Réponses de cinq lignes au maximum, puis un texte prêt à copier pour WhatsApp. » Le lendemain, dans une nouvelle conversation, Claude lui répond en cinq lignes, sans qu'elle le redemande.
 :::
 
 ::: livrable
