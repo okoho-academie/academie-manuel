@@ -165,6 +165,8 @@ def main():
            "}",
            "",
            "function nouveau(titre, description) {",
+           "  // Garde-fou : un second lancement créerait des doublons avec d'autres liens.",
+           "  if (dossier().getFilesByName(titre).hasNext()) throw new Error('Existe déjà : « ' + titre + ' ». Rien n\\'a été créé. Les liens valables sont dans parcours/cohorte-N.yaml.');",
            "  var f = FormApp.create(titre);",
            "  f.setTitle(titre).setDescription(description + '\\n\\nUne formation OKOHO Consulting GmbH · Formateur : Dr. Bertrand Toumi · okoho.de');",
            "  f.setConfirmationMessage('Merci. Vos réponses sont enregistrées. OKOHO Académie · Parcours Claude Pro');",
