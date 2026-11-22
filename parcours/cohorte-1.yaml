@@ -15,7 +15,7 @@ horaire: "17 h 00 à 18 h 30 (heure d'Allemagne, identique à l'heure du Camerou
 # Liens publics des formulaires (uniquement /viewform : la page à remplir, jamais l'éditeur).
 # Source de la fiche « Quiz de la semaine » de chaque dossier semaine (tools/build_drive.py).
 # Les formulaires eux-mêmes restent dans « Formateur (privé) », jamais dans l'Espace participants.
-ressources: [A00-04, A00-05]   # guides complémentaires, publiés dans « 05 · Ressources et liens utiles »
+ressources: [A00-04, A00-05, A00-06]   # guides complémentaires, publiés dans « 05 · Ressources et liens utiles »
 formulaires:
   0:
   - {code: S00-1, titre: "Quiz · Bien démarrer", url: "https://docs.google.com/forms/d/e/1FAIpQLSe1346xbgY91I_4iJOr-gzlPIGEB75v7oJ755s95Rd_Tb9SNw/viewform"}
