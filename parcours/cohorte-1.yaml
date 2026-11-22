@@ -12,6 +12,22 @@ nom: "OKOHO Parcours Claude Pro · Cohorte 1"
 groupe: "OKOHO Parcours Claude Pro · Cohorte 1"   # nom du groupe WhatsApp d'entraide
 jour: samedi                 # jour des séances en direct
 horaire: "17 h 00 à 18 h 30 (heure d'Allemagne, identique à l'heure du Cameroun en hiver)"   # décidé le 07.11, à reprendre dans chaque annonce
+# Liens publics des formulaires (uniquement /viewform : la page à remplir, jamais l'éditeur).
+# Source de la fiche « Quiz de la semaine » de chaque dossier semaine (tools/build_drive.py).
+# Les formulaires eux-mêmes restent dans « Formateur (privé) », jamais dans l'Espace participants.
+ressources: [A00-04, A00-05]   # guides complémentaires, publiés dans « 05 · Ressources et liens utiles »
+formulaires:
+  0:
+  - {code: S00-1, titre: "Quiz · Bien démarrer", url: "https://docs.google.com/forms/d/e/1FAIpQLSe1346xbgY91I_4iJOr-gzlPIGEB75v7oJ755s95Rd_Tb9SNw/viewform"}
+  - {code: S00-2, titre: "Diagnostic d'entrée", url: "https://docs.google.com/forms/d/e/1FAIpQLSe8Ccv--ul1POej1jv5bgN6G-06XwVZTLGqnkbAO4oNzNnilg/viewform"}
+  - {code: S00-3, titre: "Quiz · La carte de Claude", url: "https://docs.google.com/forms/d/e/1FAIpQLSefeXKQ4mRQZDLWAYlzfYArHk-JAu9SsQbEnRO7wxO60sm8Yw/viewform"}
+  1:
+  - {code: S01-1, titre: "Quiz · Prise en main de Claude", url: "https://docs.google.com/forms/d/e/1FAIpQLScWHiuYwczUwwzDl1zh3-psnbDui8u08azSei7rYdoqPqpWaQ/viewform"}
+  - {code: S01-2, titre: "Quiz · Photos et fichiers", url: "https://docs.google.com/forms/d/e/1FAIpQLSeHv-pdIWSLnGKrVvH749ODf62W2rVrHq_BalAoAcgnuvi-kw/viewform"}
+  2:
+  - {code: S02-0, titre: "Questionnaire · Votre client pilote et vos contextes", url: "https://docs.google.com/forms/d/e/1FAIpQLSemnBTcq-LSoCEbcibclMe6V2bS2QROdJsu0OoIxGnIgFelGA/viewform"}
+  - {code: S02-1, titre: "Quiz · Les cinq éléments d'une bonne consigne", url: "https://docs.google.com/forms/d/e/1FAIpQLSdMN9gtSzzm_0xlFyOmec_b5xJouWCEBVCw-AU1F44uNcIbGA/viewform"}
+  - {code: S02-2, titre: "Quiz · Itérer et affiner", url: "https://docs.google.com/forms/d/e/1FAIpQLSdh61b_hYSvHpNh40NoutKfp8_RNuTLaGO6NvTjKoh_d-eQFA/viewform"}
 programme:
   code: A00-00
   nom_drive: "Programme et calendrier · OKOHO Parcours Claude Pro · Cohorte 1"

@@ -52,6 +52,8 @@ Jede Séance beantwortet sichtbar, für Lernende und Formateur:
 - Erstes Feld jedes Quiz: « Prénom », Kurzantwort, Pflicht, leer, sichtbar (`build_forms.py` erzeugt es).
 - Nach dem Anlegen prüft Claude jedes Quiz im Browser: Notenfreigabe « Immédiatement après chaque envoi », Questions manquées, Bonnes réponses, Valeur en points aktiv; Antworten werden angenommen; Antwortansicht zeigt « Prénom » leer und « Envoyer ».
 - Freigabe: Formulare und « Espace participants » nur « Jeder mit dem Link: Lecteur », nie Bearbeiter. Teilnehmende erhalten nur die veröffentlichten Links `/forms/d/e/…/viewform`, nie Bearbeitungslinks.
+- Seit 22.11.2026: Formular-Dateien liegen nie im « Espace participants » (ein Klick auf die Datei öffnet den Editor und zeigt die Lösungen). Sie liegen in « Formateur (privé) › Semaine NN ». Im Wochenordner der Teilnehmenden steht nur die Fiche « SNN-0 · À remplir · Quiz de la semaine, liens à ouvrir » mit den `/viewform`-Links aus `parcours/cohorte-N.yaml` (`formulaires`), erzeugt von `tools/build_drive.py`. Neue Formulare: `build_forms.py` legt sie per `chemin:` im Formateur-Ordner an; danach die Links in `formulaires` eintragen und veröffentlichen.
+- Von Hand hochgeladene PDF in synchronisierten Ordnern löscht « synchroniser ». Jedes PDF für Lernende entsteht über `build_drive.py` (Guides zusätzlich über `ressources` in `cohorte-N.yaml`).
 - Reparatur eines Formulars ohne Antworten: Neuaufbau aus `quiz/*.yaml` (Muster: `academie-pilotage/appscript/Reparer_Formulaires.gs`). Ein Formular mit Antworten wird nie neu aufgebaut.
 
 ## Lernschleife nach jeder Séance (Pflicht)

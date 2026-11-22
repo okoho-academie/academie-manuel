@@ -72,7 +72,8 @@ def main():
     nom = sys.argv[1] if len(sys.argv) > 1 else "cohorte-1"
     cal = load_yaml(ROOT / "parcours" / f"{nom}.yaml")
     codes = [it["code"] for s in cal["semaines"] for it in s.get("items", [])] + [cal.get("programme", {}).get("code", "A00-00")]
-    existants = [c for c in codes if source_of(c)[0]]
+    ressources = [c for c in cal.get("ressources", []) if source_of(c)[0]]
+    existants = [c for c in codes + ressources if source_of(c)[0]]
     subprocess.run([sys.executable, str(ROOT / "tools" / "build_pdf.py"), *existants, f"--cohorte={nom}"], check=True)
     dest = OUT / "drive" / nom
     if dest.exists():
@@ -121,6 +122,43 @@ def main():
     res.mkdir(parents=True, exist_ok=True)
     build_docx(OUT / "kit" / "dossier-client-pilote.md", cal, res / "Dossier client pilote · à copier dans votre portfolio.docx", label="À REMPLIR")
     print("drive : 05 · Ressources et liens utiles / Kit du prestataire, Dossier client pilote")
+    # Guides d'accueil complémentaires (portfolio, passerelle) : 05 · Ressources et liens utiles
+    for c in ressources:
+        meta, info = source_of(c)
+        pdf = OUT / "pdf" / nom / f"OKOHO_PCP_{c}_{info[0]}_v{info[1]}.pdf"
+        if pdf.is_file():
+            shutil.copy(pdf, res / f"{c} · Guide · {clean(meta['titre'])}.pdf")
+            print(f"drive : 05 · Ressources et liens utiles / {c} {meta['titre']}")
+    # Quiz et questionnaires de la semaine : une fiche avec les liens à remplir (/viewform),
+    # jamais le fichier du formulaire (il ouvrirait l'éditeur et montrerait les réponses).
+    liens = cal.get("formulaires", {}) or {}
+    for s in cal["semaines"]:
+        fl = liens.get(s["n"]) or []
+        if not fl:
+            continue
+        for f in fl:
+            if "/viewform" not in f["url"] or "/edit" in f["url"]:
+                sys.exit(f"build_drive : lien non publié pour {f['code']} : {f['url']}")
+        md = tmp / f"liens-s{s['n']:02d}.md"
+        lignes = ["---", f"titre: \"Quiz de la semaine {s['n']:02d}\"", "---", "",
+                  "::: objectifs",
+                  "- Touchez le titre en gras ou l'adresse d'un quiz : il s'ouvre, prêt à remplir.",
+                  "- Votre score s'affiche à la fin, avec l'explication de chaque réponse.",
+                  "- Vous pouvez refaire chaque quiz autant de fois que vous voulez.",
+                  ":::", "", "## Les liens à remplir", ""]
+        for f in fl:
+            lignes += [f"**[{f['code']} · {f['titre']}]({f['url']})**", "", f"<{f['url']}>", ""]
+        lignes += ["## Comment faire", "",
+                   "1. Touchez le lien. Le formulaire s'ouvre dans votre navigateur.",
+                   "2. Écrivez votre prénom, puis répondez.",
+                   "3. Touchez **Envoyer**, puis **Afficher le score**.",
+                   "4. Pour recommencer, touchez à nouveau le lien.", "",
+                   "Le lien ne s'ouvre pas ? Copiez l'adresse sous le titre dans votre navigateur, ou demandez le lien dans le groupe WhatsApp."]
+        md.write_text("\n".join(lignes) + "\n", encoding="utf-8")
+        nomq = clean(f"S{s['n']:02d}-0 · À remplir · Quiz de la semaine, liens à ouvrir")
+        cible_q = dest / espace / "02 · Séances semaine par semaine" / folder_name(s) / f"{nomq}.pdf"
+        docx_pdf(md, cible_q, label="À REMPLIR")
+        print(f"drive : {folder_name(s)} / {nomq}.pdf")
     # Dramaturgies du formateur (formateur/*.md) : privé
     for f in sorted((ROOT / "formateur").glob("*.md")):
         meta, _ = read_seance(f)
@@ -162,7 +200,8 @@ def main():
             shutil.copy(nb_pdf[s["n"]], cible)
         quiz = [c for c in codes_s if (ROOT / "quiz" / f"{c}.yaml").is_file() and not c.startswith("A00")]
         if quiz:
-            subprocess.run([sys.executable, str(ROOT / "tools" / "build_forms.py"), f"nom:{folder_name(s)}",
+            # Les formulaires sont créés dans le dossier privé du formateur ; les participants ne reçoivent que les liens /viewform.
+            subprocess.run([sys.executable, str(ROOT / "tools" / "build_forms.py"), f"chemin:OKOHO Académie · Parcours Claude Pro/{formateur}/Semaine {s['n']:02d} · {s['titre']}",
                             f"S{s['n']:02d}", *quiz], check=True, stdout=subprocess.DEVNULL)
         gs = OUT / "forms" / f"creer_formulaires_S{s['n']:02d}.gs"
         if gs.is_file():
