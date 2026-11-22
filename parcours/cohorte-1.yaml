@@ -28,6 +28,9 @@ formulaires:
   - {code: S02-0, titre: "Questionnaire · Votre client pilote et vos contextes", url: "https://docs.google.com/forms/d/e/1FAIpQLSemnBTcq-LSoCEbcibclMe6V2bS2QROdJsu0OoIxGnIgFelGA/viewform"}
   - {code: S02-1, titre: "Quiz · Les cinq éléments d'une bonne consigne", url: "https://docs.google.com/forms/d/e/1FAIpQLSdMN9gtSzzm_0xlFyOmec_b5xJouWCEBVCw-AU1F44uNcIbGA/viewform"}
   - {code: S02-2, titre: "Quiz · Itérer et affiner", url: "https://docs.google.com/forms/d/e/1FAIpQLSdh61b_hYSvHpNh40NoutKfp8_RNuTLaGO6NvTjKoh_d-eQFA/viewform"}
+  3:
+  - {code: S03-1, titre: "Quiz · Une page web en une conversation", url: "https://docs.google.com/forms/d/e/1FAIpQLSeVt7T3Wi0jPp_s7iREC5cDuWuTrRxTbOONsDaGP9mHftJvVw/viewform"}
+  - {code: S03-2, titre: "Quiz · Vérifier : erreurs, sources, limites", url: "https://docs.google.com/forms/d/e/1FAIpQLSeolyOhEenZ9vSl8s9eq9U3nuPJczLNwZav-CfXLcMrl4pv_Q/viewform"}
 programme:
   code: A00-00
   nom_drive: "Programme et calendrier · OKOHO Parcours Claude Pro · Cohorte 1"
