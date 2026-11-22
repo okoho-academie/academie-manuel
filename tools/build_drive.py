@@ -13,7 +13,7 @@ Règle de nommage (source : parcours/cohorte-N.yaml) :
   Pas de « : » dans les noms (interdit sous Windows) : remplacé par « , ».
 Usage : python3 tools/build_drive.py [cohorte-1]
 """
-import json, shutil, subprocess, sys
+import json, re, shutil, subprocess, sys
 from pathlib import Path
 from datetime import date
 from common import ROOT, OUT, load_yaml, read_seance, resolve
@@ -65,8 +65,26 @@ def gdoc_md(src, cal, titre=None):
     return re.sub(r"\n{3,}", "\n\n", "\n".join(out)).strip() + "\n"
 
 def sha(p):
+    """Empreinte du contenu. Les dates et identifiants que Chromium et LibreOffice écrivent à chaque build sont retirés :
+    un fichier inchangé garde la même empreinte, « synchroniser » ne le remplace pas et son lien Drive reste valable."""
     import hashlib
-    return hashlib.sha256(Path(p).read_bytes()).hexdigest()[:16]
+    b = Path(p).read_bytes()
+    if str(p).endswith(".pdf") and shutil.which("qpdf"):
+        # Flux décompressés : les dates cachées dans les flux d'objets deviennent visibles et sont retirées ci-dessous.
+        r = subprocess.run(["qpdf", "--qdf", "--object-streams=disable", "--deterministic-id", str(p), "-"], capture_output=True)
+        if r.returncode in (0, 3) and r.stdout:
+            b = r.stdout
+    if str(p).endswith(".pdf"):
+        for motif in (rb"/(?:CreationDate|ModDate)\s*\([^)]*\)", rb"/ID\s*\[\s*<[0-9A-Fa-f]*>\s*<[0-9A-Fa-f]*>\s*\]",
+                      rb"/DocChecksum\s*/[0-9A-Fa-f]+", rb"<xmp:\w*Date>[^<]*</xmp:\w*Date>",
+                      rb"<xmpMM:(?:DocumentID|InstanceID)>[^<]*</xmpMM:(?:DocumentID|InstanceID)>"):
+            b = re.sub(motif, b"", b)
+    elif str(p).endswith(".docx"):
+        import zipfile, io
+        z = zipfile.ZipFile(io.BytesIO(b))
+        b = b"".join(n.encode() + (re.sub(rb"<dcterms:(?:created|modified)[^>]*>[^<]*</dcterms:(?:created|modified)>", b"", z.read(n)))
+                     for n in sorted(z.namelist()))
+    return hashlib.sha256(b).hexdigest()[:16]
 
 def main():
     nom = sys.argv[1] if len(sys.argv) > 1 else "cohorte-1"
