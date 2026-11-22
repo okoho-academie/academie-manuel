@@ -48,7 +48,7 @@ semaines:
   - {n: 1, date: "2026-11-07", titre: "Prise en main de Claude", cycle: 1, items: [{type: Séance en direct, code: M01-S1}, {type: En autonomie, code: M01-S2}]}
   - {n: 2, date: "2026-11-14", titre: "L'art du prompt", cycle: 1, items: [{type: Séance en direct, code: M02-S1}, {type: En autonomie, code: M02-S2}]}
   - {n: 3, date: "2026-11-22", titre: "Première page web", cycle: 1, note: "Exceptionnellement le dimanche, 17 h 00 à 18 h 30", items: [{type: Séance en direct, code: M05-S1}, {type: En autonomie, code: M03-S1}]}
-  - {n: 4, date: "2026-11-28", titre: "Démo Day J1", cycle: 1, jalon: J1, items: [{type: En autonomie, code: M02-S3}, {type: En autonomie, code: M03-S2}]}
+  - {n: 4, date: "2026-11-29", titre: "Démo Day J1", cycle: 1, jalon: J1, note: "Exceptionnellement le dimanche, 17 h 00 à 18 h 30", items: [{type: En autonomie, code: M02-S3}, {type: En autonomie, code: M03-S2}]}
   - {n: 5, date: "2026-12-05", titre: "Les projets Claude", cycle: 2, items: [{type: Séance en direct, code: M04-S1}, {type: En autonomie, code: M04-S2}]}
   - {n: 6, date: "2026-12-12", titre: "Flyer et site de plusieurs pages", cycle: 2, items: [{type: Séance en direct, code: M06-S1}, {type: En autonomie, code: M05-S2}, {type: En autonomie, code: M08-S1}]}
   - {n: 7, date: "2026-12-19", titre: "Publier sur son domaine", cycle: 2, items: [{type: Séance en direct, code: M05-S3}, {type: En autonomie, code: M07-S1}]}
