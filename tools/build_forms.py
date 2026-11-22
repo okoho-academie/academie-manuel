@@ -8,6 +8,7 @@ il crée les formulaires dans le dossier Drive de la semaine, avec logo, couleur
 correction automatique des quiz, et écrit les liens à partager dans le journal d'exécution.
 Usage : python3 tools/build_forms.py <ID_dossier_Drive | nom:Nom du dossier> [S00] [A00-02-formulaire A00-01 A00-03]
 """
+import sys
 import base64, json, sys
 from common import ROOT, OUT, load_yaml
 
@@ -27,6 +28,9 @@ def quiz_js(d, nom):
              "  f.addTextItem().setTitle('Prénom').setRequired(true);"]
     for q in d["questions"]:
         lines.append("  var it = f.addMultipleChoiceItem().setTitle(" + js(q["q"]) + ").setRequired(true).setPoints(1);")
+        for c in q["choix"]:
+            if not isinstance(c, str):
+                sys.exit(f"build_forms : réponse non textuelle (deux-points non protégé dans le YAML ?) : {c!r}")
         ch = ", ".join(f"it.createChoice({js(c)}, {'true' if i == q['bonne'] else 'false'})" for i, c in enumerate(q["choix"]))
         lines.append(f"  it.setChoices([{ch}]);")
         fb = js(q["explication"])

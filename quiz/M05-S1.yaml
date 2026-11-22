@@ -24,7 +24,7 @@ questions:
   choix:
   - « Améliore la page. »
   - « Recommence tout. »
-  - « Modifie seulement deux choses : ajoute les horaires de consultation sous le titre et un bouton pour appeler l'accueil. Ne change rien d'autre. »
+  - "« Modifie seulement deux choses : ajoute les horaires de consultation sous le titre et un bouton pour appeler l'accueil. Ne change rien d'autre. »"
   bonne: 2
   explication: Un tour ciblé nomme ce qui change et ce qui reste. La page s'améliore sans perdre ce qui était bon.
   competence: M05-S1-C2
