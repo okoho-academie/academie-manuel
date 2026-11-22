@@ -1,0 +1,71 @@
+code: M03-S2
+titre: "Quiz · Protéger les données, respecter les droits"
+reussite: 6
+pouls: true
+description: "8 questions dans des métiers différents : classer les données, anonymiser, écrire une charte. Les deux dernières questions sont des questions Défi. Votre score s'affiche à la fin, avec l'explication de chaque réponse."
+questions:
+- q: Une école veut l'aide de Claude. Quelle donnée est rouge, donc ne sort jamais ?
+  choix:
+  - Les horaires de l'école
+  - Les noms et les notes des élèves
+  - Le nombre total d'élèves
+  bonne: 1
+  explication: Les noms et notes d'élèves sont des données sensibles. Les horaires et les totaux peuvent être confiés à Claude.
+  competence: M03-S2-C1
+- q: Un centre de santé veut préparer son rapport mensuel avec Claude. Que lui envoie-t-il ?
+  choix:
+  - La photo du registre des patients
+  - Les totaux par vaccin et par tranche d'âge, sans aucun nom
+  - La liste des patients avec leurs quartiers
+  bonne: 1
+  explication: Le registre est rouge. Les totaux regroupés suffisent pour le rapport et ne permettent de reconnaître personne.
+  competence: M03-S2-C1
+- q: Quand faut-il anonymiser un document ?
+  choix:
+  - Avant de l'envoyer à Claude, sur son téléphone
+  - Après l'avoir envoyé, en demandant à Claude de retirer les noms
+  - Jamais, Claude est un programme
+  bonne: 0
+  explication: Demander à Claude de retirer les noms, c'est déjà lui avoir envoyé les noms. On anonymise avant.
+  competence: M03-S2-C2
+- q: '« Mbarga Paul, tél. 6 99 …, quartier Nlongkak, absent 4 jours. » Quelle version est anonyme ?'
+  choix:
+  - « Paul M., absent 4 jours »
+  - « Élève A, absent 4 jours »
+  - « Mbarga, Nlongkak, absent 4 jours »
+  bonne: 1
+  explication: Un prénom avec une initiale ou un nom avec un quartier suffit souvent pour reconnaître quelqu'un. Une lettre ne révèle rien.
+  competence: M03-S2-C2
+- q: Une boutique veut publier sur sa page la photo d'une cliente souriante avec son achat. Que faut-il d'abord ?
+  choix:
+  - Rien, la photo est belle
+  - L'accord de la cliente
+  - Flouter le produit
+  bonne: 1
+  explication: Une personne reconnaissable ne se publie qu'avec son accord. C'est le droit à l'image, et il fait partie de la charte.
+  competence: M03-S2-C3
+- q: Qui valide la charte d'utilisation de Claude dans une école ?
+  choix:
+  - L'élève le plus doué en informatique
+  - La personne qui a autorité, par exemple le chef d'établissement
+  - Claude
+  bonne: 1
+  explication: Une charte n'a de valeur que validée par la personne qui en a le droit. Sans validation, c'est un brouillon.
+  competence: M03-S2-C3
+- q: Défi. Un restaurant aime le logo d'un concurrent et veut le même sur sa page. Que répondez-vous ?
+  choix:
+  - On le copie, personne ne verra
+  - On ne copie pas le logo d'un autre ; on crée une identité propre au restaurant
+  - On change juste la couleur
+  bonne: 1
+  explication: Le logo d'un autre lui appartient, même avec une autre couleur. La charte prévoit une règle sur les droits d'auteur.
+  competence: M03-S2-C3
+- q: Défi. Claude vous répond « Que sais-tu de moi ? » avec le numéro de téléphone d'un parent d'élève. Que faites-vous ?
+  choix:
+  - Rien, c'est pratique
+  - Je retire cette information de mes instructions personnelles et je corrige la mémoire
+  - Je supprime mon compte
+  bonne: 1
+  explication: Une donnée rouge n'a rien à faire dans ce que Claude retient de vous. Vous corrigez vos instructions et la mémoire, comme dans le guide A00-06.
+  competence: M03-S2-C1
+

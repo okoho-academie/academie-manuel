@@ -198,7 +198,8 @@ def main():
     for s in cal["semaines"]:
         codes_s = [it["code"] for it in s.get("items", [])]
         pres = [d for d in sorted((ROOT / "formateur" / "presentations").glob("*"))
-                if d.is_dir() and any(c.startswith(d.name.split("-")[0]) or d.name.startswith(c) for c in codes_s)]
+                if d.is_dir() and (d.name in codes_s or (d.name.startswith("A00-") and s["n"] == 0))]
+        # Correspondance exacte : un deck « M02-S1 » ne va qu'à la semaine de M02-S1 (avant : préfixe « M02 », decks copiés dans d'autres semaines)
         espace_s = dest / espace / "02 · Séances semaine par semaine" / folder_name(s)
         if not pres and not espace_s.exists():
             continue

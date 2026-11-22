@@ -167,3 +167,27 @@ termes:
   definition: Message transféré de groupe en groupe, souvent sans source ; il doit être vérifié avant d'être cru ou partagé.
   seances:
   - M03-S1
+- terme: Bibliothèque de consignes
+  definition: Document où vous rangez vos meilleures consignes, chacune avec un titre, une ligne « Quand l'utiliser » et des [crochets], pour les réutiliser en moins d'une minute.
+  seances:
+  - M02-S3
+- terme: Consigne mère
+  definition: Consigne qui demande à Claude de poser des questions sur une tâche, puis d'écrire une nouvelle consigne réutilisable pour la bibliothèque.
+  seances:
+  - M02-S3
+- terme: Donnée sensible
+  definition: Information qui permet de reconnaître une personne et touche à sa santé, son argent, son identité ou sa scolarité ; elle ne sort jamais de la structure.
+  seances:
+  - M03-S2
+- terme: Anonymiser
+  definition: Retirer d'un document, avant de l'envoyer, tout ce qui permet de reconnaître une personne (nom, numéro, adresse, visage), ou le remplacer par des totaux.
+  seances:
+  - M03-S2
+- terme: Charte d'utilisation
+  definition: Six règles courtes, validées par le client ou la personne qui a autorité, qui disent comment Claude est utilisé et quelles données ne sortent jamais.
+  seances:
+  - M03-S2
+- terme: Feux des données
+  definition: "Classement des données en trois couleurs : vert (peut être confié à Claude), orange (après anonymisation), rouge (ne sort jamais)."
+  seances:
+  - M03-S2

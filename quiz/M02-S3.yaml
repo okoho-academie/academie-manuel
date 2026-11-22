@@ -1,0 +1,71 @@
+code: M02-S3
+titre: "Quiz · Construire sa bibliothèque de prompts"
+reussite: 6
+pouls: true
+description: "8 questions dans des métiers différents : rassembler, tester et retrouver vos consignes. Les deux dernières questions sont des questions Défi. Votre score s'affiche à la fin, avec l'explication de chaque réponse."
+questions:
+- q: Une couturière écrit chaque semaine le même message pour annoncer ses nouveaux modèles. Que fait-elle de la consigne qui a bien marché ?
+  choix:
+  - Elle la laisse dans la conversation
+  - Elle la range dans sa bibliothèque avec un titre, une ligne « Quand l'utiliser » et des [crochets]
+  - Elle la réécrit de mémoire la semaine suivante
+  bonne: 1
+  explication: Rangée avec un titre et des [crochets], la consigne se retrouve en une seconde et sert pour chaque nouveau modèle.
+  competence: M02-S3-C1
+- q: À quoi servent les [crochets] dans une consigne de bibliothèque ?
+  choix:
+  - À décorer la consigne
+  - À marquer ce qui change d'une fois à l'autre, comme le nom du produit ou la date
+  - À cacher une partie de la consigne à Claude
+  bonne: 1
+  explication: Vous remplissez seulement les [crochets]. Le reste de la consigne ne change pas.
+  competence: M02-S3-C1
+- q: Une pharmacie veut une consigne pour prévenir un client que son médicament commandé est arrivé. Quelle consigne entre dans la bibliothèque ?
+  choix:
+  - « Écris un message au client. »
+  - '« Tu es l''assistant de la pharmacie [nom]. Écris un message WhatsApp de trois lignes pour dire à [prénom du client] que sa commande est arrivée. Contraintes : vouvoiement, horaires [horaires], aucun nom de médicament. »'
+  - « Préviens tout le monde que les médicaments sont arrivés. »
+  bonne: 1
+  explication: 'Rôle, tâche, contexte, format, contraintes et [crochets] : la consigne se réutilise pour chaque client, sans donnée de santé.'
+  competence: M02-S3-C1
+- q: Vous avez testé une consigne et corrigé la réponse de Claude. Que faites-vous ensuite ?
+  choix:
+  - Rien, la réponse est corrigée
+  - Je fais réécrire la consigne avec mes corrections, je garde la version 2 et je note ce qui est meilleur
+  - Je supprime la consigne
+  bonne: 1
+  explication: La version 2 évite la même correction la prochaine fois. C'est ainsi que la bibliothèque s'améliore.
+  competence: M02-S3-C2
+- q: Un traiteur constate que Claude ajoute des plats qu'il ne prépare pas. Quelle amélioration met-il dans la version 2 ?
+  choix:
+  - « Sois plus précis. »
+  - '« Propose seulement les plats de cette liste : [liste]. »'
+  - « Ajoute plus de plats. »
+  bonne: 1
+  explication: Une contrainte précise règle le problème à la source. Les informations du client viennent du client.
+  competence: M02-S3-C2
+- q: Votre binôme vous demande « la relance d'un client silencieux ». Qu'est-ce qui montre que votre bibliothèque fonctionne ?
+  choix:
+  - Vous la retrouvez par son titre et la réponse de Claude s'affiche en moins d'une minute
+  - Vous la réécrivez en cinq minutes
+  - Vous cherchez dans vos anciennes conversations
+  bonne: 0
+  explication: Une bibliothèque se mesure à la vitesse. Le titre et le numéro vous mènent tout de suite à la bonne consigne.
+  competence: M02-S3-C3
+- q: Défi. Comment montrer à un client la valeur de votre bibliothèque ?
+  choix:
+  - En disant que c'est moderne
+  - En notant le temps de la tâche avant et après la consigne, par exemple trois heures gagnées par semaine
+  - En montrant le nombre de consignes
+  bonne: 1
+  explication: Le temps gagné est un chiffre. Il convainc mieux qu'un discours et il va dans le Dossier client pilote.
+  competence: M02-S3-C3
+- q: Défi. À quoi sert une consigne mère ?
+  choix:
+  - À produire de nouvelles consignes de bibliothèque à partir d'une tâche que vous décrivez
+  - À remplacer toutes les autres consignes
+  - À parler à la place du client
+  bonne: 0
+  explication: La consigne mère pose des questions sur la tâche, puis écrit une consigne réutilisable avec titre, cinq éléments et [crochets].
+  competence: M02-S3-C1
+
