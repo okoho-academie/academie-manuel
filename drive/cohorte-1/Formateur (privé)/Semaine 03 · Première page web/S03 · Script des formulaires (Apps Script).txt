@@ -56,7 +56,7 @@ function nouveau(titre, description) {
   it.setFeedbackForCorrect(FormApp.createFeedback().setText("Un titre qui dit l'offre et trois parties suffisent pour répondre aux questions qui bloquent le client.").build());
   it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Un titre qui dit l'offre et trois parties suffisent pour répondre aux questions qui bloquent le client.").build());
   var it = f.addMultipleChoiceItem().setTitle("La page d'un centre de santé ne montre pas les horaires de consultation. Quelle est la meilleure consigne ?").setRequired(true).setPoints(1);
-  it.setChoices([it.createChoice("« Améliore la page. »", false), it.createChoice("« Recommence tout. »", false), it.createChoice({"« Modifie seulement deux choses": "ajoute les horaires de consultation sous le titre et un bouton pour appeler l'accueil. Ne change rien d'autre. »"}, true)]);
+  it.setChoices([it.createChoice("« Améliore la page. »", false), it.createChoice("« Recommence tout. »", false), it.createChoice("« Modifie seulement deux choses : ajoute les horaires de consultation sous le titre et un bouton pour appeler l'accueil. Ne change rien d'autre. »", true)]);
   it.setFeedbackForCorrect(FormApp.createFeedback().setText("Un tour ciblé nomme ce qui change et ce qui reste. La page s'améliore sans perdre ce qui était bon.").build());
   it.setFeedbackForIncorrect(FormApp.createFeedback().setText("Un tour ciblé nomme ce qui change et ce qui reste. La page s'améliore sans perdre ce qui était bon.").build());
   var it = f.addMultipleChoiceItem().setTitle("Pourquoi écrire « Ne change rien d'autre » dans un tour ciblé ?").setRequired(true).setPoints(1);
